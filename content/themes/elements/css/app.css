@@ -749,7 +749,7 @@ ul {
   font-family: foundersText;
   src: url(../fonts/FoundersGroteskTextWeb-Light.woff); }
 h1, h2, p, span,
-time, a {
+time, a, button {
   font-family: founders;
   font-size: 16px;
   font-weight: normal; }
@@ -776,7 +776,7 @@ time {
   font-size: 15px;
   line-height: 1.35; }
 
-a {
+a, button {
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
   -ms-transition: 0.2s;
@@ -787,29 +787,30 @@ a {
   color: #888888;
   text-decoration: none;
   cursor: pointer; }
-  a:hover, a:focus {
+  a:hover, button:hover, a:focus, button:focus {
     color: black; }
 
-a.has-content {
+a.has-content, button.has-content {
   color: black;
   text-decoration: none; }
 
-article a {
+article a, article button {
   border-bottom: thin solid #888888; }
-  article a:hover, article a:focus {
+  article a:hover, article button:hover, article a:focus, article button:focus {
     border-color: black; }
 
-nav a {
+nav a, nav button {
   padding-bottom: 0;
   color: black;
   text-decoration: none;
   border-bottom: thin solid transparent; }
-  nav a:hover, nav a:focus {
+  nav a:hover, nav button:hover, nav a:focus, nav button:focus {
     padding-bottom: 5px;
     border-bottom: thin solid black; }
 
-nav .current_page_parent a,
-nav .current-menu-item a {
+nav .current_page_parent a, nav .current_page_parent button,
+nav .current-menu-item a,
+nav .current-menu-item button {
   padding-bottom: 5px;
   border-bottom: thin solid black; }
 
@@ -888,34 +889,34 @@ body.error404 #error404-content {
   body.error404 #error404-content h2, body.error404 #error404-content p {
     margin-bottom: 1em; }
 
-a.trigger-menu {
+a.trigger-menu, button.trigger-menu {
   width: 35px;
   height: 35px;
   display: block;
   position: relative; }
-  a.trigger-menu i {
+  a.trigger-menu i, button.trigger-menu i {
     width: 100%;
     height: 3px;
     display: block;
     top: calc(50% - 1.5px);
     background: black; }
-    a.trigger-menu i:before, a.trigger-menu i:after {
+    a.trigger-menu i:before, button.trigger-menu i:before, a.trigger-menu i:after, button.trigger-menu i:after {
       content: " ";
       position: absolute;
       width: 100%;
       height: 100%;
       background: black;
       transition: .2s; }
-    a.trigger-menu i:before {
+    a.trigger-menu i:before, button.trigger-menu i:before {
       margin-top: -8px; }
-    a.trigger-menu i:after {
+    a.trigger-menu i:after, button.trigger-menu i:after {
       margin-top: 8px; }
 
-a.trigger-menu:hover i:before, a.trigger-menu:hover i:after {
+a.trigger-menu:hover i:before, button.trigger-menu:hover i:before, a.trigger-menu:hover i:after, button.trigger-menu:hover i:after {
   transition: .2s; }
-a.trigger-menu:hover i:before {
+a.trigger-menu:hover i:before, button.trigger-menu:hover i:before {
   margin-top: -11px; }
-a.trigger-menu:hover i:after {
+a.trigger-menu:hover i:after, button.trigger-menu:hover i:after {
   margin-top: 11px; }
 
 @keyframes activebefore {
@@ -927,7 +928,7 @@ a.trigger-menu:hover i:after {
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg); } }
-a.trigger-menu:focus i:before {
+a.trigger-menu:focus i:before, button.trigger-menu:focus i:before {
   -webkit-animation: activebefore .4s linear; }
 
 nav ul {
@@ -1118,7 +1119,8 @@ section.text .section-body {
   margin: auto; }
   section.text .section-body h2,
   section.text .section-body p,
-  section.text .section-body a {
+  section.text .section-body a,
+  section.text .section-body button {
     margin-bottom: 1em; }
 
 section.image .section-body figure {
@@ -1218,7 +1220,7 @@ body.single-post article {
 
 body.single-post article header .post-categories {
   float: left; }
-  body.single-post article header .post-categories a {
+  body.single-post article header .post-categories a, body.single-post article header .post-categories button {
     border: none; }
   body.single-post article header .post-categories span {
     color: #888888; }
@@ -1231,6 +1233,50 @@ body.single-post article header h1 {
 body.single-post article header h1,
 body.single-post article header h2 {
   clear: both; }
+
+button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none; }
+
+button,
+.button {
+  height: 40px;
+  padding: 0 15px;
+  display: inline-block;
+  color: black;
+  background: none;
+  border: thin solid black;
+  line-height: 38px;
+  cursor: pointer; }
+
+.button-sec {
+  border-color: #c8c8c8;
+  background-color: #c8c8c8; }
+
+.button-roll {
+  width: 120px;
+  overflow: hidden;
+  text-align: center; }
+  .button-roll span {
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    line-height: 40px; }
+  .button-roll span.hover {
+    top: 100%; }
+  .button-roll:hover span {
+    top: -100%; }
+  .button-roll:hover span.hover {
+    top: 0; }
 
 /*
  * Show and Hide class functions
@@ -1478,40 +1524,40 @@ section.image .section-body.is-pos-right {
   text-align: right; }
 
 h1.is-italic, h2.is-italic, p.is-italic, span.is-italic,
-time.is-italic, a.is-italic {
+time.is-italic, a.is-italic, button.is-italic {
   font-style: italic; }
 h1.is-underlined, h2.is-underlined, p.is-underlined, span.is-underlined,
-time.is-underlined, a.is-underlined {
+time.is-underlined, a.is-underlined, button.is-underlined {
   text-decoration: underline; }
 h1.is-capitalized, h2.is-capitalized, p.is-capitalized, span.is-capitalized,
-time.is-capitalized, a.is-capitalized {
+time.is-capitalized, a.is-capitalized, button.is-capitalized {
   text-transform: capitalize; }
 h1.is-uppercase, h2.is-uppercase, p.is-uppercase, span.is-uppercase,
-time.is-uppercase, a.is-uppercase {
+time.is-uppercase, a.is-uppercase, button.is-uppercase {
   text-transform: uppercase; }
 h1.is-lowercase, h2.is-lowercase, p.is-lowercase, span.is-lowercase,
-time.is-lowercase, a.is-lowercase {
+time.is-lowercase, a.is-lowercase, button.is-lowercase {
   text-transform: lowercase; }
 h1.is-bold, h2.is-bold, p.is-bold, span.is-bold,
-time.is-bold, a.is-bold {
+time.is-bold, a.is-bold, button.is-bold {
   font-weight: 700; }
 h1.is-aligned-center, h2.is-aligned-center, p.is-aligned-center, span.is-aligned-center,
-time.is-aligned-center, a.is-aligned-center {
+time.is-aligned-center, a.is-aligned-center, button.is-aligned-center {
   text-align: center; }
 h1.is-aligned-left, h2.is-aligned-left, p.is-aligned-left, span.is-aligned-left,
-time.is-aligned-left, a.is-aligned-left {
+time.is-aligned-left, a.is-aligned-left, button.is-aligned-left {
   text-align: left; }
 h1.is-aligned-right, h2.is-aligned-right, p.is-aligned-right, span.is-aligned-right,
-time.is-aligned-right, a.is-aligned-right {
+time.is-aligned-right, a.is-aligned-right, button.is-aligned-right {
   text-align: right; }
 h1.is-black, h2.is-black, p.is-black, span.is-black,
-time.is-black, a.is-black {
+time.is-black, a.is-black, button.is-black {
   color: black; }
 h1.is-white, h2.is-white, p.is-white, span.is-white,
-time.is-white, a.is-white {
+time.is-white, a.is-white, button.is-white {
   color: white; }
 h1.is-grey, h2.is-grey, p.is-grey, span.is-grey,
-time.is-grey, a.is-grey {
+time.is-grey, a.is-grey, button.is-grey {
   color: #888888; }
 
 p.is-small {
@@ -1597,8 +1643,9 @@ table.variations {
       cursor: pointer; }
 
 body.single-product .product {
-  height: calc(100vh - 90px);
-  padding-top: 60px;
+  height: 100vh;
+  margin-top: -90px;
+  padding-top: 150px;
   padding-bottom: 60px; }
   body.single-product .product .images {
     width: 60%;
@@ -1641,3 +1688,5 @@ body.single-product .product .summary .product-download,
 body.single-product .product .summary div[itemprop="offers"] {
   display: block;
   margin-bottom: 25px; }
+body.single-product .product .summary .single_add_to_cart_button {
+  margin-right: 15px; }

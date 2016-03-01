@@ -1,0 +1,57 @@
+button{
+  @extend a;
+  @include appearance( none );
+}
+
+button,
+.button{
+  height: 40px;
+  padding: 0 15px;
+  display: inline-block;
+
+  color: $black;
+  background: none;
+  border: thin solid $black;
+  line-height: 38px;
+  cursor: pointer;
+}
+
+.button-sec{
+  border-color: $grey;
+  background-color: $grey;
+}
+
+.button-roll{
+  width: 120px;
+  overflow: hidden;
+
+  text-align: center;
+
+  span{
+    @include transition( .2s );
+
+    top: 0;
+    left: 0;
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    line-height: 40px;
+  }
+
+  span.hover{
+    top: 100%;
+  }
+
+  &:hover{
+    span{
+      top: -100%;
+    }
+
+    span.hover{
+      top: 0;
+    }
+  }
+}

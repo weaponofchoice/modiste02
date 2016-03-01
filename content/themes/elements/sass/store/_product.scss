@@ -1,6 +1,7 @@
 body.single-product .product{
-  height: calc(100vh - #{$header_height});
-  padding-top: 60px;
+  height: 100vh;
+  margin-top: -90px;
+  padding-top: 150px;
   padding-bottom: 60px;
 
   .images{
@@ -43,5 +44,9 @@ body.single-product .product .summary{
   div[itemprop="offers"]{
     display: block;
     margin-bottom: 25px;
+  }
+
+  .single_add_to_cart_button{
+    margin-right: 15px;
   }
 }

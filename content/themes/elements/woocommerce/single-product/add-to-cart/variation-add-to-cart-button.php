@@ -25,10 +25,10 @@ global $product;
 </div>
 
 <div class="woocommerce-variation-add-to-cart variations_button">
-	<button type="submit" class="single_add_to_cart_button button alt">order online</button>
+	<button type="submit" class="single_add_to_cart_button button button-roll alt"><span>order online</span><span class="hover">order online</span></button>
 	<input type="hidden" name="add-to-cart" value="<?php echo absint( $product->id ); ?>" />
 	<input type="hidden" name="product_id" value="<?php echo absint( $product->id ); ?>" />
 	<input type="hidden" name="variation_id" class="variation_id" value="0" />
 
-  <a class="button button-sec" href="mailto:lucawater@gmail.com">inquire</a>
+  <a class="button button-roll button-sec" href="mailto:lucawater@gmail.com"><span>inquire</span><span class="hover">inquire</span></a>
 </div>
