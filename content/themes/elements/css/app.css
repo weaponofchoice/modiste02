@@ -1510,6 +1510,9 @@ time.is-black, a.is-black {
 h1.is-white, h2.is-white, p.is-white, span.is-white,
 time.is-white, a.is-white {
   color: white; }
+h1.is-grey, h2.is-grey, p.is-grey, span.is-grey,
+time.is-grey, a.is-grey {
+  color: #888888; }
 
 p.is-small {
   font-size: 15px; }
@@ -1592,3 +1595,49 @@ table.variations {
       text-decoration: underline; }
     table.variations div label {
       cursor: pointer; }
+
+body.single-product .product {
+  height: calc(100vh - 90px);
+  padding-top: 60px;
+  padding-bottom: 60px; }
+  body.single-product .product .images {
+    width: 60%;
+    float: right; }
+  body.single-product .product .summary {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    width: 40%;
+    height: 100%;
+    float: left; }
+
+body.single-product .product .summary .link-arrow img {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  width: 15px;
+  margin-left: 10px; }
+body.single-product .product .summary .link-arrow:hover img, body.single-product .product .summary .link-arrow:active img {
+  margin-left: 5px; }
+body.single-product .product .summary p[itemprop="name"],
+body.single-product .product .summary div[itemprop="description"],
+body.single-product .product .summary table.variations,
+body.single-product .product .summary .product-download,
+body.single-product .product .summary div[itemprop="offers"] {
+  display: block;
+  margin-bottom: 25px; }

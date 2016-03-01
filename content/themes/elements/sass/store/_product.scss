@@ -1,0 +1,47 @@
+body.single-product .product{
+  height: calc(100vh - #{$header_height});
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .images{
+    width: 60%;
+    float: right;
+  }
+
+  .summary{
+    @include flexbox;
+    @include flex-direction( column );
+    @include justify-content( space-between );
+
+    width: 40%;
+    height: 100%;
+    float: left;
+  }
+}
+
+body.single-product .product .summary{
+  .link-arrow{
+    img{
+      @include transition( .2s );
+
+      width: 15px;
+      margin-left: 10px;
+    }
+
+    &:hover,
+    &:active{
+      img{
+        margin-left: 5px;
+      }
+    }
+  }
+
+  p[itemprop="name"],
+  div[itemprop="description"],
+  table.variations,
+  .product-download,
+  div[itemprop="offers"]{
+    display: block;
+    margin-bottom: 25px;
+  }
+}
