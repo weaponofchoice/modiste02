@@ -1645,11 +1645,17 @@ table.variations {
 body.single-product .product {
   height: 100vh;
   margin-top: -90px;
-  padding-top: 150px;
-  padding-bottom: 60px; }
+  padding: 0;
+  padding-top: 90px; }
   body.single-product .product .images {
     width: 60%;
+    height: 100%;
     float: right; }
+    body.single-product .product .images img {
+      width: auto;
+      height: 100%;
+      display: block;
+      margin: auto; }
   body.single-product .product .summary {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1669,6 +1675,7 @@ body.single-product .product {
     justify-content: space-between;
     width: 40%;
     height: 100%;
+    padding: 60px 6.25rem;
     float: left; }
 
 body.single-product .product .summary .link-arrow img {
