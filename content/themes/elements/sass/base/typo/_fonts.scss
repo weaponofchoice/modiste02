@@ -1,10 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+@font-face{
+  font-family: founders;
+  src: url(../fonts/FoundersGroteskWeb-Light.woff);
+}
 
-@mixin source{
-  font-family: 'Source Sans Pro', sans-serif;
-  font-style: normal;
+@font-face{
+  font-family: foundersText;
+  src: url(../fonts/FoundersGroteskTextWeb-Light.woff);
+}
 
-  &.is_bold{
-    font-weight: 600;
-  }
+@mixin founders{
+  font-family: founders;
+}
+
+@mixin founders-text{
+  font-family: foundersText;
 }

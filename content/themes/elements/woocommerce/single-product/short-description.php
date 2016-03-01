@@ -27,5 +27,5 @@ if ( ! $post->post_excerpt ) {
 
 ?>
 <div itemprop="description">
-	<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?>
+  <?php echo wp_trim_words( apply_filters('woocommerce_short_description', $post->post_excerpt), 10 ) . '<a>read more</a>'; ?>
 </div>

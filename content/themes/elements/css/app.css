@@ -15,7 +15,6 @@
 /*
  * 3. Media queries
  */
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
 [class*="grid-"] {
   display: block;
   *zoom: 1; }
@@ -743,32 +742,39 @@ ul {
   width: calc( 100% + 1.875rem );
   margin-left: -0.9375rem; }
 
+@font-face {
+  font-family: founders;
+  src: url(../fonts/FoundersGroteskWeb-Light.woff); }
+@font-face {
+  font-family: foundersText;
+  src: url(../fonts/FoundersGroteskTextWeb-Light.woff); }
 h1, h2, p, span,
 time, a {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-style: normal;
+  font-family: founders;
   font-size: 16px;
   font-weight: normal; }
-  h1.is_bold, h2.is_bold, p.is_bold, span.is_bold,
-  time.is_bold, a.is_bold {
-    font-weight: 600; }
 
 h1 {
-  font-size: 4.5em; }
-
-article h1 {
-  font-size: 2.5em; }
+  font-size: 90px;
+  line-height: 0.9; }
 
 h2 {
-  font-size: 2em; }
+  font-size: 40px;
+  line-height: 1.2; }
 
 p {
-  font-size: .9em; }
+  font-size: 15px;
+  line-height: 1.35; }
 
 article p {
   margin-bottom: 1em;
   font-size: 18px;
   line-height: 1.6; }
+
+span,
+time {
+  font-size: 15px;
+  line-height: 1.35; }
 
 a {
   -webkit-transition: 0.2s;
@@ -776,7 +782,8 @@ a {
   -ms-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
-  font-size: 1em;
+  font-size: 15px;
+  line-height: 1.35;
   color: #888888;
   text-decoration: none;
   cursor: pointer; }

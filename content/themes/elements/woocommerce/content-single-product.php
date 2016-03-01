@@ -49,6 +49,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="summary entry-summary">
 
+    <?php echo '<a href="' . get_permalink( woocommerce_get_page_id( 'shop' ) ) . '">Return to overview</a>'; ?>
+
 		<?php
 			/**
 			 * woocommerce_single_product_summary hook.
@@ -63,6 +65,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			 */
 			do_action( 'woocommerce_single_product_summary' );
 		?>
+
+    <a href="#product-editorial">Specifications & sizes</a>
 
 	</div><!-- .summary -->
 
