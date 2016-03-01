@@ -1,0 +1,23 @@
+table.variations{
+  position: relative;
+
+  div{
+    padding: 10px;
+    display: inline-block;
+
+    cursor: pointer;
+    background-color: $grey-light;
+
+    input[type="radio"]{
+      @include appearance( none );
+    }
+
+    input[type="radio"]:checked + label{
+      text-decoration: underline;
+    }
+
+    label{
+      cursor: pointer;
+    }
+  }
+}

@@ -14,6 +14,7 @@ function enqueue_theme_scripts() {
     wp_enqueue_script( 'jquery-mobile', get_template_directory_uri() . '/js/vendor/jquery.mobile.custom.min.js', 'jquery', false, true );
     wp_enqueue_script( 'add-to-cart', get_template_directory_uri() . '/js/vendor/add-to-cart-variation.min.js', 'jquery', false, true );
 
+    wp_enqueue_script( 'product-options', get_template_directory_uri() . '/js/product-options.js', 'jquery', false, true );
     wp_enqueue_script( 'scroll', get_template_directory_uri() . '/js/scroll.js', 'jquery', false, true );
     wp_enqueue_script( 'hero', get_template_directory_uri() . '/js/hero.js', 'jquery', false, true );
     wp_enqueue_script( 'init-slider', get_template_directory_uri() . '/js/init-slider.js', 'jquery', false, true );

@@ -1577,3 +1577,18 @@ body.is-mobile.is-loading > * {
 @media only screen and (max-width: 500px) {
   .is-fullwidth {
     margin-left: -3.75rem; } }
+table.variations {
+  position: relative; }
+  table.variations div {
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #f0f0f0; }
+    table.variations div input[type="radio"] {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none; }
+    table.variations div input[type="radio"]:checked + label {
+      text-decoration: underline; }
+    table.variations div label {
+      cursor: pointer; }
