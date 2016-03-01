@@ -50,9 +50,13 @@ body.single-product .product .summary{
   div[itemprop="description"],
   table.variations,
   .product-download,
-  div[itemprop="offers"]{
+  .product-shipping{
     display: block;
     margin-bottom: 25px;
+  }
+
+  .price small{
+    @extend p;
   }
 
   .single_add_to_cart_button{

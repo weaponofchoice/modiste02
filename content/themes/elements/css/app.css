@@ -748,7 +748,8 @@ ul {
 @font-face {
   font-family: foundersText;
   src: url(../fonts/FoundersGroteskTextWeb-Light.woff); }
-h1, h2, p, span,
+h1, h2, p, input,
+label, table.variations div.option-placeholder, body.single-product .product .summary .price small, span,
 time, a, button {
   font-family: founders;
   font-size: 16px;
@@ -762,11 +763,13 @@ h2 {
   font-size: 40px;
   line-height: 1.2; }
 
-p {
+p, input,
+label, table.variations div.option-placeholder, body.single-product .product .summary .price small {
   font-size: 15px;
   line-height: 1.35; }
 
-article p {
+article p, article input,
+article label, article table.variations div.option-placeholder, table.variations article div.option-placeholder, article body.single-product .product .summary .price small, body.single-product .product .summary .price article small {
   margin-bottom: 1em;
   font-size: 18px;
   line-height: 1.6; }
@@ -886,7 +889,8 @@ body.error404 #error404-content {
   margin: 100px auto;
   display: block !important;
   background-color: transparent; }
-  body.error404 #error404-content h2, body.error404 #error404-content p {
+  body.error404 #error404-content h2, body.error404 #error404-content p, body.error404 #error404-content input,
+  body.error404 #error404-content label, body.error404 #error404-content table.variations div.option-placeholder, table.variations body.error404 #error404-content div.option-placeholder, body.error404 #error404-content body.single-product .product .summary .price small, body.single-product .product .summary .price body.error404 #error404-content small {
     margin-bottom: 1em; }
 
 a.trigger-menu, button.trigger-menu {
@@ -1119,6 +1123,12 @@ section.text .section-body {
   margin: auto; }
   section.text .section-body h2,
   section.text .section-body p,
+  section.text .section-body input,
+  section.text .section-body label,
+  section.text .section-body table.variations div.option-placeholder,
+  table.variations section.text .section-body div.option-placeholder,
+  section.text .section-body body.single-product .product .summary .price small,
+  body.single-product .product .summary .price section.text .section-body small,
   section.text .section-body a,
   section.text .section-body button {
     margin-bottom: 1em; }
@@ -1523,44 +1533,57 @@ section.image .section-body.is-pos-center {
 section.image .section-body.is-pos-right {
   text-align: right; }
 
-h1.is-italic, h2.is-italic, p.is-italic, span.is-italic,
+h1.is-italic, h2.is-italic, p.is-italic, input.is-italic,
+label.is-italic, table.variations div.is-italic.option-placeholder, body.single-product .product .summary .price small.is-italic, span.is-italic,
 time.is-italic, a.is-italic, button.is-italic {
   font-style: italic; }
-h1.is-underlined, h2.is-underlined, p.is-underlined, span.is-underlined,
+h1.is-underlined, h2.is-underlined, p.is-underlined, input.is-underlined,
+label.is-underlined, table.variations div.is-underlined.option-placeholder, body.single-product .product .summary .price small.is-underlined, span.is-underlined,
 time.is-underlined, a.is-underlined, button.is-underlined {
   text-decoration: underline; }
-h1.is-capitalized, h2.is-capitalized, p.is-capitalized, span.is-capitalized,
+h1.is-capitalized, h2.is-capitalized, p.is-capitalized, input.is-capitalized,
+label.is-capitalized, table.variations div.is-capitalized.option-placeholder, body.single-product .product .summary .price small.is-capitalized, span.is-capitalized,
 time.is-capitalized, a.is-capitalized, button.is-capitalized {
   text-transform: capitalize; }
-h1.is-uppercase, h2.is-uppercase, p.is-uppercase, span.is-uppercase,
+h1.is-uppercase, h2.is-uppercase, p.is-uppercase, input.is-uppercase,
+label.is-uppercase, table.variations div.is-uppercase.option-placeholder, body.single-product .product .summary .price small.is-uppercase, span.is-uppercase,
 time.is-uppercase, a.is-uppercase, button.is-uppercase {
   text-transform: uppercase; }
-h1.is-lowercase, h2.is-lowercase, p.is-lowercase, span.is-lowercase,
+h1.is-lowercase, h2.is-lowercase, p.is-lowercase, input.is-lowercase,
+label.is-lowercase, table.variations div.is-lowercase.option-placeholder, body.single-product .product .summary .price small.is-lowercase, span.is-lowercase,
 time.is-lowercase, a.is-lowercase, button.is-lowercase {
   text-transform: lowercase; }
-h1.is-bold, h2.is-bold, p.is-bold, span.is-bold,
+h1.is-bold, h2.is-bold, p.is-bold, input.is-bold,
+label.is-bold, table.variations div.is-bold.option-placeholder, body.single-product .product .summary .price small.is-bold, span.is-bold,
 time.is-bold, a.is-bold, button.is-bold {
   font-weight: 700; }
-h1.is-aligned-center, h2.is-aligned-center, p.is-aligned-center, span.is-aligned-center,
+h1.is-aligned-center, h2.is-aligned-center, p.is-aligned-center, input.is-aligned-center,
+label.is-aligned-center, table.variations div.is-aligned-center.option-placeholder, body.single-product .product .summary .price small.is-aligned-center, span.is-aligned-center,
 time.is-aligned-center, a.is-aligned-center, button.is-aligned-center {
   text-align: center; }
-h1.is-aligned-left, h2.is-aligned-left, p.is-aligned-left, span.is-aligned-left,
+h1.is-aligned-left, h2.is-aligned-left, p.is-aligned-left, input.is-aligned-left,
+label.is-aligned-left, table.variations div.is-aligned-left.option-placeholder, body.single-product .product .summary .price small.is-aligned-left, span.is-aligned-left,
 time.is-aligned-left, a.is-aligned-left, button.is-aligned-left {
   text-align: left; }
-h1.is-aligned-right, h2.is-aligned-right, p.is-aligned-right, span.is-aligned-right,
+h1.is-aligned-right, h2.is-aligned-right, p.is-aligned-right, input.is-aligned-right,
+label.is-aligned-right, table.variations div.is-aligned-right.option-placeholder, body.single-product .product .summary .price small.is-aligned-right, span.is-aligned-right,
 time.is-aligned-right, a.is-aligned-right, button.is-aligned-right {
   text-align: right; }
-h1.is-black, h2.is-black, p.is-black, span.is-black,
+h1.is-black, h2.is-black, p.is-black, input.is-black,
+label.is-black, table.variations div.is-black.option-placeholder, body.single-product .product .summary .price small.is-black, span.is-black,
 time.is-black, a.is-black, button.is-black {
   color: black; }
-h1.is-white, h2.is-white, p.is-white, span.is-white,
+h1.is-white, h2.is-white, p.is-white, input.is-white,
+label.is-white, table.variations div.is-white.option-placeholder, body.single-product .product .summary .price small.is-white, span.is-white,
 time.is-white, a.is-white, button.is-white {
   color: white; }
-h1.is-grey, h2.is-grey, p.is-grey, span.is-grey,
+h1.is-grey, h2.is-grey, p.is-grey, input.is-grey,
+label.is-grey, table.variations div.is-grey.option-placeholder, body.single-product .product .summary .price small.is-grey, span.is-grey,
 time.is-grey, a.is-grey, button.is-grey {
   color: #888888; }
 
-p.is-small {
+p.is-small, input.is-small,
+label.is-small, table.variations div.is-small.option-placeholder, body.single-product .product .summary .price small.is-small {
   font-size: 15px; }
 
 .is-stretched-wrapper {
@@ -1628,11 +1651,14 @@ body.is-mobile.is-loading > * {
     margin-left: -3.75rem; } }
 table.variations {
   position: relative; }
+  table.variations div.option-placeholder,
+  table.variations div:nth-child(2) {
+    margin-left: 30px; }
   table.variations div {
     padding: 10px;
     display: inline-block;
     cursor: pointer;
-    background-color: #f0f0f0; }
+    background-color: #c8c8c8; }
     table.variations div input[type="radio"] {
       -moz-appearance: none;
       -webkit-appearance: none;
@@ -1641,6 +1667,8 @@ table.variations {
       text-decoration: underline; }
     table.variations div label {
       cursor: pointer; }
+  table.variations div.option-placeholder {
+    background-color: #f0f0f0; }
 
 body.single-product .product {
   height: 100vh;
@@ -1688,11 +1716,12 @@ body.single-product .product .summary .link-arrow img {
   margin-left: 10px; }
 body.single-product .product .summary .link-arrow:hover img, body.single-product .product .summary .link-arrow:active img {
   margin-left: 5px; }
-body.single-product .product .summary p[itemprop="name"],
+body.single-product .product .summary p[itemprop="name"], body.single-product .product .summary input[itemprop="name"],
+body.single-product .product .summary label[itemprop="name"], body.single-product .product .summary table.variations div[itemprop="name"].option-placeholder, table.variations body.single-product .product .summary div[itemprop="name"].option-placeholder, body.single-product .product .summary .price small[itemprop="name"],
 body.single-product .product .summary div[itemprop="description"],
 body.single-product .product .summary table.variations,
 body.single-product .product .summary .product-download,
-body.single-product .product .summary div[itemprop="offers"] {
+body.single-product .product .summary .product-shipping {
   display: block;
   margin-bottom: 25px; }
 body.single-product .product .summary .single_add_to_cart_button {
