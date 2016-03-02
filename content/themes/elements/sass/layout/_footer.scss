@@ -1,8 +1,38 @@
 body > footer{
   z-index: $zIndex-footer;
 
+  height: auto;
+  overflow: hidden;
+
   padding-top: 150px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 
   background: $white;
+
+  div{
+    width: calc(100% / 3);
+    float: left;
+  }
+
+  div:nth-child(2){
+    text-align: center;
+  }
+
+  div:last-child{
+    text-align: right;
+  }
+
+  ul{
+    margin-top: 1em;
+
+    li{
+      width: 30px;
+      margin-right: 10px;
+      display: inline-block;
+    }
+
+    li:last-child{
+      margin-right: 0;
+    }
+  }
 }
