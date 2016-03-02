@@ -90,6 +90,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div>
 
 <div id="product-materials">
+  <?php get_template_part( 'woocommerce/single-product/materials' ); ?>
+
 
   <a class="button button-roll" href=""><span>download product sheet</span><span>download product sheet</span></a>
 </div>
