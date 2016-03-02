@@ -7,6 +7,7 @@
 require_once('includes/scripts.php');
 
 // Inludes: template functions
+require_once('includes/functions-template/elements.php');
 require_once('includes/functions-template/posts.php');
 require_once('includes/functions-template/section.php');
 require_once('includes/functions-template/section-header.php');

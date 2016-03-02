@@ -1087,12 +1087,13 @@ section {
   width: 100%;
   height: auto;
   overflow: hidden;
-  background: white; }
+  background: #f0f0f0; }
   section .section-header,
   section .section-body {
     clear: both; }
   section .section-header {
     max-width: 700px;
+    margin: auto;
     margin-bottom: 3.125rem; }
 
 section.hero {
