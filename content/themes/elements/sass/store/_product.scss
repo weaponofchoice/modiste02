@@ -1,31 +1,39 @@
-body.single-product .product{
-  height: 100vh;
-  margin-top: -90px;
-  padding: 0;
-  padding-top: 90px;
+body.single-product{
+  .product{
+    height: 100vh;
+    margin-top: -90px;
+    padding: 0;
+    padding-top: 90px;
 
-  .images{
-    width: 60%;
-    height: 100%;
-    float: right;
-
-    img{
-      width: auto;
+    .images{
+      width: 60%;
       height: 100%;
-      display: block;
-      margin: auto;
+      float: right;
+
+      img{
+        width: auto;
+        height: 100%;
+        display: block;
+        margin: auto;
+      }
+    }
+
+    .summary{
+      @include flexbox;
+      @include flex-direction( column );
+      @include justify-content( space-between );
+
+      width: 40%;
+      height: 100%;
+      padding: 60px #{$space-sides};
+      float: left;
     }
   }
 
-  .summary{
-    @include flexbox;
-    @include flex-direction( column );
-    @include justify-content( space-between );
+  #product-editorial{
+    padding: 60px $space-sides;
 
-    width: 40%;
-    height: 100%;
-    padding: 60px #{$space-sides};
-    float: left;
+    background-color: $white;
   }
 }
 

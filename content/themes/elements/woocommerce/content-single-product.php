@@ -85,4 +85,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </div><!-- #product-<?php the_ID(); ?> -->
 
+<div id="product-editorial">
+  <?php get_elements(); ?>
+</div>
+
 <?php do_action( 'woocommerce_after_single_product' ); ?>

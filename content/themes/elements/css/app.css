@@ -830,11 +830,14 @@ body > footer {
 main {
   padding-top: 90px; }
 
-main > * {
+main > *,
+#product-editorial > * {
   padding: 3.125rem 6.25rem; }
-  main > *:first-child {
+  main > *:first-child,
+  #product-editorial > *:first-child {
     padding-top: 6.25rem; }
-  main > *:last-child {
+  main > *:last-child,
+  #product-editorial > *:last-child {
     padding-bottom: 6.25rem; }
 
 @media only screen and (max-width: 500px) {
@@ -842,11 +845,14 @@ main > * {
   body > footer {
     padding: 0 3.75rem; }
 
-  main > * {
+  main > *,
+  #product-editorial > * {
     padding: 3.75rem 3.75rem; }
-    main > *:first-child {
+    main > *:first-child,
+    #product-editorial > *:first-child {
       padding-top: 3.75rem; }
-    main > *:last-child {
+    main > *:last-child,
+    #product-editorial > *:last-child {
       padding-bottom: 3.75rem; } }
 main {
   z-index: 900;
@@ -1087,7 +1093,7 @@ section {
   width: 100%;
   height: auto;
   overflow: hidden;
-  background: #f0f0f0; }
+  background: transparent; }
   section .section-header,
   section .section-body {
     clear: both; }
@@ -1729,6 +1735,9 @@ body.single-product .product {
     height: 100%;
     padding: 60px 6.25rem;
     float: left; }
+body.single-product #product-editorial {
+  padding: 60px 6.25rem;
+  background-color: white; }
 
 body.single-product .product .summary .link-arrow img {
   -webkit-transition: 0.2s;
