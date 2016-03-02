@@ -5,6 +5,8 @@ body.single-product{
     padding: 0;
     padding-top: 90px;
 
+    background-color: $grey-light;
+
     .images{
       width: 60%;
       height: 100%;
@@ -32,6 +34,5 @@ body.single-product{
 
   #product-editorial{
     padding: 0;
-    background-color: $white;
   }
 }
