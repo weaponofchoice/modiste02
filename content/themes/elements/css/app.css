@@ -787,7 +787,7 @@ a, button {
   transition: 0.2s;
   font-size: 15px;
   line-height: 1.35;
-  color: #888888;
+  color: black;
   text-decoration: none;
   cursor: pointer; }
   a:hover, button:hover, a:focus, button:focus {
@@ -939,7 +939,7 @@ nav ul {
   display: inline; }
   nav ul li {
     display: inline-block;
-    padding-right: 30px; }
+    padding-right: 60px; }
     nav ul li:last-child {
       padding-right: 0; }
 
@@ -1258,7 +1258,8 @@ button,
   background: none;
   border: thin solid black;
   line-height: 38px;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: 0; }
 
 .button-sec {
   border-color: #c8c8c8;
@@ -1274,19 +1275,42 @@ button,
     -ms-transition: 0.2s;
     -o-transition: 0.2s;
     transition: 0.2s;
-    top: 0;
-    left: 0;
+    opacity: 1;
+    visibility: visible;
+    top: -1px;
+    left: -5px;
+    right: 0;
     position: absolute;
-    width: 100%;
     height: 100%;
     display: block;
     line-height: 40px; }
   .button-roll span.hover {
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    opacity: 0;
+    visibility: hidden;
     top: 100%; }
   .button-roll:hover span {
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    opacity: 0;
+    visibility: hidden;
     top: -100%; }
   .button-roll:hover span.hover {
-    top: 0; }
+    top: -1px;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    opacity: 1;
+    visibility: visible; }
 
 /*
  * Show and Hide class functions
@@ -1651,9 +1675,8 @@ body.is-mobile.is-loading > * {
     margin-left: -3.75rem; } }
 table.variations {
   position: relative; }
-  table.variations div.option-placeholder,
-  table.variations div:nth-child(2) {
-    margin-left: 30px; }
+  table.variations td.label {
+    width: 80px; }
   table.variations div {
     padding: 10px;
     display: inline-block;
@@ -1719,10 +1742,13 @@ body.single-product .product .summary .link-arrow:hover img, body.single-product
 body.single-product .product .summary p[itemprop="name"], body.single-product .product .summary input[itemprop="name"],
 body.single-product .product .summary label[itemprop="name"], body.single-product .product .summary table.variations div[itemprop="name"].option-placeholder, table.variations body.single-product .product .summary div[itemprop="name"].option-placeholder, body.single-product .product .summary .price small[itemprop="name"],
 body.single-product .product .summary div[itemprop="description"],
-body.single-product .product .summary table.variations,
 body.single-product .product .summary .product-download,
 body.single-product .product .summary .product-shipping {
-  display: block;
+  display: inline-block;
   margin-bottom: 25px; }
+body.single-product .product .summary table.variations {
+  margin-bottom: 15px; }
+body.single-product .product .summary .product-download {
+  margin-left: 90px; }
 body.single-product .product .summary .single_add_to_cart_button {
   margin-right: 15px; }

@@ -9,6 +9,10 @@ if( is_woocommerce() ){
   the_content();
 }
 
+if( is_cart() ){
+  echo '<h2>Cart</h2>';
+}
+
 /*
  * Start the ACF page elements loop
  *

@@ -48,11 +48,18 @@ body.single-product .product .summary{
 
   p[itemprop="name"],
   div[itemprop="description"],
-  table.variations,
   .product-download,
   .product-shipping{
-    display: block;
+    display: inline-block;
     margin-bottom: 25px;
+  }
+
+  table.variations{
+    margin-bottom: 15px;
+  }
+
+  .product-download{
+    margin-left: 90px;
   }
 
   .price small{
