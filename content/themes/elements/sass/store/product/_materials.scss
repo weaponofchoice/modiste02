@@ -1,5 +1,6 @@
 #product-materials{
   text-align: center;
+  background-color: $white;
 
   ul{
     margin-bottom: 60px;
@@ -7,7 +8,6 @@
     li{
       @include flexbox;
       @include flex-direction( row );
-      @include justify-content( center );
       @include align-items( center );
 
       img{
@@ -21,9 +21,21 @@
         text-align: left;
       }
     }
+
+    li:fist-child{
+      @include justify-content( flex-start );
+    }
+
+    li:nth-child(2){
+      @include justify-content( center );
+    }
+
+    li:last-child{
+      @include justify-content( flex-end );
+    }
   }
 
-  p{
+  > p{
     margin-bottom: 60px;
   }
 }
