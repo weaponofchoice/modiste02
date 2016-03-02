@@ -10,7 +10,13 @@
 <!--[if IE 9]>    <html class="no-js lt-ie10" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
-  <title>YOUR SITE</title>
+  <?php if( is_shop() ): ?>
+    <title>Modiste Furniture – Shop</title>
+  <?php elseif( is_home() || is_archive() ): ?>
+    <title>Modiste Furniture</title>
+  <?php else: ?>
+    <title>Modiste Furniture<?php echo ' – ' . get_the_title(); ?></title>
+  <?php endif; ?>
 
   <link rel="canonical" href="<?php echo home_url(); ?>">
 
