@@ -1,0 +1,28 @@
+body.woocommerce.archive{
+  .product{
+    div{
+      bottom: 80px;
+      left: 0;
+      right: 0;
+      position: absolute;
+
+      max-width: 500px;
+      margin: auto;
+
+      color: $white;
+      text-align: center;
+
+      h2{
+        margin-bottom: 20px;
+      }
+      
+      > p{
+        margin-bottom: 30px;
+      }
+    }
+
+    img{
+      display: block;
+    }
+  }
+}

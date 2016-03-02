@@ -1,0 +1,7 @@
+body.woocommerce.archive{
+  .products{
+    @extend .is-fullwidth;
+
+    padding-top: 0;
+  }
+}

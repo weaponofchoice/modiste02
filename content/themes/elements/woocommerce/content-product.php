@@ -51,33 +51,24 @@ if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 <li <?php post_class( $classes ); ?>>
 
 	<?php
-	/**
-	 * woocommerce_before_shop_loop_item hook.
-	 *
-	 * @hooked woocommerce_template_loop_product_link_open - 10
-	 */
-	do_action( 'woocommerce_before_shop_loop_item' );
-
   // Product featured image
   $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
 
   echo '<img src="' . $image[0] . '" width="' . $image[1] . '" height="' . $image[2] . '">';
 
-	// Product title
-  echo '<h2>' . get_the_title() . '</h2>';
+  // Product info
+  echo '<div>';
+    // Product title
+    echo '<h2>' . get_the_title() . '</h2>';
 
-	/**
-	 * woocommerce_after_shop_loop_item hook.
-	 *
-	 * @hooked woocommerce_template_loop_product_link_close - 5
-   * @hooked woocommerce_template_single_excerpt - 5
-	 */
-	do_action( 'woocommerce_after_shop_loop_item' );
+    // Product description
+    the_excerpt();
 
-  // Product link button
-  $product_url = get_permalink( $post->ID );
+    // Product link button
+    $product_url = get_permalink( $post->ID );
 
-  echo '<a class="button button-roll button-white" href="' . $product_url . '"><span>configure online</span><span>configure online</span></a>';
+    echo '<a class="button button-roll button-white" href="' . $product_url . '"><span>configure online</span><span>configure online</span></a>';
+  echo '</div>';
 	?>
 
 </li>

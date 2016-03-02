@@ -1286,6 +1286,11 @@ button,
   border-color: #c8c8c8;
   background-color: #c8c8c8; }
 
+.button-white {
+  border-color: white; }
+  .button-white span {
+    color: white; }
+
 .button-roll {
   overflow: hidden;
   text-align: center; }
@@ -1656,12 +1661,12 @@ body.is-mobile.is-loading > * {
   opacity: 1;
   visibility: visible; }
 
-.is-fullwidth {
+.is-fullwidth, body.woocommerce.archive .products {
   width: calc(100% + (6.25rem * 2));
   margin-left: -6.25rem; }
 
 @media only screen and (max-width: 500px) {
-  .is-fullwidth {
+  .is-fullwidth, body.woocommerce.archive .products {
     margin-left: -3.75rem; } }
 table.variations {
   position: relative; }
@@ -1682,6 +1687,26 @@ table.variations {
       cursor: pointer; }
   table.variations div.option-placeholder {
     background-color: #f0f0f0; }
+
+body.woocommerce.archive .products {
+  padding-top: 0; }
+
+body.woocommerce.archive .product div {
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  max-width: 500px;
+  margin: auto;
+  color: white;
+  text-align: center; }
+  body.woocommerce.archive .product div h2 {
+    margin-bottom: 20px; }
+  body.woocommerce.archive .product div > p, body.woocommerce.archive .product div > input,
+  body.woocommerce.archive .product div > label, body.woocommerce.archive .product table.variations div > div.option-placeholder, table.variations body.woocommerce.archive .product div > div.option-placeholder, body.woocommerce.archive body.single-product .product .summary .price div > small, body.single-product body.woocommerce.archive .product .summary .price div > small {
+    margin-bottom: 30px; }
+body.woocommerce.archive .product img {
+  display: block; }
 
 body.single-product .product {
   height: 100vh;

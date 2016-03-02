@@ -63,6 +63,9 @@
 @import
   "store/_radio",
 
-  "store/product/_product",
-  "store/product/_summary",
-  "store/product/_materials";
+  "store/_archive",
+  "store/_archive-product",
+
+  "store/_product",
+  "store/_product-summary",
+  "store/_product-materials";

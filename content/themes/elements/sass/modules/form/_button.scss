@@ -22,6 +22,14 @@ button,
   background-color: $grey;
 }
 
+.button-white{
+  border-color: $white;
+
+  span{
+    color: $white;
+  }
+}
+
 .button-roll{
   overflow: hidden;
 
