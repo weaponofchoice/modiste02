@@ -32,6 +32,9 @@ function custom_woocommerce_paypal_icon( $url ) {
   return $url;
 }
 
+// Remove WooCommerce page titles
+add_filter( 'woocommerce_show_page_title', function() { return false; } );
+
 // Initialize mobile detect
 require_once('includes/mobile-detect.php');
 $detect = new Mobile_Detect;
