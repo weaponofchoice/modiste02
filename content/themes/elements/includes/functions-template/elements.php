@@ -11,6 +11,8 @@ function get_elements(){
 
       if( get_row_layout() == 'text' ):
         get_template_part( 'elements/text' );
+      elseif( get_row_layout() == 'quote' ):
+        get_template_part( 'elements/quote' );
       elseif( get_row_layout() == 'image' ):
         get_template_part( 'elements/image' );
       elseif( get_row_layout() == 'grid_primary' ):
