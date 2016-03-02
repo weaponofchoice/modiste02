@@ -1259,7 +1259,7 @@ button {
 button,
 .button {
   height: 40px;
-  padding: 0 15px;
+  padding: 0 30px;
   display: inline-block;
   color: black;
   background: none;
@@ -1273,7 +1273,6 @@ button,
   background-color: #c8c8c8; }
 
 .button-roll {
-  width: 120px;
   overflow: hidden;
   text-align: center; }
   .button-roll span {
@@ -1282,42 +1281,12 @@ button,
     -ms-transition: 0.2s;
     -o-transition: 0.2s;
     transition: 0.2s;
-    opacity: 1;
-    visibility: visible;
     top: -1px;
-    left: -5px;
-    right: 0;
-    position: absolute;
     height: 100%;
     display: block;
     line-height: 40px; }
-  .button-roll span.hover {
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -ms-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
-    opacity: 0;
-    visibility: hidden;
-    top: 100%; }
   .button-roll:hover span {
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -ms-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
-    opacity: 0;
-    visibility: hidden;
-    top: -100%; }
-  .button-roll:hover span.hover {
-    top: -1px;
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -ms-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
-    opacity: 1;
-    visibility: visible; }
+    top: -40px; }
 
 /*
  * Show and Hide class functions
@@ -1735,8 +1704,9 @@ body.single-product .product {
     height: 100%;
     padding: 60px 6.25rem;
     float: left; }
-body.single-product #product-editorial {
-  padding: 60px 6.25rem;
+body.single-product #product-editorial,
+body.single-product #product-materials {
+  padding: 30px 0;
   background-color: white; }
 
 body.single-product .product .summary .link-arrow img {
@@ -1760,5 +1730,8 @@ body.single-product .product .summary table.variations {
   margin-bottom: 15px; }
 body.single-product .product .summary .product-download {
   margin-left: 90px; }
+body.single-product .product .summary .button {
+  width: 150px;
+  float: left; }
 body.single-product .product .summary .single_add_to_cart_button {
   margin-right: 15px; }

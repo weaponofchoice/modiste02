@@ -6,7 +6,7 @@ button{
 button,
 .button{
   height: 40px;
-  padding: 0 15px;
+  padding: 0 30px;
   display: inline-block;
 
   color: $black;
@@ -23,18 +23,14 @@ button,
 }
 
 .button-roll{
-  width: 120px;
   overflow: hidden;
 
   text-align: center;
 
   span{
-    @include show( .2s );
+    @include transition( .2s );
 
     top: -1px;
-    left: -5px;
-    right: 0;
-    position: absolute;
 
     height: 100%;
     display: block;
@@ -42,20 +38,9 @@ button,
     line-height: 40px;
   }
 
-  span.hover{
-    @include hide( .2s );
-    top: 100%;
-  }
-
   &:hover{
     span{
-      @include hide( .2s );
-      top: -100%;
-    }
-
-    span.hover{
-      top: -1px;
-      @include show( .2s );
+      top: -40px;
     }
   }
 }

@@ -30,9 +30,9 @@ body.single-product{
     }
   }
 
-  #product-editorial{
-    padding: 60px $space-sides;
-
+  #product-editorial,
+  #product-materials{
+    padding: 30px 0;
     background-color: $white;
   }
 }
@@ -72,6 +72,11 @@ body.single-product .product .summary{
 
   .price small{
     @extend p;
+  }
+
+  .button{
+    width: 150px;
+    float: left;
   }
 
   .single_add_to_cart_button{
