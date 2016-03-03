@@ -17,9 +17,9 @@ $class_header = 'section-header is-pos-' . $o_h_pos;
 $class_body = 'section-body';
 
 if( $o_b_layout == 'masonry' ){
-  $class_grid = 's-grid-1 m-grid-2 l-grid-4 row isotope isotope-masonry';
+  $class_grid = 's-grid-1 m-grid-2';
 } else {
-  $class_grid = 's-grid-1 m-grid-2 l-grid-4 row';
+  $class_grid = 's-grid-1 m-grid-2';
 }
 
 // Build section

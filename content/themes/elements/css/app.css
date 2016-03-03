@@ -639,8 +639,8 @@ ul {
   max-width: none; }
 
 [class*='grid-'] {
-  width: calc( 100% + 3.75rem );
-  margin-left: -1.875rem; }
+  width: calc( 100% + 30px ) !important;
+  margin-left: -15px; }
 
 @font-face {
   font-family: founders;
@@ -657,7 +657,7 @@ time, a, button {
 
 h1 {
   font-size: 90px;
-  line-height: 0.9; }
+  line-height: 0.8; }
 
 h2 {
   font-size: 40px;
@@ -671,8 +671,7 @@ label, table.variations div.option-placeholder, body.single-product .product .su
 article p, article input,
 article label, article table.variations div.option-placeholder, table.variations article div.option-placeholder, article body.single-product .product .summary .price small, body.single-product .product .summary .price article small {
   margin-bottom: 1em;
-  font-size: 18px;
-  line-height: 1.6; }
+  font-size: 18px; }
 
 span,
 time {
@@ -1126,9 +1125,6 @@ section.grid ul.isotope-masonry li:nth-child(n) {
   section.grid ul.isotope-masonry li:nth-child(n) img {
     margin-bottom: 0; }
 
-@media screen and (min-width: 1400px) {
-  section.grid ul li {
-    width: 25%; } }
 section.parallax .section-body,
 .bcg {
   height: 0;
@@ -1160,27 +1156,21 @@ ul.posts li img {
   display: block;
   margin-top: -185px; }
 
-body.single-post article {
-  max-width: 900px;
-  margin: 0 auto; }
-  body.single-post article header {
-    margin-bottom: 50px; }
+body.single-post article section {
+  margin-bottom: 50px; }
+body.single-post article h1 {
+  max-width: 550px;
+  float: right;
+  text-align: right; }
+body.single-post article p, body.single-post article input,
+body.single-post article label, body.single-post article table.variations div.option-placeholder, table.variations body.single-post article div.option-placeholder, body.single-post article body.single-product .product .summary .price small, body.single-product .product .summary .price body.single-post article small {
+  text-indent: 35px; }
 
-body.single-post article header .post-categories {
-  float: left; }
-  body.single-post article header .post-categories a, body.single-post article header .post-categories button {
-    border: none; }
-  body.single-post article header .post-categories span {
-    color: #888888; }
-  body.single-post article header .post-categories span:last-child {
-    display: none; }
-body.single-post article header time {
-  float: right; }
-body.single-post article header h1 {
-  padding-top: 15px; }
-body.single-post article header h1,
-body.single-post article header h2 {
-  clear: both; }
+body.single-post article section.image {
+  width: calc(100% + 6.25rem);
+  margin-left: -6.25rem; }
+body.single-post article section.text .section-body {
+  margin-left: 0; }
 
 button {
   -moz-appearance: none;
