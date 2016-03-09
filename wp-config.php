@@ -1,4 +1,5 @@
 <?php
+define('WP_ALLOW_REPAIR', true);
 // ===================================================
 // Load database info and local development parameters
 // ===================================================
