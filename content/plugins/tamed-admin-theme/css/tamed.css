@@ -641,7 +641,7 @@ body.tamed-theme-clean #adminmenu .wp-has-submenu.tamed-menu-open ul {
 
 .tamed-wrap #tamed-custom-menu ul {
   float: left;
-  width: calc(50% - 30px);
+  width: calc(50% - 15px);
   margin-bottom: 30px; }
   .tamed-wrap #tamed-custom-menu ul.reset {
     opacity: .5;
@@ -661,7 +661,6 @@ body.tamed-theme-clean #adminmenu .wp-has-submenu.tamed-menu-open ul {
     -moz-justify-content: flex-end;
     justify-content: flex-end;
     position: relative;
-    max-width: 500px;
     height: 50px;
     padding: 0 15px;
     cursor: move;
@@ -686,9 +685,9 @@ body.tamed-theme-clean #adminmenu .wp-has-submenu.tamed-menu-open ul {
   .tamed-wrap #tamed-custom-menu ul li .menu-item-edit:hover {
     color: green;
     cursor: pointer; }
-.tamed-wrap #tamed-custom-menu ul:first-child {
+.tamed-wrap #tamed-custom-menu ul#tamed-menu-order {
   padding-right: 15px; }
-.tamed-wrap #tamed-custom-menu ul:nth-child(2) {
+.tamed-wrap #tamed-custom-menu ul#tamed-menu-removals {
   padding-left: 15px; }
 .tamed-wrap #tamed-custom-menu #tamed-menu-removals li {
   opacity: 0.5; }

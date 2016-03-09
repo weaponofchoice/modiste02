@@ -1,0 +1,382 @@
+@import "base/_colors";
+
+$color-1: #FFFFFF;
+$color-2: #E9EBEE;
+$color-3: #575757;
+$color-4: #4BD9AC;
+$color-4-dark: #46B08F;
+
+/*
+ * Body
+ */
+#wpcontent,
+#wpfooter{
+  margin-left: 200px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#wpfooter{
+  padding-left: 60px;
+}
+
+#wpbody{
+  #wpbody-content{
+    #screen-meta-links{
+      margin: 0 40px 0 0;
+    }
+
+    .wrap{
+      background-color: $color-1;
+
+      .nav-tab-wrapper{
+        background-color: $white;
+
+        .nav-tab{
+          &.nav-tab-active,
+          &:hover{
+            border-bottom: 3px solid $color-4;
+          }
+        }
+      }
+    }
+  }
+}
+
+#wpwrap{
+  background: $color-1;
+}
+
+/*
+ * Navigation
+ */
+// Menu-top
+#wpadminbar{
+  // left: 201px;
+  z-index: 9998 !important;
+
+  // width: calc(100% - 201px);
+  height: 45px;
+  // padding-left: 45px;
+  padding-right: 50px;
+  box-sizing: border-box;
+
+  background: $color-1;
+  border-bottom: thin solid $color-2;
+
+  *{
+    color: $color-3 !important;
+  }
+
+  li{
+    a.ab-item,
+    .ab-sub-wrapper{
+      color: $color-3 !important;
+      background-color: transparent !important;
+    }
+
+    .ab-sub-wrapper{
+      border: thin solid $color-2;
+      border-top: none;
+      box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+      background-color: $color-1 !important;
+    }
+
+    a:focus span{
+      color: $color-4 !important;
+    }
+
+    span,
+    a:before,
+    a span.ab-icon,
+    a span.ab-icon:before{
+      color: $color-3 !important;
+    }
+  }
+
+  li:hover{
+    > a,
+    > a span{
+      color: $color-4 !important;
+    }
+  }
+}
+
+// Menu-side
+#adminmenuback,
+#adminmenuwrap,
+#adminmenu{
+  // top: 0;
+
+  width: 200px;
+  // min-height: 100%;
+
+  background: $color-1;
+  border-right: thin solid $color-2;
+}
+
+#adminmenuwrap{
+  ul#adminmenu{
+    li{
+      // Icons
+      a{
+        .wp-menu-image{
+          &:before{
+            color: $color-3;
+          }
+        }
+
+        .wp-menu-name{
+          color: $color-3;
+        }
+      }
+
+      // Currently selected menu item
+      &.current,
+      &.wp-has-current-submenu{
+        a{
+          background: $color-2;
+
+          .wp-menu-name{
+
+          }
+        }
+      }
+
+      // Menu item with submenu
+      &.wp-has-submenu{
+        ul.wp-submenu{
+          width: 200px;
+
+          background: $color-2;
+
+          li{
+            a{
+              color: $color-3;
+
+              &.current{
+                font-weight: bold;
+              }
+
+              &:hover{
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+
+      &.wp-not-current-submenu ul.wp-submenu{
+        left: 200px;
+
+        margin-top: 1px;
+      }
+
+      // Different states
+      &:hover,
+      &:focus{
+        a{
+          color: $color-3;
+          background: $color-2;
+        }
+      }
+
+      // Admin menu group seperator
+      &.wp-menu-separator{
+        background: $color-2;
+      }
+    }
+
+    // Menu item hover-off mode
+    li.menu-top:hover,
+    li.opensub>a.menu-top,
+    li>a.menu-top:focus{
+      background-color: $color-2 !important;
+    }
+  }
+}
+
+// Collapse icon and name
+#collapse-menu span,
+#collapse-menu #collapse-button div:after{
+  opacity: 0.3;
+  color: $color-3;
+}
+
+#collapse-menu:hover span,
+#collapse-menu:hover #collapse-button div:after{
+  opacity: 1;
+  color: $color-4;
+}
+
+/*
+ * Buttons
+ */
+.button-primary{
+  background-color: $color-4 !important;
+
+  &:hover{
+    background-color: $color-4-dark !important;
+  }
+}
+
+button,
+.button,
+.acf-button{
+  &.button-primary,
+  &.blue{
+    background-color: $color-4 !important;
+
+    &:hover{
+      background-color: $color-4-dark !important;
+    }
+  }
+
+  &:active,
+  &:focus{
+    outline: none !important;
+  }
+}
+
+.wp-core-ui .button-primary.disabled,
+.wp-core-ui .button-primary-disabled,
+.wp-core-ui .button-primary:disabled,
+.wp-core-ui .button-primary[disabled]{
+  color: $color-1 !important;
+  background-color: $color-4 !important;
+}
+
+/*
+ * Messages
+ */
+.updated,
+.error,
+.settings-error{
+  background-color: $white !important;
+  border: thin solid $color-2;
+}
+
+/*
+ * Settings
+ */
+.tamed-wrap{
+  input[type="radio"]:checked + label{
+    box-shadow: 0 0 0 1px $color-2;
+  }
+
+  #tamed-custom-login{
+    > div{
+      border: none;
+      box-shadow: 0 0 0 1px $color-2;
+    }
+  }
+}
+
+.tamed-wrap{
+  .tamed-box{
+    border: thin solid $color-2;
+
+    .tamed-box-header{
+      border-bottom: thin solid $color-2;
+    }
+
+    .tamed-box-body{
+      .tamed-box-inside{
+        border: thin solid $color-2;
+      }
+    }
+  }
+}
+
+/*
+ * Editors
+ */
+// Input fields
+input[type=checkbox],
+input[type=color],
+input[type=date],
+input[type=datetime-local],
+input[type=datetime],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=radio],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+select,
+textarea{
+  &:focus{
+    border-color: $color-4 !important;
+  }
+}
+
+input[type="checkbox"]{
+  &:before{
+    color: $color-4 !important;
+  }
+}
+
+input[type=radio]:checked:before{
+  background-color: $color-4;
+}
+
+// Media view switches
+.view-switch a.current:before{
+  color: $color-4 !important;
+}
+
+// WYSIWYG: active tab
+.wp-editor-tabs{
+  .switch-tmce,
+  .switch-html{
+    &:hover,
+    &:active,
+    &:focus{
+      color: $white !important;
+      background-color: $color-4 !important;
+    }
+  }
+}
+.tmce-active{
+  .wp-editor-tabs{
+    .switch-tmce{
+      color: $white !important;
+      background-color: $color-4 !important;
+    }
+  }
+}
+
+.html-active{
+  .wp-editor-tabs{
+    .switch-html{
+      color: $white !important;
+      background-color: $color-4 !important;
+    }
+  }
+}
+
+#wp-content-editor-tools{
+  background-color: $color-1 !important;
+}
+
+/*
+ * Tables
+ */
+.post-com-count:hover span{
+  background-color: $color-4 !important;
+}
+
+/*
+ * Responsiveness
+ */
+@media only screen and (max-width: 960px){
+  #wpfooter{
+    padding-left: 20px;
+  }
+}

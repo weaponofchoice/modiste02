@@ -1,0 +1,108 @@
+.tamed-wrap #tamed-custom-menu{
+  ul{
+    float: left;
+
+    width: calc(50% - 15px);
+    margin-bottom: 30px;
+
+    &.reset{
+      opacity: .5;
+      pointer-events: none;
+    }
+
+    li{
+      @include flexbox;
+      @include align-items( center );
+      @include justify-content( flex-end );
+
+      position: relative;
+
+      height: 50px;
+      padding: 0 15px;
+
+      cursor: move;
+      background-color: $white;
+      border: thin solid $grey;
+      border-radius: 3px;
+    }
+
+    li p span{
+      display: none;
+    }
+
+    li input,
+    li .menu-item-save{
+      display: none;
+    }
+
+    li p,
+    li input{
+      margin-right: auto;
+    }
+
+    li .menu-item-save{
+      margin-bottom: 0;
+    }
+
+    li .menu-item-remove{
+      margin-left: 5px;
+    }
+
+    li .menu-item-remove:hover{
+      color: red;
+      cursor: pointer;
+    }
+
+    li .menu-item-edit:hover{
+      color: green;
+      cursor: pointer;
+    }
+  }
+
+  ul#tamed-menu-order{
+    padding-right: 15px;
+  }
+
+  ul#tamed-menu-removals{
+    padding-left: 15px;
+  }
+
+  #tamed-menu-removals{
+    li{
+      opacity: 0.5;
+
+      &:hover{
+        opacity: 1;
+      }
+
+      span:hover{
+        color: green;
+        cursor: pointer;
+      }
+
+      &.tamed-reAdd{
+        opacity: 1;
+        pointer-events: none;
+        cursor: default;
+
+        span:hover{
+          color: black;
+        }
+      }
+    }
+  }
+
+  #remove_menuOrder_button{
+    clear: both;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .tamed-wrap #tamed-custom-menu{
+    ul:nth-child(n){
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+}

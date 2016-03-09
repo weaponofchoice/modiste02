@@ -184,7 +184,7 @@ $option_theme = get_option('tamed_theme', 'default');
 
             foreach( $items as $item ){
               $item_name = preg_replace('/[0-9]+/', '', $item[0]);
-              (($item[4] != 'wp-menu-separator') ? $item_slug = $item[5] : 'separator');
+              ( (empty($item[0])) ? $item_slug = 'separator' : $item_slug = $item[5] );
               $item_value = get_option('tamed_menu_name_' . $item_slug, $item_name);
 
               if( $item[2] == 'options-general.php' ){

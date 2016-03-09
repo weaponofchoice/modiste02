@@ -1,0 +1,53 @@
+.tamed-wrap{
+  .tamed-themes{
+    #tamed_themes{
+      @include flexbox;
+
+      label{
+        @include flexbox-grow( 1 );
+      }
+    }
+
+    input[type="radio"]{
+      display: none;
+    }
+
+    label{
+      width: 20%;
+      display: block;
+      float: left;
+      margin-right: 5%;
+      padding: 25px;
+
+      text-align: center;
+      border-radius: 5px;
+      background-color: transparent;
+
+      &:last-child{
+        margin-right: 0;
+      }
+
+      img{
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .tamed-wrap{
+    .tamed-themes{
+      #tamed_themes{
+        @include flexbox-direction( column );
+        @include align-items( center );
+
+        label{
+          width: calc(100% - 50px);
+          max-width: 250px;
+          margin-right: 0;
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+}

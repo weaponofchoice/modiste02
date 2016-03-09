@@ -3,7 +3,7 @@
 Plugin Name: Tamed Wordpress Admin Theme
 Plugin URI: http://codecanyon.net/item/tamed-wordpress-admin-theme/13800689
 Description: A powerful WordPress Admin Theme that transforms your WordPress backend into a more calm, clean and overall better place to work, personalised for your client or project.
-Version: 2.5.2
+Version: 2.4.1
 Author: Luc Awater
 Author URI: http://lucawater.nl
 Copyright: Luc Awater
@@ -226,7 +226,7 @@ if( class_exists('tamed') ) {
     foreach( $menu as $key => $value ){
       foreach( $items as $item ){
         $item_name = preg_replace('/[0-9]+/', '', $item[0]);
-        (($item[4] != 'wp-menu-separator') ? $item_slug = $item[5] : 'separator');
+        ( (empty($item[0])) ? $item_slug = 'separator' : $item_slug = $item[5] );
         $item_value = get_option('tamed_menu_name_' . $item_slug);
 
         if( $item_slug && $item_value && $item[2] == $menu[$key][2] ){

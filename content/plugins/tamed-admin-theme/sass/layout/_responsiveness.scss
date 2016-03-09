@@ -1,0 +1,82 @@
+@media only screen and (max-width: 960px){
+  // Remove extra padding on content wrap
+  #wpcontent{
+    padding-left: 0;
+  }
+
+  // Reposition submenus for collapsed menu
+  #adminmenuwrap ul#adminmenu li.wp-not-current-submenu ul.wp-submenu{
+    left: 36px;
+  }
+
+  // Submenu for current menu item
+  #adminmenuwrap ul#adminmenu li.wp-has-current-submenu ul.wp-submenu{
+    margin-top: 0 !important;
+  }
+
+    // Submenu header(special for collapsed menu)
+  #adminmenu .wp-submenu .wp-submenu-head{
+    margin: 5px 2px;
+
+    font-weight: bold;
+    background-color: transparent !important;
+  }
+
+  // Center menu icons
+  .auto-fold #adminmenu div.wp-menu-image{
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 782px){
+  // Remove content's left padding
+  .auto-fold #wpcontent{
+    padding-left: 0;
+  }
+
+  // Content wrap
+  #wpcontent #wpbody #wpbody-content .wrap{
+    margin: 0;
+    padding: 40px 20px;
+  }
+
+  // Submenu
+  #adminmenuwrap ul#adminmenu li.wp-has-submenu ul.wp-submenu{
+    left: 0 !important;
+
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
+
+  // Menu wrap
+  .auto-fold #adminmenu, .auto-fold #adminmenuback, .auto-fold #adminmenuwrap{
+    z-index: 9990;
+  }
+
+  // Top menu icons
+  #wpadminbar div.quicklinks ul#wp-admin-bar-root-default li a:before, #wpadminbar div.quicklinks ul#wp-admin-bar-root-default li a span.ab-icon, #wpadminbar div.quicklinks ul#wp-admin-bar-top-secondary li a:before, #wpadminbar div.quicklinks ul#wp-admin-bar-top-secondary li a span.ab-icon{
+    font: 400 32px/1 dashicons !important;
+  }
+
+  // All icons the same? no let's make them different
+  // Here's the home icon
+  #wpadminbar #wp-admin-bar-edit>.ab-item:before, #wpadminbar #wp-admin-bar-my-account>.ab-item:before, #wpadminbar #wp-admin-bar-my-sites>.ab-item:before, #wpadminbar #wp-admin-bar-site-name>.ab-item:before{
+    top: 7px !important;
+  }
+
+  // And the updates icon
+  #wpadminbar #wp-admin-bar-updates .ab-icon:before{
+    top: 7px;
+  }
+
+  // Post search box
+  p.search-box{
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  html.wp-toolbar{
+    padding-top: 0 !important;
+  }
+}

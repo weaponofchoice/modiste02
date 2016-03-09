@@ -1,0 +1,25 @@
+#submitpost{
+  #save-action{
+    .button{
+      width: calc(100% - 50px);
+      max-width: 300px;
+      margin-bottom: 10px;
+    }
+  }
+
+  #preview-action{
+    clear: both;
+    
+    .button{
+      width: calc(100% - 50px);
+      max-width: 300px;
+      float: left;
+    }
+  }
+}
+
+#post-body{
+  #edit-slug-box{
+    margin: 10px 0 !important;
+  }
+}
