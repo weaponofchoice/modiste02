@@ -49,9 +49,7 @@ if( ! class_exists('tamed') ) {
       // Do nothing
     }
 
-    /*
-     * Add a settings link on the plugins page
-     */
+    // Add a settings link on the plugins page
     function plugin_settings_link($links) {
       $settings_link = '<a href="options-general.php?page=tamed-admin-theme">Settings</a>';
       array_unshift($links, $settings_link);
@@ -63,24 +61,18 @@ if( ! class_exists('tamed') ) {
 
 if( class_exists('tamed') ) {
 
-  /*
-   * Installation and uninstallation hooks
-   */
+  // Installation and uninstallation hooks
   register_activation_hook( __FILE__, array('tamed', 'activate') );
   register_deactivation_hook( __FILE__, array('tamed', 'deactivate') );
 
-  /*
-   * Add plugin base stylesheets
-   */
+  // Add plugin base stylesheets
   function tamed_style() {
     wp_enqueue_style('tamed-admin-theme', plugins_url('css/tamed.css', __FILE__));
   }
   add_action('admin_enqueue_scripts', 'tamed_style');
   add_action('login_enqueue_scripts', 'tamed_style');
 
-  /*
-   * Add plugin chosen theme stylesheet
-   */
+  // Add plugin chosen theme stylesheet
   function update_style() {
     $option_theme = get_option('tamed_theme', 'default');
 
@@ -93,9 +85,7 @@ if( class_exists('tamed') ) {
   add_action('admin_enqueue_scripts', 'update_style');
   add_action('login_enqueue_scripts', 'update_style');
 
-  /*
-   * Add plugin scripts
-   */
+  // Add plugin scripts
   function tamed_scripts() {
     wp_register_script('uploader', plugins_url('js/uploader.js', __FILE__));
     wp_enqueue_script('uploader');
@@ -104,22 +94,16 @@ if( class_exists('tamed') ) {
     wp_enqueue_script('sortable', 'http://code.jquery.com/ui/1.11.4/jquery-ui.js');
     wp_enqueue_script('menu-order', plugins_url('js/menu-order.js', __FILE__));
     wp_enqueue_script('menu-removals', plugins_url('js/menu-removals.js', __FILE__));
-    wp_enqueue_script('menu-collapse', plugins_url('js/menu-collapse.js', __FILE__));
-    wp_enqueue_script('menu-names', plugins_url('js/menu-names.js', __FILE__));
   }
   add_action('admin_enqueue_scripts', 'tamed_scripts');
 
-  /*
-   * Change link value for login logo
-   */
+  // Change link value for login logo
   function my_login_logo_url() {
     return home_url();
   }
   add_filter( 'login_headerurl', 'my_login_logo_url' );
 
-  /*
-   * Add custom logo to login page
-   */
+  // Add custom logo to login page
   function my_login_logo() { ?>
     <style type="text/css">
       body.login{
@@ -141,9 +125,7 @@ if( class_exists('tamed') ) {
   <?php }
   add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
-  /*
-   * Add custom style
-   */
+  // Add custom style
   if( get_option('tamed_color_1') || get_option('tamed_color_2') || get_option('tamed_color_3') || get_option('tamed_color_4') ){
     function tamed_style_custom() {
       wp_enqueue_style('custom-style', plugins_url('css/tamed-custom.css', __FILE__));
@@ -181,9 +163,7 @@ if( class_exists('tamed') ) {
   add_action('admin_enqueue_scripts', 'color_picker');
   add_action('login_enqueue_scripts', 'color_picker');
 
-  /*
-   * Add custom footer content
-   */
+  // Add custom footer content
   function tamed_footer_content() {
     $footer_content = get_option('tamed_footer_content', '<p>Powered by WordPress and Tamed Admin Theme</p>');
 
@@ -196,9 +176,7 @@ if( class_exists('tamed') ) {
   }
   add_filter('admin_footer_text', 'tamed_footer_content');
 
-  /*
-   * Custom menu order function
-   */
+  // Custom menu order function
   $items = json_decode(get_option('tamed_menu_order'));
   if( !empty($items) ){
     function tamed_menu_order( $menu_order ) {
@@ -215,31 +193,7 @@ if( class_exists('tamed') ) {
     add_filter( 'menu_order', 'tamed_menu_order' );
   }
 
-  /*
-   * Edit top-level menu titles
-   */
-  function edit_menu_titles() {
-    global $menu;
-
-    $items = $GLOBALS['menu'];
-
-    foreach( $menu as $key => $value ){
-      foreach( $items as $item ){
-        $item_name = preg_replace('/[0-9]+/', '', $item[0]);
-        ( (empty($item[0])) ? $item_slug = 'separator' : $item_slug = $item[5] );
-        $item_value = get_option('tamed_menu_name_' . $item_slug);
-
-        if( $item_slug && $item_value && $item[2] == $menu[$key][2] ){
-          $menu[$key][0] = get_option('tamed_menu_name_' . $item_slug);
-        }
-      }
-    }
-  }
-  add_action( 'admin_menu', 'edit_menu_titles' );
-
-  /*
-   * Remove menu items
-   */
+  // Remove menu items
   $remove_items = json_decode(get_option('tamed_menu_removals'));
   if( !empty($remove_items) ){
     function remove_menu_items() {
@@ -253,16 +207,6 @@ if( class_exists('tamed') ) {
       return $items_removals;
     }
     add_action( 'admin_menu', 'remove_menu_items' );
-  }
-
-  /*
-   * Add custom classes to body_class
-   */
-  add_filter( 'admin_body_class', 'custom_body_class' );
-  function custom_body_class( $classes ) {
-    $option_theme = get_option('tamed_theme', 'default');
-    $custom_class = 'tamed-theme-' . $option_theme;
-    return $custom_class;
   }
 
   // Instantiate the plugin class

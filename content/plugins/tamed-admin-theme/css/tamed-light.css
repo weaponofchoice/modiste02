@@ -8,10 +8,6 @@
   padding-right: 20px;
 }
 
-#wpfooter {
-  padding-left: 60px;
-}
-
 #wpbody #wpbody-content #screen-meta-links {
   margin: 0 40px 0 0;
 }
@@ -160,14 +156,6 @@ button:active, button:focus,
   outline: none !important;
 }
 
-.wp-core-ui .button-primary.disabled,
-.wp-core-ui .button-primary-disabled,
-.wp-core-ui .button-primary:disabled,
-.wp-core-ui .button-primary[disabled] {
-  color: #FFFFFF !important;
-  background-color: #4BD9AC !important;
-}
-
 /*
  * Messages
  */
@@ -228,7 +216,7 @@ input[type="checkbox"]:before {
 }
 
 input[type=radio]:checked:before {
-  background-color: #4BD9AC;
+  color: #4BD9AC;
 }
 
 .view-switch a.current:before {
@@ -262,13 +250,4 @@ input[type=radio]:checked:before {
  */
 .post-com-count:hover span {
   background-color: #4BD9AC !important;
-}
-
-/*
- * Responsiveness
- */
-@media only screen and (max-width: 960px) {
-  #wpfooter {
-    padding-left: 20px;
-  }
 }
