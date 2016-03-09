@@ -692,6 +692,11 @@ a, button {
   a:hover, button:hover, a:focus, button:focus {
     color: black; }
 
+p a, input a,
+label a, table.variations div.option-placeholder a, body.single-product .product .summary .price small a, p button, input button,
+label button, table.variations div.option-placeholder button, body.single-product .product .summary .price small button {
+  text-decoration: underline; }
+
 a.has-content, button.has-content {
   color: black;
   text-decoration: none; }
@@ -1074,6 +1079,37 @@ section.image .section-body figure {
   display: inline-block;
   text-align: left; }
 
+section.module .section-body img,
+section.module .section-body div {
+  width: 50%;
+  float: left; }
+section.module .section-body img {
+  padding-right: 45px; }
+section.module .section-body div {
+  padding-left: 45px; }
+  section.module .section-body div p, section.module .section-body div input,
+  section.module .section-body div label, section.module .section-body div table.variations div.option-placeholder, table.variations section.module .section-body div div.option-placeholder, section.module .section-body div body.single-product .product .summary .price small, body.single-product .product .summary .price section.module .section-body div small {
+    margin-bottom: 1em; }
+  section.module .section-body div p:first-child, section.module .section-body div input:first-child,
+  section.module .section-body div label:first-child, section.module .section-body div table.variations div.option-placeholder:first-child, table.variations section.module .section-body div div.option-placeholder:first-child, section.module .section-body div body.single-product .product .summary .price small:first-child, body.single-product .product .summary .price section.module .section-body div small:first-child {
+    text-indent: 30px; }
+section.module.orientated-right .section-body img {
+  float: right;
+  padding-right: 0;
+  padding-left: 45px; }
+section.module.orientated-right .section-body div {
+  padding-left: 0;
+  padding-right: 45px; }
+
+@media only screen and (max-width: 1000px) {
+  section.module.orientated-right .section-body img,
+  section.module.orientated-right .section-body div, section.module.orientated-left .section-body img,
+  section.module.orientated-left .section-body div {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0; }
+  section.module.orientated-right .section-body img, section.module.orientated-left .section-body img {
+    margin-bottom: 45px; } }
 section.grid ul {
   width: 100%; }
   section.grid ul li {
@@ -1124,22 +1160,6 @@ section.grid ul.isotope-masonry li:nth-child(n) {
   margin-bottom: 3.75rem; }
   section.grid ul.isotope-masonry li:nth-child(n) img {
     margin-bottom: 0; }
-
-section.parallax .section-body,
-.bcg {
-  height: 0;
-  padding-bottom: 50% !important; }
-
-.section-parallax {
-  width: 100%;
-  z-index: 1000; }
-
-.bcg {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  width: 100%; }
 
 ul.posts li div {
   padding: 15px 30px;

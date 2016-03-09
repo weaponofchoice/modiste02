@@ -15,10 +15,10 @@ function get_elements(){
         get_template_part( 'elements/quote' );
       elseif( get_row_layout() == 'image' ):
         get_template_part( 'elements/image' );
+      elseif( get_row_layout() == 'module' ):
+        get_template_part( 'elements/module' );
       elseif( get_row_layout() == 'grid_primary' ):
         get_template_part( 'elements/gridPri' );
-      elseif( get_row_layout() == 'grid_secondary' ):
-        get_template_part( 'elements/gridSec' );
       elseif( get_row_layout() == 'slider' ):
         get_template_part( 'elements/slider' );
       endif;

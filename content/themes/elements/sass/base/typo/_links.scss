@@ -15,6 +15,10 @@ a{
   }
 }
 
+p a{
+  text-decoration: underline;
+}
+
 // Link tags with headings, divs or images in them get has-content class to serve as click container
 a.has-content{
   color: $black;

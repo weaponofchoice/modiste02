@@ -1,0 +1,60 @@
+section.module{
+  .section-body{
+    img,
+    div{
+      width: 50%;
+      float: left;
+    }
+
+    img{
+      padding-right: 45px;
+    }
+
+    div{
+      padding-left: 45px;
+
+      p{
+        margin-bottom: 1em;
+      }
+
+      p:first-child{
+        text-indent: 30px;
+      }
+    }
+  }
+
+  &.orientated-right{
+    .section-body{
+      img{
+        float: right;
+        padding-right: 0;
+        padding-left: 45px;
+      }
+
+      div{
+        padding-left: 0;
+        padding-right: 45px;
+      }
+    }
+  }
+}
+
+@media #{$medium-down}{
+  section.module{
+    &.orientated-right,
+    &.orientated-left{
+      .section-body{
+        img,
+        div{
+          width: 100%;
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        img{
+          margin-bottom: 45px;
+        }
+      }
+    }
+  }
+}
