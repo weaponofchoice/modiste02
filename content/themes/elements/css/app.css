@@ -1200,20 +1200,33 @@ section.grid ul.isotope-masonry li:nth-child(n) {
   section.grid ul.isotope-masonry li:nth-child(n) img {
     margin-bottom: 0; }
 
-ul.posts li div {
-  padding: 15px 30px;
-  background-color: #f0f0f0; }
-  ul.posts li div .post-category {
-    margin-bottom: 10px;
-    display: inline-block;
-    text-decoration: none; }
-  ul.posts li div .post-title {
+ul.posts li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 100px; }
+  ul.posts li div {
+    max-width: 700px; }
+    ul.posts li div a, ul.posts li div button {
+      height: auto;
+      overflow: hidden;
+      display: block;
+      margin-bottom: 30px; }
+  ul.posts li img {
     display: block; }
-ul.posts li div:first-child {
-  padding-bottom: 200px; }
-ul.posts li img {
-  display: block;
-  margin-top: -185px; }
+ul.posts li:nth-child(even) {
+  -webkit-align-items: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  text-align: right; }
 
 body.single-post article section {
   margin-bottom: 50px; }
@@ -1651,7 +1664,7 @@ body.woocommerce.archive .products {
   padding-top: 0; }
 
 body.woocommerce.archive .product div {
-  bottom: 80px;
+  bottom: 180px;
   left: 0;
   right: 0;
   position: absolute;

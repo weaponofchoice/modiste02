@@ -11,7 +11,7 @@
 <!--[if gt IE 9]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
   <?php if( is_shop() ): ?>
-    <title>Modiste Furniture – Shop</title>
+    <title>Modiste Furniture – Furniture</title>
   <?php elseif( is_home() || is_archive() ): ?>
     <title>Modiste Furniture</title>
   <?php else: ?>
