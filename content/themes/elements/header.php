@@ -59,7 +59,14 @@
         wp_nav_menu( $nav );
         ?>
 
-        <li <?php if( is_cart() ) echo 'class="current-menu-item"'; ?>><a href="/cart"><?php echo 'Cart (' . WC()->cart->get_cart_contents_count() . ')'; ?></a></li>
+        <?php
+        global $woocommerce;
+        $cart_url = $woocommerce->cart->get_cart_url();
+        $cart_count = WC()->cart->get_cart_contents_count();
+        ( (is_cart()) ? $cart_class = 'current-menu-item' : $cart_class = '' );
+
+        echo '<li class="' . $cart_class . '"><a href="' . $cart_url . '">Cart (' . $cart_count . ')</a></li>';
+        ?>
       </ul>
     </nav>
   </header>
