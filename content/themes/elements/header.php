@@ -48,15 +48,19 @@
     </a>
 
     <nav>
-      <?php
-      $nav = array(
-        'theme_location'  => 'menu_primary',
-        'container'       => '',
-        'items_wrap'      => '<ul>%3$s</ul>'
-      );
+      <ul>
+        <?php
+        $nav = array(
+          'theme_location'  => 'menu_primary',
+          'container'       => '',
+          'items_wrap'      => '%3$s'
+        );
 
-      wp_nav_menu( $nav );
-      ?>
+        wp_nav_menu( $nav );
+        ?>
+
+        <li <?php if( is_cart() ) echo 'class="current-menu-item"'; ?>><a href="/cart"><?php echo 'Cart (' . WC()->cart->get_cart_contents_count() . ')'; ?></a></li>
+      </ul>
     </nav>
   </header>
 
