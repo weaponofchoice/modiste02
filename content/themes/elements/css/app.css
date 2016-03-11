@@ -1687,11 +1687,26 @@ body.single-product .product {
   padding-top: 90px;
   background-color: #f0f0f0; }
   body.single-product .product .images {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     width: 60%;
     height: 100%;
-    float: right; }
+    float: right;
+    overflow: hidden; }
     body.single-product .product .images img {
       width: auto;
+      max-width: none;
       height: 100%;
       display: block;
       margin: auto; }

@@ -8,12 +8,18 @@ body.single-product{
     background-color: $grey-light;
 
     .images{
+      @include flexbox;
+      @include justify-content( center );
+      @include align-items( center );
+
       width: 60%;
       height: 100%;
       float: right;
+      overflow: hidden;
 
       img{
         width: auto;
+        max-width: none;
         height: 100%;
         display: block;
         margin: auto;
