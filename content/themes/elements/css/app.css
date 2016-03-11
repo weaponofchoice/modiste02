@@ -792,6 +792,14 @@ body > header {
     width: 150px; }
 
 body > footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
   z-index: 1100;
   height: auto;
   overflow: hidden;
@@ -801,8 +809,17 @@ body > footer {
   body > footer div {
     width: calc(100% / 3);
     float: left; }
+    body > footer div p, body > footer div input,
+    body > footer div label, body > footer div table.variations div.option-placeholder, table.variations body > footer div div.option-placeholder, body > footer div body.single-product .product .summary .price small, body.single-product .product .summary .price body > footer div small {
+      margin-bottom: 1em; }
+      body > footer div p:last-child, body > footer div input:last-child,
+      body > footer div label:last-child, body > footer div table.variations div.option-placeholder:last-child, table.variations body > footer div div.option-placeholder:last-child, body > footer div body.single-product .product .summary .price small:last-child, body.single-product .product .summary .price body > footer div small:last-child {
+        margin-bottom: 0; }
   body > footer div:nth-child(2) {
     text-align: center; }
+    body > footer div:nth-child(2) p, body > footer div:nth-child(2) input,
+    body > footer div:nth-child(2) label, body > footer div:nth-child(2) table.variations div.option-placeholder, table.variations body > footer div:nth-child(2) div.option-placeholder, body > footer div:nth-child(2) body.single-product .product .summary .price small, body.single-product .product .summary .price body > footer div:nth-child(2) small {
+      margin-bottom: 0; }
   body > footer div:last-child {
     text-align: right; }
   body > footer ul {

@@ -1,4 +1,7 @@
 body > footer{
+  @include flexbox;
+  @include align-items( flex-end );
+  
   z-index: $zIndex-footer;
 
   height: auto;
@@ -12,10 +15,22 @@ body > footer{
   div{
     width: calc(100% / 3);
     float: left;
+
+    p{
+      margin-bottom: 1em;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
   }
 
   div:nth-child(2){
     text-align: center;
+
+    p{
+      margin-bottom: 0;
+    }
   }
 
   div:last-child{

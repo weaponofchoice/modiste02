@@ -2,29 +2,32 @@
 
   <!-- Footer -->
   <footer>
+    <?php
+    $footer_left = get_field( 'footer_left', 'option' );
+    $footer_right = get_field( 'footer_right', 'option' );
+    $socials = get_field( 'social', 'option' );
+    ?>
+
     <div>
-      <a href="mailto:info@modistefurniture.com">info@modistefurniture.com</a>
-      <p>+31 6 5353 9191</p>
-      <br>
-      <a href="<?php echo get_permalink( 'terms' ); ?>">Terms & Conditions</a>
+      <?php echo wpautop( $footer_left ); ?>
     </div>
 
     <div>
       <p>Want to receive updates?</p>
       <a>Join our Mailinglist</a>
       <ul>
-        <li><a><img src="<?php echo get_template_directory_uri() . '/img/icon-instagram.svg'; ?>"></a></li>
-        <li><a><img src="<?php echo get_template_directory_uri() . '/img/icon-facebook.svg'; ?>"></a></li>
-        <li><a><img src="<?php echo get_template_directory_uri() . '/img/icon-tumblr.svg'; ?>"></a></li>
-        <li><a><img src="<?php echo get_template_directory_uri() . '/img/icon-linkedin.svg'; ?>"></a></li>
+        <?php foreach( $socials as $social ): ?>
+          <li>
+            <a href="<?php echo $social['social_link']; ?>" target="_blank">
+              <img src="<?php echo get_template_directory_uri() . '/img/icon-' . $social['social_platform'] . '.svg'; ?>">
+            </a>
+          </li>
+        <?php endforeach; ?>
       </ul>
     </div>
 
     <div>
-      <p>Hoornbrekersstraat 4</p>
-      <p>3011 CL Rotterdam</p>
-      <br>
-      <a href="<?php echo get_permalink( 'shipping' ); ?>">Shipping, Customs & Returns</a>
+      <?php echo wpautop( $footer_right ); ?>
     </div>
   </footer>
 

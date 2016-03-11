@@ -18,6 +18,18 @@ require_once('includes/functions-template/section-slider.php');
 require_once('woocommerce/woo-functions.php');
 require_once('includes/functions-woocommerce/cart-update.php');
 
+// Add ACF options page for footer info
+if( function_exists('acf_add_options_page') ) {
+  $option_page = acf_add_options_page(array(
+    'page_title' 	=> 'Footer',
+    'menu_title' 	=> 'Footer',
+    'menu_slug' 	=> 'footer',
+    'capability' 	=> 'edit_posts',
+    'redirect' 	=> false
+  ));
+}
+
+
 // Add support for WooCommerce
 add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
