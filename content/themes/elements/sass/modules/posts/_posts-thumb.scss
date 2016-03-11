@@ -3,6 +3,7 @@ ul.posts{
     @include flexbox;
     @include flex-direction( column );
 
+    width: auto;
     margin-bottom: 100px;
 
     div{
@@ -24,6 +25,7 @@ ul.posts{
   li:nth-child(even){
     @include align-items( flex-end );
 
+    float: right;
     text-align: right;
   }
 }
