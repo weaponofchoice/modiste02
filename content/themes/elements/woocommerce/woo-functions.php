@@ -22,6 +22,15 @@ remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
  * @hooked woocommerce_catalog_ordering - 30
  */
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
+
+/**
+ * woocommerce_after_shop_loop_item hook.
+ *
+ * @hooked woocommerce_template_loop_product_link_close - 5
+ * @hooked woocommerce_template_loop_add_to_cart - 10
+ */
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
 
 /**
 * woocommerce_single_product_summary hook

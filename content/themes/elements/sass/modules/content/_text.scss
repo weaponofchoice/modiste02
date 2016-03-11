@@ -1,11 +1,9 @@
 section.text{
   .section-body{
-    max-width: 700px;
-    margin: auto;
-
     h2,
     p,
     a{
+      max-width: 700px;
       margin-bottom: 1em;
     }
   }

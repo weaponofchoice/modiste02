@@ -30,6 +30,6 @@ ul{
 }
 
 [class*='grid-']{
-  width: calc( 100% + #{$block-grid-default-spacing} );
-  margin-left: -($block-grid-default-spacing / 2);
+  width: calc( 100% + 30px ) !important;
+  margin-left: -15px;
 }

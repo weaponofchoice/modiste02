@@ -38,14 +38,16 @@
   "modules/content/_section",
   "modules/content/_hero",
   "modules/content/_text",
+  "modules/content/_quote",
   "modules/content/_image",
+  "modules/content/_module",
   "modules/content/_grid",
-  "modules/content/_parallax",
 
   "modules/posts/_posts-thumb",
   "modules/posts/_single",
 
-  "modules/form/_button";
+  "modules/form/_button",
+  "modules/form/_form";
 
 // STATE
 @import
@@ -60,4 +62,10 @@
 // STORE
 @import
   "store/_radio",
-  "store/_product";
+
+  "store/_archive",
+  "store/_archive-product",
+
+  "store/_product",
+  "store/_product-summary",
+  "store/_product-materials";

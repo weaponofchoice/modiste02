@@ -11,13 +11,9 @@ $thumb = get_the_post_thumbnail( $post->ID, 'medium' );
 
 <li>
   <div>
-    <a href="<?php echo $category_link; ?>" class="post-category"><?php echo $category[0]->cat_name; ?></a>
-    <a class="post-title" href="<?php echo $permalink; ?>"><h3><?php echo $title; ?></h3></a>
-  </div>
-
-  <?php echo $thumb; ?>
-
-  <div>
     <p><?php echo $date; ?></p>
+    <a class="post-title" href="<?php echo $permalink; ?>"><h1><?php echo $title; ?></h1></a>
   </div>
+
+  <a href="<?php echo $permalink; ?>"><?php echo $thumb; ?></a>
 </li>

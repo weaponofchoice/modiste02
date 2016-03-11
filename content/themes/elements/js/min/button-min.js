@@ -1,0 +1,1 @@
+!function($){var n=$(".button");for(i=0;i<n.length;i++){var t=$(n[i]).text();$(n[i]).html("<span>"+t+"</span><span>"+t+"</span>")}}(jQuery);

@@ -1,0 +1,40 @@
+#product-materials{
+  text-align: center;
+
+  ul{
+    margin-bottom: 60px;
+
+    li{
+      @include flexbox;
+      @include flex-direction( row );
+      @include align-items( center );
+
+      img{
+        max-width: 150px;
+      }
+
+      p{
+        float: left;
+        padding-left: 30px;
+
+        text-align: left;
+      }
+    }
+
+    li:fist-child{
+      @include justify-content( flex-start );
+    }
+
+    li:nth-child(2){
+      @include justify-content( center );
+    }
+
+    li:last-child{
+      @include justify-content( flex-end );
+    }
+  }
+
+  > p{
+    margin-bottom: 60px;
+  }
+}

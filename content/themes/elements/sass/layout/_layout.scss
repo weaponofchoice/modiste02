@@ -7,7 +7,9 @@ main{
   padding-top: $header-height;
 }
 
-main > *{
+main > *,
+#product-editorial > *,
+#product-materials{
   padding: ($space-section / 2) $space-sides;
 
   &:first-child{
@@ -25,7 +27,9 @@ main > *{
     padding: 0 $space-sides-small;
   }
 
-  main > *{
+  main > *,
+  #product-editorial > *,
+  #product-materials{
     padding: $space-section-small $space-sides-small;
 
     &:first-child{

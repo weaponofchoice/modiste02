@@ -1,29 +1,31 @@
 ul.posts{
   li{
+    @include flexbox;
+    @include flex-direction( column );
+
+    width: auto;
+    margin-bottom: 100px;
+
     div{
-      padding: 15px 30px;
+      max-width: 700px;
 
-      background-color: $grey-light;
-
-      .post-category{
-        margin-bottom: 10px;
-        display: inline-block;
-
-        text-decoration: none;
-      }
-
-      .post-title{
+      a{
+        height: auto;
+        overflow: hidden;
         display: block;
+        margin-bottom: 30px;
       }
-    }
-
-    div:first-child{
-      padding-bottom: 200px;
     }
 
     img{
       display: block;
-      margin-top: -185px;
     }
+  }
+
+  li:nth-child(even){
+    @include align-items( flex-end );
+
+    float: right;
+    text-align: right;
   }
 }

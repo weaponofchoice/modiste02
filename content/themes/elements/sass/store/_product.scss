@@ -1,52 +1,44 @@
-body.single-product .product{
-  height: 100vh;
-  margin-top: -90px;
-  padding-top: 150px;
-  padding-bottom: 60px;
+body.single-product{
+  .product{
+    height: 100vh;
+    margin-top: -90px;
+    padding: 0;
+    padding-top: 90px;
 
-  .images{
-    width: 60%;
-    float: right;
-  }
+    background-color: $grey-light;
 
-  .summary{
-    @include flexbox;
-    @include flex-direction( column );
-    @include justify-content( space-between );
+    .images{
+      @include flexbox;
+      @include justify-content( center );
+      @include align-items( center );
 
-    width: 40%;
-    height: 100%;
-    float: left;
-  }
-}
+      width: 60%;
+      height: 100%;
+      float: right;
+      overflow: hidden;
 
-body.single-product .product .summary{
-  .link-arrow{
-    img{
-      @include transition( .2s );
-
-      width: 15px;
-      margin-left: 10px;
-    }
-
-    &:hover,
-    &:active{
       img{
-        margin-left: 5px;
+        width: auto;
+        max-width: none;
+        height: 100%;
+        display: block;
+        margin: auto;
       }
     }
+
+    .summary{
+      @include flexbox;
+      @include flex-direction( column );
+      @include justify-content( space-between );
+
+      width: 40%;
+      height: 100%;
+      padding: 60px #{$space-sides};
+      float: left;
+    }
   }
 
-  p[itemprop="name"],
-  div[itemprop="description"],
-  table.variations,
-  .product-download,
-  div[itemprop="offers"]{
-    display: block;
-    margin-bottom: 25px;
-  }
-
-  .single_add_to_cart_button{
-    margin-right: 15px;
+  #product-editorial{
+    padding: 0;
   }
 }

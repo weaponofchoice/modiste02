@@ -1,8 +1,53 @@
 body > footer{
+  @include flexbox;
+  @include align-items( flex-end );
+  
   z-index: $zIndex-footer;
 
-  padding-top: 20px;
-  padding-bottom: 20px;
+  height: auto;
+  overflow: hidden;
 
-  background: $grey-light;
+  padding-top: 150px;
+  padding-bottom: 30px;
+
+  background: $white;
+
+  div{
+    width: calc(100% / 3);
+    float: left;
+
+    p{
+      margin-bottom: 1em;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  div:nth-child(2){
+    text-align: center;
+
+    p{
+      margin-bottom: 0;
+    }
+  }
+
+  div:last-child{
+    text-align: right;
+  }
+
+  ul{
+    margin-top: 1em;
+
+    li{
+      width: 30px;
+      margin-right: 10px;
+      display: inline-block;
+    }
+
+    li:last-child{
+      margin-right: 0;
+    }
+  }
 }

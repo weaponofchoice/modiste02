@@ -1,41 +1,18 @@
 body.single-post{
   article{
-    max-width: 900px;
-    margin: 0 auto;
-
-    header{
+    section{
       margin-bottom: 50px;
     }
   }
 }
 
-body.single-post article header{
-  .post-categories{
-    float: left;
-
-    a{
-      border: none;
-    }
-
-    span{
-      color: $grey-text;
-    }
-
-    span:last-child{
-      display: none;
-    }
+body.single-post article{
+  section.image{
+    width: calc(100% + #{$space-sides});
+    margin-left: -#{$space-sides};
   }
 
-  time{
-    float: right;
-  }
-
-  h1{
-    padding-top: 15px;
-  }
-
-  h1,
-  h2{
-    clear: both;
+  section.text .section-body{
+    margin-left: 0;
   }
 }

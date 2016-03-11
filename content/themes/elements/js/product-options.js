@@ -25,7 +25,6 @@ $(document).ready( function() {
   var placeholder = $('.option-placeholder');
 
   placeholder.on( 'click', function() {
-    console.log("WRTWerg");
     var parent = $(this).parents('td.value');
     parent.find('.option-placeholder').hide();
     parent.find('div:not(.option-placeholder)').show();

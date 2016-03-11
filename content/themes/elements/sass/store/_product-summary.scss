@@ -1,0 +1,46 @@
+body.single-product .product .summary{  
+  .link-arrow{
+    img{
+      @include transition( .2s );
+
+      width: 15px;
+      margin-left: 10px;
+    }
+
+    &:hover,
+    &:active{
+      img{
+        margin-left: 5px;
+      }
+    }
+  }
+
+  p[itemprop="name"],
+  div[itemprop="description"],
+  .product-download,
+  .product-shipping{
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+
+  table.variations{
+    margin-bottom: 15px;
+  }
+
+  .product-download{
+    margin-left: 90px;
+  }
+
+  .price small{
+    @extend p;
+  }
+
+  .button{
+    width: 150px;
+    float: left;
+  }
+
+  .single_add_to_cart_button{
+    margin-right: 15px;
+  }
+}

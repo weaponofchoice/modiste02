@@ -10,7 +10,13 @@
 <!--[if IE 9]>    <html class="no-js lt-ie10" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
-  <title>YOUR SITE</title>
+  <?php if( is_shop() ): ?>
+    <title>Modiste Furniture – Furniture</title>
+  <?php elseif( is_home() || is_archive() ): ?>
+    <title>Modiste Furniture</title>
+  <?php else: ?>
+    <title>Modiste Furniture<?php echo ' – ' . get_the_title(); ?></title>
+  <?php endif; ?>
 
   <link rel="canonical" href="<?php echo home_url(); ?>">
 
@@ -42,15 +48,26 @@
     </a>
 
     <nav>
-      <?php
-      $nav = array(
-        'theme_location'  => 'menu_primary',
-        'container'       => '',
-        'items_wrap'      => '<ul>%3$s</ul>'
-      );
+      <ul>
+        <?php
+        $nav = array(
+          'theme_location'  => 'menu_primary',
+          'container'       => '',
+          'items_wrap'      => '%3$s'
+        );
 
-      wp_nav_menu( $nav );
-      ?>
+        wp_nav_menu( $nav );
+        ?>
+
+        <?php
+        global $woocommerce;
+        $cart_url = $woocommerce->cart->get_cart_url();
+        $cart_count = WC()->cart->get_cart_contents_count();
+        ( (is_cart()) ? $cart_class = 'current-menu-item' : $cart_class = '' );
+
+        echo '<li class="' . $cart_class . '"><a href="' . $cart_url . '">Cart (' . $cart_count . ')</a></li>';
+        ?>
+      </ul>
     </nav>
   </header>
 

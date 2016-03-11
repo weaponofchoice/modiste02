@@ -1,12 +1,16 @@
 table.variations{
   position: relative;
 
+  td.label{
+    width: 80px;
+  }
+
   div{
     padding: 10px;
     display: inline-block;
 
     cursor: pointer;
-    background-color: $grey-light;
+    background-color: $grey;
 
     input[type="radio"]{
       @include appearance( none );
@@ -19,5 +23,11 @@ table.variations{
     label{
       cursor: pointer;
     }
+  }
+
+  div.option-placeholder{
+    @extend p;
+
+    background-color: $grey-light;
   }
 }
