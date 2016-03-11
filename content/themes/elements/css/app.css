@@ -1261,29 +1261,19 @@ button {
 
 button,
 .button {
+  overflow: hidden;
   height: 40px;
   padding: 0 30px;
   display: inline-block;
   color: black;
+  text-align: center;
   background: none;
   border: thin solid black;
   line-height: 38px;
   cursor: pointer;
   outline: 0; }
-
-.button-sec {
-  border-color: #c8c8c8;
-  background-color: #c8c8c8; }
-
-.button-white {
-  border-color: white; }
-  .button-white span {
-    color: white; }
-
-.button-roll {
-  overflow: hidden;
-  text-align: center; }
-  .button-roll span {
+  button span,
+  .button span {
     -webkit-transition: 0.2s;
     -moz-transition: 0.2s;
     -ms-transition: 0.2s;
@@ -1293,8 +1283,18 @@ button,
     height: 100%;
     display: block;
     line-height: 40px; }
-  .button-roll:hover span {
+  button:hover span,
+  .button:hover span {
     top: -40px; }
+
+.button-sec {
+  border-color: #c8c8c8;
+  background-color: #c8c8c8; }
+
+.button-white {
+  border-color: white; }
+  .button-white span {
+    color: white; }
 
 /*
  * Show and Hide class functions

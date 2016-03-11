@@ -5,35 +5,19 @@ button{
 
 button,
 .button{
+  overflow: hidden;
+
   height: 40px;
   padding: 0 30px;
   display: inline-block;
 
   color: $black;
+  text-align: center;
   background: none;
   border: thin solid $black;
   line-height: 38px;
   cursor: pointer;
   outline: 0;
-}
-
-.button-sec{
-  border-color: $grey;
-  background-color: $grey;
-}
-
-.button-white{
-  border-color: $white;
-
-  span{
-    color: $white;
-  }
-}
-
-.button-roll{
-  overflow: hidden;
-
-  text-align: center;
 
   span{
     @include transition( .2s );
@@ -50,5 +34,18 @@ button,
     span{
       top: -40px;
     }
+  }
+}
+
+.button-sec{
+  border-color: $grey;
+  background-color: $grey;
+}
+
+.button-white{
+  border-color: $white;
+
+  span{
+    color: $white;
   }
 }

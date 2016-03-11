@@ -93,7 +93,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   <?php get_template_part( 'woocommerce/single-product/materials' ); ?>
 
 
-  <a class="button button-roll" href=""><span>download product sheet</span><span>download product sheet</span></a>
+  <a class="button" href="">download product sheet</a>
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

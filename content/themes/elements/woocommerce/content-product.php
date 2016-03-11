@@ -67,7 +67,7 @@ if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
     // Product link button
     $product_url = get_permalink( $post->ID );
 
-    echo '<a class="button button-roll button-white" href="' . $product_url . '"><span>configure online</span><span>configure online</span></a>';
+    echo '<a class="button button-white" href="' . $product_url . '">configure online</a>';
   echo '</div>';
 	?>
 
