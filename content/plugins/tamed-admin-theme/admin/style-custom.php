@@ -190,7 +190,7 @@ if( $option_theme === 'default' || empty($option_theme) ):
       background: {$color_3};
     }
     #adminmenuwrap ul#adminmenu li.wp-has-submenu ul.wp-submenu li a {
-      color: {$color_3};
+      color: {$color_1} !important;
     }
     #adminmenuwrap ul#adminmenu li.wp-has-submenu ul.wp-submenu li a.current {
       color: white;
@@ -254,6 +254,13 @@ if( $option_theme === 'default' || empty($option_theme) ):
     .acf-button:focus {
       outline: none !important;
     }
+    .wp-core-ui .button-primary.disabled,
+    .wp-core-ui .button-primary-disabled,
+    .wp-core-ui .button-primary:disabled,
+    .wp-core-ui .button-primary[disabled] {
+      color: {$color_1} !important;
+      background-color: {$color_4} !important;
+    }
 
     /*
      * Messages
@@ -314,7 +321,7 @@ if( $option_theme === 'default' || empty($option_theme) ):
     }
 
     input[type=radio]:checked:before {
-      color: {$color_4};
+      background-color: {$color_4};
     }
 
     .view-switch a.current:before {
@@ -505,6 +512,13 @@ elseif( $option_theme === 'light' ):
     .acf-button:focus {
       outline: none !important;
     }
+    .wp-core-ui .button-primary.disabled,
+    .wp-core-ui .button-primary-disabled,
+    .wp-core-ui .button-primary:disabled,
+    .wp-core-ui .button-primary[disabled] {
+      color: {$color_1} !important;
+      background-color: {$color_4} !important;
+    }
 
     /*
      * Messages
@@ -566,7 +580,7 @@ elseif( $option_theme === 'light' ):
     }
 
     input[type=radio]:checked:before {
-      color: {$color_4};
+      background-color: {$color_4};
     }
 
     .view-switch a.current:before {
@@ -807,6 +821,13 @@ elseif( $option_theme === 'clean' ):
     .acf-button:focus {
       outline: none !important;
     }
+    .wp-core-ui .button-primary.disabled,
+    .wp-core-ui .button-primary-disabled,
+    .wp-core-ui .button-primary:disabled,
+    .wp-core-ui .button-primary[disabled] {
+      color: {$color_1} !important;
+      background-color: {$color_4} !important;
+    }
 
     /*
      * Messages
@@ -881,7 +902,7 @@ elseif( $option_theme === 'clean' ):
     }
 
     input[type=radio]:checked:before {
-      color: {$color_4};
+      background-color: {$color_4};
     }
 
     .view-switch a.current:before {
