@@ -2,7 +2,7 @@ a{
   @extend %base;
   @include transition( .2s );
 
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.35;
 
   color: $black;
@@ -22,8 +22,9 @@ a.has-content{
 }
 
 // Links in articles
-p a,
+main p a,
 article a{
+  font-size: 15px;
   border-bottom: thin solid $black;
 }
 

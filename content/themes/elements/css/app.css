@@ -649,8 +649,9 @@ ul {
   font-family: foundersText;
   src: url(../fonts/FoundersGroteskTextWeb-Light.woff); }
 h1, h2, p, input,
-label, table.variations div.option-placeholder, body.single-product .product .summary .price small, span,
-time, a, button {
+label, table.variations div.option-placeholder, body.single-product .product .summary .price small, section.module .module-text p, section.module .module-text input,
+section.module .module-text label, span,
+time, .founders-15, a, button {
   font-family: founders;
   font-size: 16px;
   font-weight: normal; }
@@ -665,16 +666,53 @@ h2 {
 
 p, input,
 label, table.variations div.option-placeholder, body.single-product .product .summary .price small {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.35; }
 
 article p, article input,
-article label, article table.variations div.option-placeholder, table.variations article div.option-placeholder, article body.single-product .product .summary .price small, body.single-product .product .summary .price article small {
+article label, article table.variations div.option-placeholder, table.variations article div.option-placeholder, article body.single-product .product .summary .price small, body.single-product .product .summary .price article small,
+section.module p,
+section.module input,
+section.module label,
+section.module table.variations div.option-placeholder,
+table.variations section.module div.option-placeholder,
+section.module body.single-product .product .summary .price small,
+body.single-product .product .summary .price section.module small,
+section.quote p,
+section.quote input,
+section.quote label,
+section.quote table.variations div.option-placeholder,
+table.variations section.quote div.option-placeholder,
+section.quote body.single-product .product .summary .price small,
+body.single-product .product .summary .price section.quote small,
+.products .product p,
+.products .product input,
+.products .product label,
+.products .product table.variations div.option-placeholder,
+table.variations .products .product div.option-placeholder,
+.products body.single-product .product .summary .price small,
+body.single-product .products .product .summary .price small,
+#product-materials p,
+#product-materials input,
+#product-materials label,
+#product-materials table.variations div.option-placeholder,
+table.variations #product-materials div.option-placeholder,
+#product-materials body.single-product .product .summary .price small,
+body.single-product .product .summary .price #product-materials small {
   margin-bottom: 1em;
-  font-size: 18px; }
+  font-size: 15px; }
+
+section.module .module-text p, section.module .module-text input,
+section.module .module-text label, section.module .module-text table.variations div.option-placeholder, table.variations section.module .module-text div.option-placeholder, section.module .module-text body.single-product .product .summary .price small, body.single-product .product .summary .price section.module .module-text small {
+  font-family: 'serif';
+  font-size: 20px; }
 
 span,
 time {
+  font-size: 13px;
+  line-height: 1.35; }
+
+.founders-15 {
   font-size: 15px;
   line-height: 1.35; }
 
@@ -684,7 +722,7 @@ a, button {
   -ms-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.35;
   color: black;
   text-decoration: none;
@@ -696,11 +734,12 @@ a.has-content, button.has-content {
   color: black;
   text-decoration: none; }
 
-p a, input a,
-label a, table.variations div.option-placeholder a, body.single-product .product .summary .price small a, p button, input button,
-label button, table.variations div.option-placeholder button, body.single-product .product .summary .price small button,
+main p a, main input a,
+main label a, main table.variations div.option-placeholder a, table.variations main div.option-placeholder a, main body.single-product .product .summary .price small a, body.single-product .product .summary .price main small a, main p button, main input button,
+main label button, main table.variations div.option-placeholder button, table.variations main div.option-placeholder button, main body.single-product .product .summary .price small button, body.single-product .product .summary .price main small button,
 article a,
 article button {
+  font-size: 15px;
   border-bottom: thin solid black; }
 
 nav a, nav button {
@@ -1544,52 +1583,64 @@ section.image .section-body.is-pos-right {
   text-align: right; }
 
 h1.is-italic, h2.is-italic, p.is-italic, input.is-italic,
-label.is-italic, table.variations div.is-italic.option-placeholder, body.single-product .product .summary .price small.is-italic, span.is-italic,
-time.is-italic, a.is-italic, button.is-italic {
+label.is-italic, table.variations div.is-italic.option-placeholder, body.single-product .product .summary .price small.is-italic, section.module .module-text p.is-italic, section.module .module-text input.is-italic,
+section.module .module-text label.is-italic, span.is-italic,
+time.is-italic, .is-italic.founders-15, a.is-italic, button.is-italic {
   font-style: italic; }
 h1.is-underlined, h2.is-underlined, p.is-underlined, input.is-underlined,
-label.is-underlined, table.variations div.is-underlined.option-placeholder, body.single-product .product .summary .price small.is-underlined, span.is-underlined,
-time.is-underlined, a.is-underlined, button.is-underlined {
+label.is-underlined, table.variations div.is-underlined.option-placeholder, body.single-product .product .summary .price small.is-underlined, section.module .module-text p.is-underlined, section.module .module-text input.is-underlined,
+section.module .module-text label.is-underlined, span.is-underlined,
+time.is-underlined, .is-underlined.founders-15, a.is-underlined, button.is-underlined {
   text-decoration: underline; }
 h1.is-capitalized, h2.is-capitalized, p.is-capitalized, input.is-capitalized,
-label.is-capitalized, table.variations div.is-capitalized.option-placeholder, body.single-product .product .summary .price small.is-capitalized, span.is-capitalized,
-time.is-capitalized, a.is-capitalized, button.is-capitalized {
+label.is-capitalized, table.variations div.is-capitalized.option-placeholder, body.single-product .product .summary .price small.is-capitalized, section.module .module-text p.is-capitalized, section.module .module-text input.is-capitalized,
+section.module .module-text label.is-capitalized, span.is-capitalized,
+time.is-capitalized, .is-capitalized.founders-15, a.is-capitalized, button.is-capitalized {
   text-transform: capitalize; }
 h1.is-uppercase, h2.is-uppercase, p.is-uppercase, input.is-uppercase,
-label.is-uppercase, table.variations div.is-uppercase.option-placeholder, body.single-product .product .summary .price small.is-uppercase, span.is-uppercase,
-time.is-uppercase, a.is-uppercase, button.is-uppercase {
+label.is-uppercase, table.variations div.is-uppercase.option-placeholder, body.single-product .product .summary .price small.is-uppercase, section.module .module-text p.is-uppercase, section.module .module-text input.is-uppercase,
+section.module .module-text label.is-uppercase, span.is-uppercase,
+time.is-uppercase, .is-uppercase.founders-15, a.is-uppercase, button.is-uppercase {
   text-transform: uppercase; }
 h1.is-lowercase, h2.is-lowercase, p.is-lowercase, input.is-lowercase,
-label.is-lowercase, table.variations div.is-lowercase.option-placeholder, body.single-product .product .summary .price small.is-lowercase, span.is-lowercase,
-time.is-lowercase, a.is-lowercase, button.is-lowercase {
+label.is-lowercase, table.variations div.is-lowercase.option-placeholder, body.single-product .product .summary .price small.is-lowercase, section.module .module-text p.is-lowercase, section.module .module-text input.is-lowercase,
+section.module .module-text label.is-lowercase, span.is-lowercase,
+time.is-lowercase, .is-lowercase.founders-15, a.is-lowercase, button.is-lowercase {
   text-transform: lowercase; }
 h1.is-bold, h2.is-bold, p.is-bold, input.is-bold,
-label.is-bold, table.variations div.is-bold.option-placeholder, body.single-product .product .summary .price small.is-bold, span.is-bold,
-time.is-bold, a.is-bold, button.is-bold {
+label.is-bold, table.variations div.is-bold.option-placeholder, body.single-product .product .summary .price small.is-bold, section.module .module-text p.is-bold, section.module .module-text input.is-bold,
+section.module .module-text label.is-bold, span.is-bold,
+time.is-bold, .is-bold.founders-15, a.is-bold, button.is-bold {
   font-weight: 700; }
 h1.is-aligned-center, h2.is-aligned-center, p.is-aligned-center, input.is-aligned-center,
-label.is-aligned-center, table.variations div.is-aligned-center.option-placeholder, body.single-product .product .summary .price small.is-aligned-center, span.is-aligned-center,
-time.is-aligned-center, a.is-aligned-center, button.is-aligned-center {
+label.is-aligned-center, table.variations div.is-aligned-center.option-placeholder, body.single-product .product .summary .price small.is-aligned-center, section.module .module-text p.is-aligned-center, section.module .module-text input.is-aligned-center,
+section.module .module-text label.is-aligned-center, span.is-aligned-center,
+time.is-aligned-center, .is-aligned-center.founders-15, a.is-aligned-center, button.is-aligned-center {
   text-align: center; }
 h1.is-aligned-left, h2.is-aligned-left, p.is-aligned-left, input.is-aligned-left,
-label.is-aligned-left, table.variations div.is-aligned-left.option-placeholder, body.single-product .product .summary .price small.is-aligned-left, span.is-aligned-left,
-time.is-aligned-left, a.is-aligned-left, button.is-aligned-left {
+label.is-aligned-left, table.variations div.is-aligned-left.option-placeholder, body.single-product .product .summary .price small.is-aligned-left, section.module .module-text p.is-aligned-left, section.module .module-text input.is-aligned-left,
+section.module .module-text label.is-aligned-left, span.is-aligned-left,
+time.is-aligned-left, .is-aligned-left.founders-15, a.is-aligned-left, button.is-aligned-left {
   text-align: left; }
 h1.is-aligned-right, h2.is-aligned-right, p.is-aligned-right, input.is-aligned-right,
-label.is-aligned-right, table.variations div.is-aligned-right.option-placeholder, body.single-product .product .summary .price small.is-aligned-right, span.is-aligned-right,
-time.is-aligned-right, a.is-aligned-right, button.is-aligned-right {
+label.is-aligned-right, table.variations div.is-aligned-right.option-placeholder, body.single-product .product .summary .price small.is-aligned-right, section.module .module-text p.is-aligned-right, section.module .module-text input.is-aligned-right,
+section.module .module-text label.is-aligned-right, span.is-aligned-right,
+time.is-aligned-right, .is-aligned-right.founders-15, a.is-aligned-right, button.is-aligned-right {
   text-align: right; }
 h1.is-black, h2.is-black, p.is-black, input.is-black,
-label.is-black, table.variations div.is-black.option-placeholder, body.single-product .product .summary .price small.is-black, span.is-black,
-time.is-black, a.is-black, button.is-black {
+label.is-black, table.variations div.is-black.option-placeholder, body.single-product .product .summary .price small.is-black, section.module .module-text p.is-black, section.module .module-text input.is-black,
+section.module .module-text label.is-black, span.is-black,
+time.is-black, .is-black.founders-15, a.is-black, button.is-black {
   color: black; }
 h1.is-white, h2.is-white, p.is-white, input.is-white,
-label.is-white, table.variations div.is-white.option-placeholder, body.single-product .product .summary .price small.is-white, span.is-white,
-time.is-white, a.is-white, button.is-white {
+label.is-white, table.variations div.is-white.option-placeholder, body.single-product .product .summary .price small.is-white, section.module .module-text p.is-white, section.module .module-text input.is-white,
+section.module .module-text label.is-white, span.is-white,
+time.is-white, .is-white.founders-15, a.is-white, button.is-white {
   color: white; }
 h1.is-grey, h2.is-grey, p.is-grey, input.is-grey,
-label.is-grey, table.variations div.is-grey.option-placeholder, body.single-product .product .summary .price small.is-grey, span.is-grey,
-time.is-grey, a.is-grey, button.is-grey {
+label.is-grey, table.variations div.is-grey.option-placeholder, body.single-product .product .summary .price small.is-grey, section.module .module-text p.is-grey, section.module .module-text input.is-grey,
+section.module .module-text label.is-grey, span.is-grey,
+time.is-grey, .is-grey.founders-15, a.is-grey, button.is-grey {
   color: #888888; }
 
 p.is-small, input.is-small,
