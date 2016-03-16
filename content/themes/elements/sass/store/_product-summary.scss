@@ -1,4 +1,4 @@
-body.single-product .product .summary{  
+body.single-product .product .summary{
   .link-arrow{
     img{
       @include transition( .2s );
@@ -42,5 +42,43 @@ body.single-product .product .summary{
 
   .single_add_to_cart_button{
     margin-right: 15px;
+  }
+}
+
+@media #{$medium-down}{
+  body.single-product .product .summary{
+    padding: 40px #{$space-sides-small};
+
+    .link-arrow{
+      display: none;
+    }
+
+    p[itemprop="name"],
+    div[itemprop="description"]{
+      width: calc(50% - 40px);
+      padding-right: 40px;
+      clear: both;
+      float: left;
+    }
+
+    form{
+      width: 50%;
+      float: right;
+    }
+
+    .button{
+      width: 45%;
+    }
+  }
+}
+
+@media #{$small-only}{
+  body.single-product .product .summary{
+    p[itemprop="name"],
+    div[itemprop="description"],
+    form{
+      width: 100%;
+      padding-right: 0;
+    }
   }
 }
