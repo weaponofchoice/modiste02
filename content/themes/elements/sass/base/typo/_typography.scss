@@ -38,8 +38,8 @@ section.quote p,
 
 section.module .module-text p{
   @extend %base;
-
-  font-family: 'serif';
+  @include baskerville;
+  
   font-size: 20px;
 }
 
