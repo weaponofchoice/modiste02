@@ -11,9 +11,65 @@ nav ul{
   }
 }
 
-// Current item
-nav ul{
-  li.current{
-    text-decoration: underline;
+@media #{$medium-down}{
+  nav{
+    @include transition( .2s );
+
+    top: 0;
+    right: -300px;
+    position: fixed;
+    z-index: 9999;
+
+    width: 300px;
+    height: 100%;
+
+    background-color: $grey-light;
+
+    &.is-active{
+      right: 0;
+    }
+
+    a:hover{
+      padding-bottom: 0;
+      border-color: transparent;
+    }
+
+    ul{
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      display: block;
+      padding-right: $space-sides;
+
+      li{
+        display: block;
+        padding-right: 0;
+        margin-bottom: 15px;
+
+        text-align: right;
+
+        a:hover{
+          text-decoration: underline;
+        }
+
+        &.current-menu-item a{
+          text-decoration: underline;
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+  .overlay{
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 998;
+
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+    background-color: rgba(0,0,0,0);
   }
 }
