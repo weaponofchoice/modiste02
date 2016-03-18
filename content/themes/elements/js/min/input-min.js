@@ -1,0 +1,1 @@
+$(document).ready(function(){var e=$("input"),t;for(i=0;i<e.length;i++)t=$(e[i]).attr("name"),t=t.replace(/_/g," "),t=t.charAt(0).toUpperCase()+t.slice(1),$(e[i]).attr("placeholder",t)});

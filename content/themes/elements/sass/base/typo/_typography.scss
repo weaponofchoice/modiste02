@@ -19,6 +19,12 @@ h2{
   line-height: 1.2;
 }
 
+h3{
+  @extend h2;
+
+  font-size: 30px;
+}
+
 p{
   @extend %base;
 
@@ -39,16 +45,21 @@ section.quote p,
 section.module .module-text p{
   @extend %base;
   @include baskerville;
-  
+
   font-size: 20px;
 }
 
 span,
-time{
+time,
+address{
   @extend %base;
 
   font-size: 13px;
   line-height: 1.35;
+}
+
+legend{
+  @extend h3;
 }
 
 .founders-15{

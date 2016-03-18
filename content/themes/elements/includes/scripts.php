@@ -15,6 +15,7 @@ function enqueue_theme_scripts() {
 
     wp_enqueue_script( 'button', get_template_directory_uri() . '/js/button.js', 'jquery', false, true );
     wp_enqueue_script( 'nav', get_template_directory_uri() . '/js/nav.js', 'jquery', false, true );
+    wp_enqueue_script( 'input', get_template_directory_uri() . '/js/input.js', 'jquery', false, true );
     wp_enqueue_script( 'product-options', get_template_directory_uri() . '/js/product-options.js', 'jquery', false, true );
     wp_enqueue_script( 'scroll', get_template_directory_uri() . '/js/scroll.js', 'jquery', false, true );
     wp_enqueue_script( 'hero', get_template_directory_uri() . '/js/hero.js', 'jquery', false, true );
