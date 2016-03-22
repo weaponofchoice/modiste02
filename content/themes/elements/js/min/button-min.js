@@ -1,1 +1,1 @@
-!function($){var n=$(".button");for(i=0;i<n.length;i++){var t=$(n[i]).text();$(n[i]).html("<span>"+t+"</span><span>"+t+"</span>")}}(jQuery);
+$(document).ready(function(){var t=$(".button");for(i=0;i<t.length;i++)if("submit"==$(t[i]).attr("type")&&"INPUT"==t[i].tagName){var a=$(t[i]).attr("value");$(t[i]).replaceWith(function(){return $("<button>",{type:"submit","class":this.className,name:this.name,value:this.value})}),$('button[value="'+a+'"]').html("<span>"+a+"</span><span>"+a+"</span>")}else{var a=$(t[i]).text();$(t[i]).html("<span>"+a+"</span><span>"+a+"</span>")}});
