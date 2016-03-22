@@ -3,41 +3,45 @@ label{
   @extend p;
 }
 
-form{
-  max-width: 700px;
-  margin: auto;
-  padding: 50px;
+.woocommerce-account,
+.woocommerce-cart,
+.woocommerce-checkout{
+  form{
+    max-width: 700px;
+    margin: auto;
+    padding: 50px;
 
-  background-color: $grey-light;
-}
-
-form h3{
-  margin-bottom: 1em;
-
-  text-align: center;
-}
-
-form .form-row{
-  margin-bottom: 15px;
-
-  label{
-    display: none;
+    background-color: $grey-light;
   }
 
-  input{
-    width: 100%;
+  form input[type="submit"]{
+    display: block;
+    margin: 50px auto 0;
   }
-}
 
-form input[type="submit"]{
-  display: block;
-  margin: 50px auto 0;
-}
+  form h3{
+    margin-bottom: 1em;
 
-form fieldset{
-  border: none;
+    text-align: center;
+  }
 
-  legend{
-    padding-top: 1em;
+  form .form-row{
+    margin-bottom: 25px;
+
+    label{
+      color: $grey-text;
+    }
+
+    input{
+      width: 100%;
+    }
+  }
+
+  form fieldset{
+    border: none;
+
+    legend{
+      padding-top: 1em;
+    }
   }
 }
