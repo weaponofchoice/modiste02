@@ -51,7 +51,11 @@ section.module .module-text p{
 
 span,
 time,
-address{
+address,
+th,
+td,
+dt,
+dd{
   @extend %base;
 
   font-size: 13px;

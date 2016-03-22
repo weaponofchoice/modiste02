@@ -1,0 +1,80 @@
+table.shop_table{
+  thead{
+    th{
+      padding: 0 15px;
+
+      color: $grey-text;
+      text-align: left;
+
+      &:last-child{
+        text-align: right;
+
+      }
+    }
+
+    .product-thumbnail{
+      width: 30%;
+    }
+
+    .product-name{
+      width: 30%;
+    }
+
+    .product-price{
+      width: 20%;
+    }
+
+    .product-quantity{
+      width: 20%;
+    }
+
+    .product-subtotal{
+      width: 20%;
+    }
+  }
+
+  tbody{
+    td{
+      padding: 35px 15px;
+
+      text-align: left;
+      vertical-align: top;
+
+      &:last-child{
+        text-align: right;
+      }
+    }
+
+    .product-remove{
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+
+    .product-thumbnail{
+      padding: 25px 15px;
+
+      img{
+        border: 5px solid white;
+      }
+    }
+
+    .product-name{
+      a{
+        margin-bottom: 15px;
+        display: block;
+
+        font-size: 30px;
+        line-height: 25px;
+      }
+
+      .variation{
+        dt,
+        dd{
+          width: 50%;
+          float: left;
+        }
+      }
+    }
+  }
+}
