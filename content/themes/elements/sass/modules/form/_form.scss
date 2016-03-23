@@ -7,18 +7,29 @@ label{
 .woocommerce-cart,
 .woocommerce-checkout{
   form{
-    max-width: 1000px;
-    margin: auto;
+    max-width: 700px;
+    margin: 50px auto 0;
     padding: 50px;
 
     background-color: $grey-light;
   }
+}
 
+.woocommerce-cart{
+  form{
+    max-width: 1000px;
+  }
+}
+
+.woocommerce-account,
+.woocommerce-cart,
+.woocommerce-checkout{
   form input[type="submit"]{
     display: block;
     margin: 50px auto 0;
   }
 
+  h2,
   form h3{
     margin-bottom: 1em;
 

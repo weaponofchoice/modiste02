@@ -1,0 +1,81 @@
+.woocommerce-account{
+  form.login{
+    label[for="rememberme"]{
+      display: none;
+    }
+  }
+}
+
+// Containers
+.woocommerce-account{
+  .woocommerce{
+    max-width: 700px;
+    margin: 50px auto 0;
+    padding: 50px;
+
+    background-color: $grey-light;
+  }
+}
+
+.woocommerce-edit-account,
+.woocommerce-edit-address{
+  .woocommerce{
+    max-width: none;
+    margin: 0;
+    padding: 0;
+
+    background-color: transparent;
+  }
+}
+
+#customer_login{
+  form{
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// Account overview
+.woocommerce-account{
+  .myaccount_user{
+    margin-bottom: 50px;
+  }
+
+  .myaccount_user + h2{
+    margin-bottom: 0;
+  }
+
+  .myaccount_address{
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .addresses{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+    .address{
+      width: 50%;
+      float: left;
+
+      text-align: left;
+
+      h2{
+        text-align: left;
+      }
+
+      a{
+        text-decoration: underline;
+      }
+    }
+
+    .col-1{
+      padding-right: 5%;
+    }
+
+    .col-2{
+      padding-left: 5%;
+    }
+  }
+}
