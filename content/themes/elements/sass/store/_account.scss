@@ -12,8 +12,6 @@
     max-width: 700px;
     margin: 50px auto 0;
     padding: 50px;
-
-    background-color: $grey-light;
   }
 }
 
@@ -22,7 +20,6 @@
   .woocommerce{
     max-width: none;
     margin: 0;
-    padding: 0;
 
     background-color: transparent;
   }
@@ -37,6 +34,13 @@
 
 // Account overview
 .woocommerce-account{
+  .myaccount_user,
+  .addresses{
+    padding: 25px;
+
+    background-color: $white;
+  }
+
   .myaccount_user{
     margin-bottom: 50px;
   }
@@ -46,7 +50,7 @@
   }
 
   .myaccount_address{
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     text-align: center;
   }
 

@@ -6,22 +6,31 @@ label{
 .woocommerce-account,
 .woocommerce-cart,
 .woocommerce-checkout{
+  main{
+    background-color: $grey-light;
+  }
+
   form{
     max-width: 700px;
     margin: 50px auto 0;
     padding: 50px;
 
-    background-color: $grey-light;
+    background-color: $white;
   }
 }
 
 .woocommerce-cart{
   .woocommerce{
+    max-width: 1000px;
+    margin: 50px auto 0;
     padding: 0;
   }
 
   form{
-    max-width: 1000px;
+    max-width: none;
+    margin: 0;
+
+    background-color: transparent;
   }
 }
 

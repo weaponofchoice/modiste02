@@ -1,13 +1,13 @@
 body > footer{
   @include flexbox;
   @include align-items( flex-end );
-  
+
   z-index: $zIndex-footer;
 
   height: auto;
   overflow: hidden;
 
-  padding-top: 150px;
+  padding-top: 30px;
   padding-bottom: 30px;
 
   background: $white;

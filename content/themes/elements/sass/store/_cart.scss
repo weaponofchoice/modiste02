@@ -1,7 +1,7 @@
 table.shop_table.cart{
   thead{
     th{
-      padding: 0 15px;
+      padding: 15px;
 
       color: $grey-text;
       text-align: left;
@@ -10,6 +10,11 @@ table.shop_table.cart{
         text-align: right;
 
       }
+    }
+
+    .product-remove{
+      padding: 0;
+      position: absolute;
     }
 
     .product-thumbnail{
@@ -34,6 +39,10 @@ table.shop_table.cart{
   }
 
   tbody{
+    tr.cart_item{
+      background-color: $white;
+    }
+
     td{
       padding: 35px 15px;
 
@@ -46,17 +55,21 @@ table.shop_table.cart{
     }
 
     .product-remove{
-      top: 0;
-      left: 0;
-      position: absolute;
+      z-index: 999;
+
+      padding: 0;
+
+      a{
+        top: 25px;
+        left: -35px;
+        position: absolute;
+
+        font-size: 30px;
+      }
     }
 
     .product-thumbnail{
-      padding: 25px 15px;
-
-      img{
-        border: 5px solid white;
-      }
+      padding: 15px;
     }
 
     .product-name{
@@ -76,13 +89,48 @@ table.shop_table.cart{
         }
       }
     }
+
+    .product-quantity{
+      .incrementer{
+        margin-left: -20px;
+        margin-top: -5px;
+      }
+    }
+
+    // Update cart button
+    tr:last-child td{
+      padding: 15px 0;
+    }
   }
 }
 
 .cart-collaterals{
-  max-width: 1000px;
-  margin: 50px auto 0;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 50px;
   padding: 50px;
+  float: right;
 
-  background-color: $grey-light;
+  background-color: $white;
+
+  h2{
+    text-align: left;
+    margin-bottom: 25px;
+  }
+
+  table{
+    width: 100%;
+    text-align: left;
+
+    tbody{
+      th,
+      td{
+        padding: 5px 0;
+      }
+    }
+  }
+
+  .wc-proceed-to-checkout{
+    margin-top: 25px;
+  }
 }
