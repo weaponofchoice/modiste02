@@ -4,6 +4,12 @@
   }
 }
 
+.woocommerce-order-received{
+  .woocommerce{
+    padding: 50px;
+  }
+}
+
 .woocommerce-checkout{
   .woocommerce-info{
     .showlogin{
@@ -76,7 +82,8 @@
   }
 }
 
-table.woocommerce-checkout-review-order-table{
+table.woocommerce-checkout-review-order-table,
+table.order_details{
   width: 100%;
   border-collapse: collapse;
 
@@ -122,13 +129,13 @@ table.woocommerce-checkout-review-order-table{
     .product-name{
       padding-left: 15px;
 
-      a{
-        margin-bottom: 15px;
-        display: block;
-
-        font-size: 30px;
-        line-height: 25px;
-      }
+      // a{
+      //   margin-bottom: 15px;
+      //   display: block;
+      //
+      //   font-size: 30px;
+      //   line-height: 25px;
+      // }
 
       .variation{
         @include clearfix();

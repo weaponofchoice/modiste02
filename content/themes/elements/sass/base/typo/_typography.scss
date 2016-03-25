@@ -55,7 +55,8 @@ address,
 th,
 td,
 dt,
-dd{
+dd,
+li{
   @extend %base;
 
   font-size: 13px;
