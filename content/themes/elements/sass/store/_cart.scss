@@ -1,10 +1,13 @@
 table.shop_table.cart{
   thead{
+    color: $grey-text;
+    background-color: $white;
+
     th{
       padding: 15px;
 
-      color: $grey-text;
       text-align: left;
+      border-bottom: thin solid $grey-light;
 
       &:last-child{
         text-align: right;
@@ -99,7 +102,14 @@ table.shop_table.cart{
 
     // Update cart button
     tr:last-child td{
-      padding: 15px 0;
+      padding: 15px;
+
+      border-top: thin solid $grey-light;
+      background-color: $white;
+
+      a{
+        @extend .button-sec;
+      }
     }
   }
 }
@@ -107,7 +117,6 @@ table.shop_table.cart{
 .cart-collaterals{
   width: 100%;
   max-width: 500px;
-  margin: 0 50px;
   padding: 50px;
   float: right;
 
