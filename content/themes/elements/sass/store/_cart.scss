@@ -90,10 +90,19 @@ table.shop_table.cart{
       }
 
       .variation{
+        @include clearfix();
+
+        margin-bottom: 25px;
+
         dt,
         dd{
-          width: 50%;
           float: left;
+          display: inline-block;
+        }
+
+        dt{
+          clear: left;
+          margin-right: 5px;
         }
       }
     }

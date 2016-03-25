@@ -25,3 +25,36 @@ textarea{
 ::-moz-placeholder          {color:transparent;} /* Firefox 19+ */
 :-moz-placeholder           {color:transparent;} /* Firefox 18- */
 :-ms-input-placeholder      {color:transparent;}
+
+input[type="checkbox"],
+input[type="checkbox"] + label,
+label.checkbox{
+  display: inline-block;
+  margin-right: 5px;
+  cursor: pointer;
+  color: $black !important;
+}
+
+input[type="checkbox"]{
+  @include appearance( none );
+
+  margin-bottom: 0;
+  margin-right: .5em;
+  vertical-align: middle;
+
+  width: 15px !important;
+  height: 15px;
+  margin-bottom: 3px;
+  padding: 0;
+
+  background-color: transparent;
+  border: thin solid $black;
+  cursor: pointer;
+
+  &:checked{
+    background: url('https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/checkmark-24-512.png');
+    background-size: 80%;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}

@@ -3,3 +3,106 @@
     padding: 0;
   }
 }
+
+.woocommerce-checkout{
+  .woocommerce-info{
+    .showlogin{
+      margin-left: 5px;
+    }
+  }
+
+  form.login{
+    p:first-child{
+      margin-bottom: 25px;
+    }
+
+    label[for="rememberme"]{
+      display: none;
+    }
+  }
+
+  // Checkboxes
+  .create-account{
+    margin-bottom: 10px !important;
+  }
+
+  h3#ship-to-different-address{
+    @include flexbox;
+    @include flex-direction( row-reverse );
+    @include justify-content( flex-end );
+
+    text-align: left;
+  }
+}
+
+table.woocommerce-checkout-review-order-table{
+  width: 100%;
+  border-collapse: collapse;
+
+  thead{
+    color: $grey-text;
+    text-align: left;
+
+    th{
+      padding: 15px 0;
+
+      border-bottom: thin solid $grey;
+
+      &:first-child{
+        width: 150px;
+      }
+
+      &:last-child{
+        text-align: right;
+      }
+
+      &.product-name{
+        padding-left: 15px;
+      }
+    }
+  }
+
+  tbody{
+    td{
+      padding: 15px 0;
+      vertical-align: top;
+
+      &:last-child{
+        text-align: right;
+      }
+    }
+
+    .product-thumbnail{
+      img{
+        border: 5px solid $white;
+      }
+    }
+
+    .product-name{
+      padding-left: 15px;
+
+      a{
+        margin-bottom: 15px;
+        display: block;
+
+        font-size: 30px;
+        line-height: 25px;
+      }
+
+      .variation{
+        @include clearfix();
+
+        dt,
+        dd{
+          float: left;
+          display: inline-block;
+        }
+
+        dt{
+          clear: left;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

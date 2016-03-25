@@ -1,4 +1,5 @@
 .woocommerce-message,
+.woocommerce-info,
 .woocommerce-error{
   @extend p;
   @include flexbox;
@@ -16,21 +17,19 @@
 
 .woocommerce-cart{
   .woocommerce-message,
+  .woocommerce-info,
   .woocommerce-error{
     max-width: 1000px;
     margin: 50px auto;
-
-    background-color: $grey-light;
   }
 }
 
 .woocommerce-account,
 .woocommerce-checkout{
   .woocommerce-message,
+  .woocommerce-info,
   .woocommerce-error{
     max-width: 700px;
     margin: 50px auto 0;
-
-    background-color: $white;
   }
 }
