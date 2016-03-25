@@ -38,3 +38,45 @@
     margin-bottom: 60px;
   }
 }
+
+@media #{$medium-down}{
+  #product-materials{
+    ul{
+      li{
+        @include flex-direction( column );
+
+        img{
+          margin-bottom: 15px;
+        }
+
+        p{
+          padding-left: 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 750px){
+  #product-materials{
+    ul{
+      li{
+        @include flex-direction( row );
+        @include justify-content( center !important );
+
+        width: 100%;
+        margin-bottom: 50px;
+
+        img{
+          margin-bottom: 0;
+        }
+
+        p{
+          padding-left: 15px;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
