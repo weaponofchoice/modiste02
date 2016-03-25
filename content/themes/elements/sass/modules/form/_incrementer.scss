@@ -1,0 +1,31 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.incrementer{
+  span{
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+
+    width: 30px;
+    height: 30px;
+    padding: 7px;
+    display: inline-block;
+
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+  }
+
+  input{
+    width: 30px;
+    padding: 0;
+    padding-bottom: 8px;
+
+    text-align: center;
+  }
+}

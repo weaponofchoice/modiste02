@@ -3,6 +3,38 @@
  * @package WordPress
  * @subpackage HTML5_Boilerplate */
 
+function wpb_mce_buttons_2($buttons) {
+  array_unshift($buttons, 'styleselect');
+  return $buttons;
+}
+add_filter('mce_buttons_2', 'wpb_mce_buttons_2');
+
+/*
+* Callback function to filter the MCE settings
+*/
+
+function my_mce_before_init_insert_formats( $init_array ) {
+
+// Define the style_formats array
+
+  $style_formats = array(
+    // Each array child is a format with it's own settings
+    array(
+      'title' => 'Founders 15',
+      'block' => 'span',
+      'classes' => 'founders-15',
+      'wrapper' => true,
+    )
+  );
+  // Insert the array, JSON ENCODED, into 'style_formats'
+  $init_array['style_formats'] = json_encode( $style_formats );
+
+  return $init_array;
+
+}
+// Attach callback to 'tiny_mce_before_init'
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
+
 // Includes
 require_once('includes/scripts.php');
 
@@ -29,7 +61,6 @@ if( function_exists('acf_add_options_page') ) {
   ));
 }
 
-
 // Add support for WooCommerce
 add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
@@ -51,6 +82,20 @@ function is_really_woocommerce_page () {
   }
 
   return false;
+}
+
+// Removing Woocommerce's standard select replacement
+add_action( 'wp_enqueue_scripts', 'mgt_dequeue_stylesandscripts', 100 );
+
+function mgt_dequeue_stylesandscripts() {
+    if ( class_exists( 'woocommerce' ) ) {
+        wp_dequeue_style( 'select2' );
+        wp_deregister_style( 'select2' );
+
+        wp_dequeue_script( 'select2');
+        wp_deregister_script('select2');
+
+    }
 }
 
 // Change the WooCommerce paypal icon

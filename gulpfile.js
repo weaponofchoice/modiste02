@@ -14,6 +14,8 @@ gulp.task('minify-js', function () {
       './content/themes/elements/js/vendor/jquery.mobile.custom.min.js',
 
       './content/themes/elements/js/button.js',
+      './content/themes/elements/js/incrementers.js',
+      './content/themes/elements/js/nav.js',
       './content/themes/elements/js/product-options.js',
       './content/themes/elements/js/scroll.js',
       './content/themes/elements/js/hero.js',
@@ -37,6 +39,8 @@ gulp.task('concat', function () {
       './content/themes/elements/js/min/jquery.mobile.custom.min.js',
 
       './content/themes/elements/js/min/button.js',
+      './content/themes/elements/js/min/incrementers.js',
+      './content/themes/elements/js/min/nav.js',
       './content/themes/elements/js/min/product-options.js',
       './content/themes/elements/js/min/scroll.js',
       './content/themes/elements/js/min/hero.js',

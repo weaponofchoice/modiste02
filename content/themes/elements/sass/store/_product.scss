@@ -42,3 +42,24 @@ body.single-product{
     padding: 0;
   }
 }
+
+@media #{$medium-down}{
+  body.single-product{
+    .product{
+      height: auto;
+      overflow: hidden;
+
+      .images,
+      .summary{
+        width: 100%;
+      }
+
+      .images{
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,159 @@
+.woocommerce-cart{
+  .woocommerce{
+    padding: 0;
+  }
+}
+
+table.shop_table.cart{
+  thead{
+    color: $grey-text;
+
+    th{
+      padding: 15px;
+
+      text-align: left;
+      border-bottom: thin solid $grey;
+
+      &:last-child{
+        text-align: right;
+
+      }
+    }
+
+    .product-remove{
+      padding: 0;
+      position: absolute;
+    }
+
+    .product-thumbnail{
+      width: 30%;
+    }
+
+    .product-name{
+      width: 30%;
+    }
+
+    .product-price{
+      width: 20%;
+    }
+
+    .product-quantity{
+      width: 20%;
+    }
+
+    .product-subtotal{
+      width: 20%;
+    }
+  }
+
+  tbody{
+    td{
+      padding: 35px 15px;
+
+      text-align: left;
+      vertical-align: top;
+
+      &:last-child{
+        text-align: right;
+      }
+    }
+
+    .product-remove{
+      z-index: 999;
+
+      padding: 0;
+
+      a{
+        top: 25px;
+        left: -35px;
+        position: absolute;
+
+        font-size: 30px;
+      }
+    }
+
+    .product-thumbnail{
+      padding: 15px;
+
+      img{
+        border: 5px solid $white;
+      }
+    }
+
+    .product-name{
+      a{
+        margin-bottom: 15px;
+        display: block;
+
+        font-size: 30px;
+        line-height: 25px;
+      }
+
+      .variation{
+        @include clearfix();
+
+        margin-bottom: 25px;
+
+        dt,
+        dd{
+          float: left;
+          display: inline-block;
+        }
+
+        dt{
+          clear: left;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .product-quantity{
+      .incrementer{
+        margin-left: -20px;
+        margin-top: -5px;
+      }
+    }
+
+    // Update cart button
+    tr:last-child td{
+      padding: 15px;
+
+      border-top: thin solid $grey;
+      background-color: $grey-light;
+
+      a{
+        @extend .button-sec;
+      }
+    }
+  }
+}
+
+.cart-collaterals{
+  width: 100%;
+  max-width: 500px;
+  padding: 50px;
+  float: right;
+
+  background-color: $grey-light;
+
+  h2{
+    text-align: left;
+    margin-bottom: 25px;
+  }
+
+  table{
+    width: 100%;
+    text-align: left;
+
+    tbody{
+      th,
+      td{
+        padding: 5px 0;
+      }
+    }
+  }
+
+  .wc-proceed-to-checkout{
+    margin-top: 25px;
+  }
+}

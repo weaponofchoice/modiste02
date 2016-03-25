@@ -50,10 +50,4 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
  */
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
-
-remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
-add_action( 'woocommerce_review_order_before_submit', 'woocommerce_checkout_coupon_form', 10);
-
-remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
-add_action( 'woocommerce_after_customer_details', 'woocommerce_checkout_payment', 20 );
 ?>

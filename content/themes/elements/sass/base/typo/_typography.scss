@@ -19,21 +19,55 @@ h2{
   line-height: 1.2;
 }
 
+h3{
+  @extend h2;
+
+  font-size: 30px;
+}
+
 p{
   @extend %base;
 
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.35;
 }
 
-article p{
+article p,
+section.module p,
+section.quote p,
+.products .product p,
+#product-materials p{
   margin-bottom: 1em;
 
-  font-size: 18px;
+  font-size: 15px;
+}
+
+section.module .module-text p{
+  @extend %base;
+  @include baskerville;
+
+  font-size: 20px;
 }
 
 span,
-time{
+time,
+address,
+th,
+td,
+dt,
+dd,
+li{
+  @extend %base;
+
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+legend{
+  @extend h3;
+}
+
+.founders-15{
   @extend %base;
 
   font-size: 15px;

@@ -1,0 +1,29 @@
+.woocommerce-order-received{
+  .woocommerce-thankyou-order-received{
+    margin-bottom: 1em;
+  }
+
+  h2{
+    margin: 25px 0;
+  }
+
+  table{
+    thead{
+      tr th{
+        padding-left: 0 !important;
+      }
+    }
+
+    tbody{
+      tr td{
+        padding-left: 0 !important;
+      }
+    }
+
+    tfoot{
+      tr th{
+        width: 75%;
+      }
+    }
+  }
+}

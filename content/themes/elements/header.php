@@ -48,6 +48,8 @@
     </a>
 
     <nav>
+      <a class="nav-close">close <i></i></a>
+
       <ul>
         <?php
         $nav = array(
@@ -69,6 +71,8 @@
         ?>
       </ul>
     </nav>
+
+    <a class="nav-open">menu <i></i></a>
   </header>
 
   <!-- Main content -->

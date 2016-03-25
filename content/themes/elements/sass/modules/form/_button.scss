@@ -30,7 +30,8 @@ button,
     line-height: 40px;
   }
 
-  &:hover{
+  &:hover,
+  &:focus{
     span{
       top: -40px;
     }
@@ -48,4 +49,8 @@ button,
   span{
     color: $white;
   }
+}
+
+button[disabled="disabled"]{
+  opacity: .2;
 }
