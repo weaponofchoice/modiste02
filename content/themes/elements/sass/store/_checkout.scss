@@ -11,6 +11,17 @@
     }
   }
 
+  ul.woocommerce-error{
+    display: block;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+
+    li{
+      width: 100%;
+    }
+  }
+
   form.login{
     p:first-child{
       margin-bottom: 25px;
@@ -32,6 +43,36 @@
     @include justify-content( flex-end );
 
     text-align: left;
+  }
+
+  #order_review{
+    height: auto;
+    overflow: hidden;
+  }
+
+  #payment{
+    width: 40%;
+    float: right;
+    margin-top: 50px;
+
+    li{
+      margin-bottom: 15px;
+
+      img,
+      a,
+      div.payment_box{
+        display: none !important;
+      }
+    }
+
+    .place-order{
+      .button{
+        margin-top: 0;
+
+        color: $white;
+        background-color: $black;
+      }
+    }
   }
 }
 
@@ -113,7 +154,7 @@ table.woocommerce-checkout-review-order-table{
       th,
       td{
         padding-top: 15px;
-        
+
         border-top: thin solid $grey;
       }
     }
