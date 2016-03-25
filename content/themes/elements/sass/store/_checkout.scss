@@ -105,4 +105,25 @@ table.woocommerce-checkout-review-order-table{
       }
     }
   }
+
+  tfoot{
+    text-align: right;
+
+    tr:first-child{
+      th,
+      td{
+        padding-top: 15px;
+        
+        border-top: thin solid $grey;
+      }
+    }
+
+    tr.shipping td{
+      color: transparent;
+
+      span{
+        color: $black;
+      }
+    }
+  }
 }
