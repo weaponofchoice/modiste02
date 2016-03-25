@@ -19,3 +19,8 @@ textarea{
   border: none;
   background-color: $grey-light;
 }
+
+::-webkit-input-placeholder {color:transparent;}
+::-moz-placeholder          {color:transparent;} /* Firefox 19+ */
+:-moz-placeholder           {color:transparent;} /* Firefox 18- */
+:-ms-input-placeholder      {color:transparent;}
