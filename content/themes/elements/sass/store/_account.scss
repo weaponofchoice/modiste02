@@ -9,9 +9,7 @@
 // Containers
 .woocommerce-account{
   .woocommerce{
-    max-width: 700px;
-    margin: 50px auto 0;
-    padding: 50px;
+    padding: 0;
   }
 }
 
@@ -34,19 +32,37 @@
 
 // Account overview
 .woocommerce-account{
+  table.my_account_orders{
+    width: 100%;
+    margin: 25px 0 50px;
+
+    border-collapse: collapse;
+    background-color: $grey-light;
+
+    thead tr th{
+      border-bottom: thin solid $grey;
+    }
+
+    thead tr th,
+    tbody tr td{
+      text-align: left;
+      padding: 15px;
+    }
+  }
+
   .myaccount_user,
   .addresses{
     padding: 25px;
 
-    background-color: $white;
+    background-color: $grey-light;
   }
 
   .myaccount_user{
     margin-bottom: 50px;
   }
 
-  .myaccount_user + h2{
-    margin-bottom: 0;
+  h2{
+    text-align: center;
   }
 
   .myaccount_address{
@@ -80,6 +96,53 @@
 
     .col-2{
       padding-left: 5%;
+    }
+  }
+}
+
+// View order
+.woocommerce-view-order{
+  .management-content{
+    padding: 50px;
+
+    background-color: $grey-light;
+
+    .order-info{
+      margin-bottom: 25px;
+    }
+
+    table{
+      margin-bottom: 50px;
+    }
+
+    table tfoot tr th{
+      width: 75%;
+    }
+
+    header h2{
+      text-align: left;
+    }
+
+    .customer_details{
+      text-align: left;
+
+      td{
+        padding-left: 5px;
+      }
+    }
+
+    .addresses{
+      padding: 0;
+      
+      > div{
+        width: 50%;
+        float: left;
+
+        h3{
+          text-align: left;
+          margin-bottom: 15px;
+        }
+      }
     }
   }
 }
