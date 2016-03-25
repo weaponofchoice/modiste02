@@ -1,13 +1,18 @@
+.woocommerce-cart{
+  .woocommerce{
+    padding: 0;
+  }
+}
+
 table.shop_table.cart{
   thead{
     color: $grey-text;
-    background-color: $white;
 
     th{
       padding: 15px;
 
       text-align: left;
-      border-bottom: thin solid $grey-light;
+      border-bottom: thin solid $grey;
 
       &:last-child{
         text-align: right;
@@ -42,10 +47,6 @@ table.shop_table.cart{
   }
 
   tbody{
-    tr.cart_item{
-      background-color: $white;
-    }
-
     td{
       padding: 35px 15px;
 
@@ -73,6 +74,10 @@ table.shop_table.cart{
 
     .product-thumbnail{
       padding: 15px;
+
+      img{
+        border: 5px solid $white;
+      }
     }
 
     .product-name{
@@ -104,8 +109,8 @@ table.shop_table.cart{
     tr:last-child td{
       padding: 15px;
 
-      border-top: thin solid $grey-light;
-      background-color: $white;
+      border-top: thin solid $grey;
+      background-color: $grey-light;
 
       a{
         @extend .button-sec;
@@ -120,7 +125,7 @@ table.shop_table.cart{
   padding: 50px;
   float: right;
 
-  background-color: $white;
+  background-color: $grey-light;
 
   h2{
     text-align: left;
