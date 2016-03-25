@@ -12,12 +12,13 @@ input{
 
 textarea{
   width: 100%;
+  max-width: 100%;
   min-height: 100px;
   padding: 15px;
   margin-top: 5px;
 
   border: none;
-  background-color: $grey-light;
+  background-color: $white;
 }
 
 ::-webkit-input-placeholder {color:transparent;}

@@ -3,12 +3,16 @@ label{
   @extend p;
 }
 
-form{
-  max-width: 700px;
-  margin: 50px auto 0;
-  padding: 50px;
+.woocommerce-cart,
+.woocommerce-account,
+.woocommerce-checkout{
+  form{
+    max-width: 700px;
+    margin: 50px auto 0;
+    padding: 50px;
 
-  background-color: $grey-light;
+    background-color: $grey-light;
+  }
 }
 
 .woocommerce-cart{

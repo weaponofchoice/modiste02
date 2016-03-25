@@ -18,13 +18,13 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-
-wc_print_notices();
 ?>
 
 <div class="management-heading">
   <h3>Modiste Cart</h3>
 </div>
+
+<?php wc_print_notices(); ?>
 
 <div class="management-content">
   <?php

@@ -50,3 +50,7 @@ button,
     color: $white;
   }
 }
+
+button[disabled="disabled"]{
+  opacity: .2;
+}
