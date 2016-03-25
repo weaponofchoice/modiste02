@@ -61,7 +61,6 @@ if( function_exists('acf_add_options_page') ) {
   ));
 }
 
-
 // Add support for WooCommerce
 add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
@@ -83,6 +82,20 @@ function is_really_woocommerce_page () {
   }
 
   return false;
+}
+
+// Removing Woocommerce's standard select replacement
+add_action( 'wp_enqueue_scripts', 'mgt_dequeue_stylesandscripts', 100 );
+
+function mgt_dequeue_stylesandscripts() {
+    if ( class_exists( 'woocommerce' ) ) {
+        wp_dequeue_style( 'select2' );
+        wp_deregister_style( 'select2' );
+
+        wp_dequeue_script( 'select2');
+        wp_deregister_script('select2');
+
+    }
 }
 
 // Change the WooCommerce paypal icon

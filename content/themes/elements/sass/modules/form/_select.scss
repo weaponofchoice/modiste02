@@ -1,0 +1,19 @@
+select{
+  @include appearance( none );
+
+  width: 100%;
+  padding: 8px 0;
+
+  cursor: pointer;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  border-bottom: thin solid $grey;
+
+  background-image: url("../img/arrow-dropdown.svg") !important;
+  background-position: right 1em center !important;
+  background-repeat: no-repeat !important;
+  background-size: 25px !important;
+  border-radius: 0;
+  cursor: pointer;
+}
