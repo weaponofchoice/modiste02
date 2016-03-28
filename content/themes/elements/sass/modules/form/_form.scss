@@ -1,54 +1,16 @@
-input,
-label{
-  @extend p;
-}
-
-.woocommerce-cart,
-.woocommerce-account,
-.woocommerce-checkout{
-  form{
-    max-width: 700px;
-    margin: 50px auto 0;
-    padding: 50px;
-
-    background-color: $grey-light;
-  }
-}
-
-.woocommerce-cart{
-  form{
-    max-width: none;
-    margin: 0;
-    margin-bottom: 50px;
-    padding: 0;
-  }
-}
-
-.woocommerce-order-received{
-  .woocommerce{
-    max-width: 700px;
-    margin: 50px auto 0;
-    padding: 50px;
-
-    background-color: $grey-light;
-  }
-}
-
-.woocommerce-account,
-.woocommerce-cart,
-.woocommerce-checkout{
-  form input[type="submit"]{
+form{
+  input[type="submit"]{
     display: block;
     margin: 50px auto 0;
   }
 
-  form h3{
+  h3{
     margin-bottom: 1em;
 
     text-align: center;
   }
 
-  form .form-row{
+  .form-row{
     margin-bottom: 25px;
 
     label{
@@ -60,11 +22,22 @@ label{
     }
   }
 
-  form fieldset{
+  fieldset{
     border: none;
 
     legend{
       padding-top: 1em;
     }
+  }
+}
+
+// Login form
+form.login{
+  p:first-child{
+    margin-bottom: 25px;
+  }
+
+  label[for="rememberme"]{
+    display: none;
   }
 }

@@ -1,4 +1,12 @@
 .woocommerce-account{
+  form{
+    max-width: 700px;
+    margin: 50px auto 0;
+    padding: 50px;
+
+    background-color: $grey-light;
+  }
+
   form.login{
     label[for="rememberme"]{
       display: none;
@@ -33,21 +41,7 @@
 // Account overview
 .woocommerce-account{
   table.my_account_orders{
-    width: 100%;
     margin: 25px 0 50px;
-
-    border-collapse: collapse;
-    background-color: $grey-light;
-
-    thead tr th{
-      border-bottom: thin solid $grey;
-    }
-
-    thead tr th,
-    tbody tr td{
-      text-align: left;
-      padding: 15px;
-    }
   }
 
   .myaccount_user,
@@ -115,10 +109,6 @@
       margin-bottom: 50px;
     }
 
-    table tfoot tr th{
-      width: 75%;
-    }
-
     header h2{
       text-align: left;
     }
@@ -133,7 +123,7 @@
 
     .addresses{
       padding: 0;
-      
+
       > div{
         width: 50%;
         float: left;

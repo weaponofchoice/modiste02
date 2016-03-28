@@ -1,4 +1,11 @@
 .woocommerce-cart{
+  form{
+    max-width: none;
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+  }
+
   .woocommerce{
     padding: 0;
   }
@@ -6,20 +13,6 @@
 
 table.shop_table.cart{
   thead{
-    color: $grey-text;
-
-    th{
-      padding: 15px;
-
-      text-align: left;
-      border-bottom: thin solid $grey;
-
-      &:last-child{
-        text-align: right;
-
-      }
-    }
-
     .product-remove{
       padding: 0;
       position: absolute;
@@ -49,13 +42,6 @@ table.shop_table.cart{
   tbody{
     td{
       padding: 35px 15px;
-
-      text-align: left;
-      vertical-align: top;
-
-      &:last-child{
-        text-align: right;
-      }
     }
 
     .product-remove{
@@ -142,9 +128,6 @@ table.shop_table.cart{
   }
 
   table{
-    width: 100%;
-    text-align: left;
-
     tbody{
       th,
       td{
