@@ -91,3 +91,9 @@ a.nav-open{
     display: block;
   }
 }
+
+@media #{$small-only}{
+  a.nav-close{
+    margin-right: $space-sides-small;
+  }
+}

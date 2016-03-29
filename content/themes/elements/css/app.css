@@ -1052,6 +1052,9 @@ nav ul {
     height: 100%;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.3); } }
+@media only screen and (max-width: 500px) {
+  nav ul {
+    padding-right: 2.5rem; } }
 a.nav-open, button.nav-open,
 a.nav-close,
 button.nav-close {
@@ -1119,6 +1122,9 @@ a.nav-open i, button.nav-open i {
 
   a.nav-close, button.nav-close {
     display: block; } }
+@media only screen and (max-width: 500px) {
+  a.nav-close, button.nav-close {
+    margin-right: 2.5rem; } }
 .arrow {
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
