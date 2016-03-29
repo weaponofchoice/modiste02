@@ -922,6 +922,30 @@ body > footer {
     body > footer ul li:last-child {
       margin-right: 0; }
 
+@media all and (max-width: 750px) {
+  footer {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    footer div {
+      width: 100% !important;
+      margin-bottom: 30px;
+      text-align: center !important; }
+      footer div p, footer div input,
+      footer div label, footer div table.variations div.option-placeholder, table.variations footer div div.option-placeholder, footer div .woocommerce-message,
+      footer div .woocommerce-info,
+      footer div .woocommerce-error, footer div body.single-product .product .summary .price small, body.single-product .product .summary .price footer div small {
+        margin-bottom: 0 !important; }
+    footer div:nth-child(1) {
+      order: 1; }
+    footer div:nth-child(2) {
+      order: 3;
+      margin-bottom: 0; }
+    footer div:nth-child(3) {
+      order: 2; } }
 body.error404 #error404-content {
   max-width: 800px;
   margin: 100px auto;
