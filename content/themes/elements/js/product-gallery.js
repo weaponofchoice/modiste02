@@ -31,7 +31,6 @@ $(document).ready(function(){
             var target = mutation.target;
 
             if( $(target).find('li').length < 1 ){
-              console.log("function fired");
               contents = $(target).find('a');
 
               // Prevent opening image in new tab

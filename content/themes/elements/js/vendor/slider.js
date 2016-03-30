@@ -54,63 +54,33 @@
 
         // Next and previous arrow buttons
         if( settings.buttons === true ) {
-          if( $(this).closest('.slider').hasClass('images') ){
-            prev.click(function() {
-              var parent = $(this).closest('.slider');
-              var current = parent.find('.is-active');
+          next.unbind('click').click(function() {
+            var parent = $(this).closest('.slider');
+            var current = parent.find('.is-active');
 
-              if (current.hasClass("last")) {
-                var target = parent.find('.first');
-              } else {
-                var target = current.next();
-              }
+            if (current.hasClass("last")) {
+              var target = parent.find('.first');
+            } else {
+              var target = current.next();
+            }
 
-              current.removeClass("is-active");
-              target.addClass("is-active");
-            });
+            current.removeClass("is-active");
+            target.addClass("is-active");
+          });
 
-            next.click(function() {
-              var parent = $(this).closest('.slider');
-              var current = parent.find('.is-active');
+          prev.unbind('click').click(function() {
+            var parent = $(this).closest('.slider');
+            var current = parent.find('.is-active');
 
-              if (current.hasClass("first")) {
-                var target = parent.find('.last');
-              } else {
-                var target = current.prev();
-              }
+            if (current.hasClass("first")) {
+              var target = parent.find('.last');
+            } else {
+              var target = current.prev();
+            }
 
-              current.removeClass("is-active");
-              target.addClass("is-active");
-            });
-          } else {
-            next.click(function() {
-              var parent = $(this).closest('.slider');
-              var current = parent.find('.is-active');
-
-              if (current.hasClass("last")) {
-                var target = parent.find('.first');
-              } else {
-                var target = current.next();
-              }
-
-              current.removeClass("is-active");
-              target.addClass("is-active");
-            });
-
-            prev.click(function() {
-              var parent = $(this).closest('.slider');
-              var current = parent.find('.is-active');
-
-              if (current.hasClass("first")) {
-                var target = parent.find('.last');
-              } else {
-                var target = current.prev();
-              }
-
-              current.removeClass("is-active");
-              target.addClass("is-active");
-            });
-          }
+            current.removeClass("is-active");
+            target.addClass("is-active");
+          });
         } else {
           controls.hide();
         }
