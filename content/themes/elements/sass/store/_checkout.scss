@@ -1,22 +1,24 @@
 .woocommerce-checkout{
+  form{
+    max-width: 700px;
+    margin: 50px auto 0;
+    padding: 50px;
+
+    background-color: $grey-light;
+  }
+
   .woocommerce{
     padding: 0;
   }
-}
 
-.woocommerce-order-received{
-  .woocommerce{
-    padding: 50px;
-  }
-}
-
-.woocommerce-checkout{
+  // Login message
   .woocommerce-info{
     .showlogin{
       margin-left: 5px;
     }
   }
 
+  // Errors in billing details
   ul.woocommerce-error{
     display: block;
     padding: 0;
@@ -28,17 +30,7 @@
     }
   }
 
-  form.login{
-    p:first-child{
-      margin-bottom: 25px;
-    }
-
-    label[for="rememberme"]{
-      display: none;
-    }
-  }
-
-  // Checkboxes
+  // Checkboxes for account creation and shipping address
   .create-account{
     margin-bottom: 10px !important;
   }
@@ -51,11 +43,7 @@
     text-align: left;
   }
 
-  #order_review{
-    height: auto;
-    overflow: hidden;
-  }
-
+  // Payment radio buttons
   #payment{
     width: 40%;
     float: right;
@@ -82,95 +70,18 @@
   }
 }
 
-table.woocommerce-checkout-review-order-table,
-table.order_details{
-  width: 100%;
-  border-collapse: collapse;
+.woocommerce-checkout{
+  #order_review{
+    height: auto;
+    overflow: hidden;
 
-  thead{
-    color: $grey-text;
-    text-align: left;
+    table tfoot{
+      tr.shipping td{
+        color: transparent;
 
-    th{
-      padding: 15px 0;
-
-      border-bottom: thin solid $grey;
-
-      &:first-child{
-        width: 150px;
-      }
-
-      &:last-child{
-        text-align: right;
-      }
-
-      &.product-name{
-        padding-left: 15px;
-      }
-    }
-  }
-
-  tbody{
-    td{
-      padding: 15px 0;
-      vertical-align: top;
-
-      &:last-child{
-        text-align: right;
-      }
-    }
-
-    .product-thumbnail{
-      img{
-        border: 5px solid $white;
-      }
-    }
-
-    .product-name{
-      padding-left: 15px;
-
-      // a{
-      //   margin-bottom: 15px;
-      //   display: block;
-      //
-      //   font-size: 30px;
-      //   line-height: 25px;
-      // }
-
-      .variation{
-        @include clearfix();
-
-        dt,
-        dd{
-          float: left;
-          display: inline-block;
+        span{
+          color: $black;
         }
-
-        dt{
-          clear: left;
-          margin-right: 5px;
-        }
-      }
-    }
-  }
-
-  tfoot{
-    text-align: right;
-
-    tr:first-child{
-      th,
-      td{
-        padding-top: 15px;
-
-        border-top: thin solid $grey;
-      }
-    }
-
-    tr.shipping td{
-      color: transparent;
-
-      span{
-        color: $black;
       }
     }
   }

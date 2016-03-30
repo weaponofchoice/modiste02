@@ -6,7 +6,6 @@ table.variations{
   }
 
   div{
-    padding: 10px;
     display: inline-block;
 
     cursor: pointer;
@@ -24,11 +23,15 @@ table.variations{
 
     label{
       cursor: pointer;
+      padding: 10px;
+      display: inline-block;
     }
   }
 
   div.option-placeholder{
     @extend p;
+
+    padding: 10px 0;
 
     background-color: $grey-light;
   }

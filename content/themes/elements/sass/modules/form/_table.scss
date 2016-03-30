@@ -1,0 +1,67 @@
+table{
+  width: 100%;
+
+  text-align: left;
+  border-collapse: collapse;
+
+  thead{
+    color: $grey-text;
+
+    th{
+      padding: 15px 0;
+
+      border-bottom: thin solid $grey;
+
+      &:last-child{
+        text-align: right;
+      }
+    }
+  }
+
+  tbody{
+    td{
+      padding: 15px 0;
+
+      vertical-align: top;
+
+      &:last-child{
+        text-align: right;
+      }
+    }
+  }
+
+  tfoot{
+    text-align: right;
+
+    tr th{
+      width: 75%;
+    }
+
+    tr:first-child{
+      th,
+      td{
+        padding-top: 15px;
+
+        border-top: thin solid $grey;
+      }
+    }
+  }
+
+  // Variations
+  .product-name{
+    .variation{
+      @include clearfix();
+
+      dt,
+      dd{
+        float: left;
+        display: inline-block;
+      }
+
+      dt{
+        clear: left;
+        margin-right: 5px;
+      }
+    }
+  }
+}

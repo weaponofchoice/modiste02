@@ -1,3 +1,8 @@
+input,
+label{
+  @extend p;
+}
+
 input{
   padding: 8px 0;
 
@@ -59,35 +64,39 @@ input[type="checkbox"]{
   }
 }
 
-input[type="radio"]{
-  @include appearance( none );
+.woocommerce-cart,
+.woocommerce-account,
+.woocommerce-checkout{
+  input[type="radio"]{
+    @include appearance( none );
 
-  margin-bottom: 0;
-  margin-right: .5em;
-  vertical-align: middle;
+    margin-bottom: 0;
+    margin-right: .5em;
+    vertical-align: middle;
 
-  width: 18px !important;
-  height: 18px;
-  margin-bottom: 3px;
-  padding: 0;
+    width: 18px !important;
+    height: 18px;
+    margin-bottom: 3px;
+    padding: 0;
 
-  background-color: transparent;
-  border: thin solid $black;
-  border-radius: 100%;
-  cursor: pointer;
-
-  + label{
-    cursor: pointer;
-  }
-  
-  &:checked:after{
-    content: '';
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    width: 8px;
-    height: 8px;
+    background-color: transparent;
+    border: thin solid $black;
     border-radius: 100%;
-    background: black;
+    cursor: pointer;
+
+    + label{
+      cursor: pointer;
+    }
+
+    &:checked:after{
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      background: black;
+    }
   }
 }
