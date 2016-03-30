@@ -2611,6 +2611,11 @@ body.single-product .product {
     height: 100%;
     float: right;
     overflow: hidden; }
+    body.single-product .product .images .woocommerce-main-image {
+      display: none; }
+    body.single-product .product .images .slider-images {
+      height: 100%;
+      padding-bottom: 0; }
     body.single-product .product .images img {
       width: auto;
       max-width: none;

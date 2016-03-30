@@ -17,6 +17,15 @@ body.single-product{
       float: right;
       overflow: hidden;
 
+      .woocommerce-main-image{
+        display: none;
+      }
+
+      .slider-images{
+        height: 100%;
+        padding-bottom: 0;
+      }
+
       img{
         width: auto;
         max-width: none;

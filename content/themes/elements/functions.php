@@ -3,6 +3,9 @@
  * @package WordPress
  * @subpackage HTML5_Boilerplate */
 
+apply_filters( 'wc_additional_variation_images_main_images_class', 'thumbnails' );
+
+
 function wpb_mce_buttons_2($buttons) {
   array_unshift($buttons, 'styleselect');
   return $buttons;
