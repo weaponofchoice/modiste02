@@ -25,6 +25,13 @@ body.single-product .product .summary{
 
   table.variations{
     margin-bottom: 15px;
+
+    td{
+      padding: 0;
+      vertical-align: baseline;
+
+      text-align: left;
+    }
   }
 
   .product-download{

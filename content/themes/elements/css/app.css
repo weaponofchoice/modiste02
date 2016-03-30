@@ -2252,7 +2252,6 @@ table.variations {
   table.variations td.label {
     width: 80px; }
   table.variations div {
-    padding: 10px;
     display: inline-block;
     cursor: pointer;
     background-color: #c8c8c8; }
@@ -2264,8 +2263,11 @@ table.variations {
     table.variations div input[type="radio"]:checked + label {
       text-decoration: underline; }
     table.variations div label {
-      cursor: pointer; }
+      cursor: pointer;
+      padding: 10px;
+      display: inline-block; }
   table.variations div.option-placeholder {
+    padding: 10px 0;
     background-color: #f0f0f0; }
 
 .woocommerce-cart form {
@@ -2687,6 +2689,10 @@ body.single-product .product .summary .product-shipping {
   margin-bottom: 25px; }
 body.single-product .product .summary table.variations {
   margin-bottom: 15px; }
+  body.single-product .product .summary table.variations td {
+    padding: 0;
+    vertical-align: baseline;
+    text-align: left; }
 body.single-product .product .summary .product-download {
   margin-left: 90px; }
 body.single-product .product .summary .button {
