@@ -25,62 +25,33 @@ $(document).ready(function(){
 
       // Create an observer instance
       var observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-          var target = mutation.target;
 
-          if( $(target).find('li').length < 1 ){
-            contents = $(target).find('a');
+        var initProductSlider = function() {
+          mutations.forEach(function(mutation) {
+            var target = mutation.target;
 
-            // Prevent opening image in new tab
-            contents.click( function(e){
-              e.preventDefault();
-            });
+            if( $(target).find('li').length < 1 ){
+              console.log("function fired");
+              contents = $(target).find('a');
 
-            // Wrap items in li tags
-            contents.wrap('<li></li>');
+              // Prevent opening image in new tab
+              contents.click( function(e){
+                e.preventDefault();
+              });
 
-            $('.single-product .images').slider({
-              lightbox: false,
-              bullets: false,
-              keys: false,
-              buttons: false
-            });
+              // Wrap items in li tags
+              contents.wrap('<li></li>');
 
-            // Images are build in reverse, so next and previous functionality should be reversed as well
-            var prev = $('.product .slider-prev');
-            var next = $('.product .slider-next');
+              $('.single-product .images').slider({
+                lightbox: false,
+                bullets: false,
+                keys: false
+              });
+            }
+          });
+        }
 
-            prev.click(function() {
-              console.log('prev');
-              var parent = $(this).closest('.slider')
-              var current = parent.find('.is-active');
-
-              if (current.hasClass("last")) {
-                var target = parent.find('.first');
-              } else {
-                var target = current.next();
-              }
-
-              current.removeClass("is-active");
-              target.addClass("is-active");
-            });
-
-            next.click(function() {
-              console.log('next');
-              var parent = $(this).closest('.slider')
-              var current = parent.find('.is-active');
-
-              if (current.hasClass("first")) {
-                var target = parent.find('.last');
-              } else {
-                var target = current.prev();
-              }
-
-              current.removeClass("is-active");
-              target.addClass("is-active");
-            });
-          }
-        });
+        initProductSlider();
       });
 
       // Configuration of the observer:
