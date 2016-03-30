@@ -2660,30 +2660,6 @@ body.single-product .product .images img {
   margin: auto; }
 body.single-product .product .images .slider-controls {
   display: block !important; }
-  body.single-product .product .images .slider-controls a, body.single-product .product .images .slider-controls button {
-    top: 0;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-image: url("/modiste/content/themes/elements/img/arrow.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 15px; }
-    body.single-product .product .images .slider-controls a.slider-prev, body.single-product .product .images .slider-controls button.slider-prev {
-      left: 0;
-      margin-left: 2em; }
-      body.single-product .product .images .slider-controls a.slider-prev:hover, body.single-product .product .images .slider-controls button.slider-prev:hover, body.single-product .product .images .slider-controls a.slider-prev:focus, body.single-product .product .images .slider-controls button.slider-prev:focus {
-        margin-left: 1.5em; }
-    body.single-product .product .images .slider-controls a.slider-next, body.single-product .product .images .slider-controls button.slider-next {
-      -moz-transform: rotate(180deg);
-      -o-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-      -webkit-transform: rotate(180deg);
-      transform: rotate(180deg);
-      right: 0;
-      margin-right: 2em; }
-      body.single-product .product .images .slider-controls a.slider-next:hover, body.single-product .product .images .slider-controls button.slider-next:hover, body.single-product .product .images .slider-controls a.slider-next:focus, body.single-product .product .images .slider-controls button.slider-next:focus {
-        margin-right: 1.5em; }
 
 @media only screen and (max-width: 1000px) {
   body.single-product .product {
