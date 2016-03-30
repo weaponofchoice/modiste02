@@ -38,7 +38,6 @@
         // Next image if clicked on image
         if( settings.click === true ) {
           image.click(function() {
-            console.log('clicked');
             var parent = $(this).closest('.slider')
             var current = parent.find('.is-active');
 

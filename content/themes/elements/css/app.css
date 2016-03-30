@@ -1126,28 +1126,14 @@ a.nav-open i, button.nav-open i {
   a.nav-close, button.nav-close {
     margin-right: 2.5rem; } }
 .arrow {
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black; }
+  width: 15px;
+  cursor: pointer; }
   .arrow.arrow-right {
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
-  .arrow.arrow-left {
-    -moz-transform: rotate(135deg);
-    -o-transform: rotate(135deg);
-    -ms-transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg); }
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
   .arrow.arrow-up {
     -moz-transform: rotate(225deg);
     -o-transform: rotate(225deg);
@@ -1235,15 +1221,30 @@ a.nav-open i, button.nav-open i {
   left: 50%;
   position: absolute;
   width: 100%; }
-  .slider-controls .arrow {
+  .slider-controls a, .slider-controls button {
     top: 0;
-    position: absolute; }
-    .slider-controls .arrow.arrow-left {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url("/modiste/content/themes/elements/img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15px; }
+    .slider-controls a.slider-prev, .slider-controls button.slider-prev {
       left: 0;
       margin-left: 2em; }
-    .slider-controls .arrow.arrow-right {
+      .slider-controls a.slider-prev:hover, .slider-controls button.slider-prev:hover, .slider-controls a.slider-prev:focus, .slider-controls button.slider-prev:focus {
+        margin-left: 1.5em; }
+    .slider-controls a.slider-next, .slider-controls button.slider-next {
+      -moz-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
       right: 0;
       margin-right: 2em; }
+      .slider-controls a.slider-next:hover, .slider-controls button.slider-next:hover, .slider-controls a.slider-next:focus, .slider-controls button.slider-next:focus {
+        margin-right: 1.5em; }
 
 .section-slider .section-content .slider-controls {
   -webkit-transition: 0.3s;
@@ -2657,6 +2658,32 @@ body.single-product .product .images img {
   height: 100%;
   display: block;
   margin: auto; }
+body.single-product .product .images .slider-controls {
+  display: block !important; }
+  body.single-product .product .images .slider-controls a, body.single-product .product .images .slider-controls button {
+    top: 0;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url("/modiste/content/themes/elements/img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15px; }
+    body.single-product .product .images .slider-controls a.slider-prev, body.single-product .product .images .slider-controls button.slider-prev {
+      left: 0;
+      margin-left: 2em; }
+      body.single-product .product .images .slider-controls a.slider-prev:hover, body.single-product .product .images .slider-controls button.slider-prev:hover, body.single-product .product .images .slider-controls a.slider-prev:focus, body.single-product .product .images .slider-controls button.slider-prev:focus {
+        margin-left: 1.5em; }
+    body.single-product .product .images .slider-controls a.slider-next, body.single-product .product .images .slider-controls button.slider-next {
+      -moz-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+      right: 0;
+      margin-right: 2em; }
+      body.single-product .product .images .slider-controls a.slider-next:hover, body.single-product .product .images .slider-controls button.slider-next:hover, body.single-product .product .images .slider-controls a.slider-next:focus, body.single-product .product .images .slider-controls button.slider-next:focus {
+        margin-right: 1.5em; }
 
 @media only screen and (max-width: 1000px) {
   body.single-product .product {
@@ -2694,7 +2721,7 @@ body.single-product .product .summary table.variations {
     vertical-align: baseline;
     text-align: left; }
 body.single-product .product .summary .product-download {
-  margin-left: 90px; }
+  margin-left: 80px; }
 body.single-product .product .summary .button {
   width: 150px;
   float: left; }

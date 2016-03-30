@@ -50,7 +50,7 @@ body.single-product .product .images{
 
   img{
     @include transform( translate(0) );
-    
+
     top: 0;
     left: 0;
 
@@ -59,6 +59,45 @@ body.single-product .product .images{
     height: 100%;
     display: block;
     margin: auto;
+  }
+
+  .slider-controls{
+    display: block !important;
+    
+    a{
+      top: 0;
+      position: absolute;
+
+      width: 50px;
+      height: 50px;
+
+      background-image: url('/modiste/content/themes/elements/img/arrow.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 15px;
+
+      &.slider-prev{
+        left: 0;
+        margin-left: 2em;
+
+        &:hover,
+        &:focus{
+          margin-left: 1.5em;
+        }
+      }
+
+      &.slider-next{
+        @include transform( rotate(180deg) );
+
+        right: 0;
+        margin-right: 2em;
+
+        &:hover,
+        &:focus{
+          margin-right: 1.5em;
+        }
+      }
+    }
   }
 }
 

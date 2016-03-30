@@ -1,20 +1,11 @@
 .arrow{
-  @include transform( rotate(45deg) );
-
-  width: 30px;
-  height: 30px;
+  width: 15px;
 
   cursor: pointer;
-  border-right: 2px solid $black;
-  border-bottom: 2px solid $black;
 
   // Default direction is down
   &.arrow-right{
-    @include transform( rotate(-45deg) );
-  }
-
-  &.arrow-left{
-    @include transform( rotate(135deg) );
+    @include transform( rotate(180deg) );
   }
 
   &.arrow-up{

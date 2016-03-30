@@ -9,6 +9,11 @@ $(document).ready(function(){
       // Add container class
       container.addClass('slider');
 
+      // Add slider controls
+      container.append('<div class="slider-controls"></div>');
+      $('.product .slider-controls').append('<a class="slider-prev"></a>');
+      $('.product .slider-controls').append('<a class="slider-next"></a>');
+
       // Add slider class
       thumbnails.addClass('slider-images');
 
@@ -35,8 +40,43 @@ $(document).ready(function(){
             contents.wrap('<li></li>');
 
             $('.single-product .images').slider({
-              lightbox: false
-            })
+              lightbox: false,
+              bullets: false,
+              keys: false,
+              buttons: false
+            });
+
+            // Images are build in reverse, so next and previous functionality should be reversed as well
+            var prev = $('.product .slider-prev');
+            var next = $('.product .slider-next');
+
+            prev.click(function() {
+              var parent = $(this).closest('.slider')
+              var current = parent.find('.is-active');
+
+              if (current.hasClass("last")) {
+                var target = parent.find('.first');
+              } else {
+                var target = current.next();
+              }
+
+              current.removeClass("is-active");
+              target.addClass("is-active");
+            });
+
+            next.click(function() {
+              var parent = $(this).closest('.slider')
+              var current = parent.find('.is-active');
+
+              if (current.hasClass("first")) {
+                var target = parent.find('.last');
+              } else {
+                var target = current.prev();
+              }
+
+              current.removeClass("is-active");
+              target.addClass("is-active");
+            });
           }
         });
       });
@@ -46,8 +86,6 @@ $(document).ready(function(){
 
       // Pass in the target node, as well as the observer options
       observer.observe(target, config);
-
     }
   }
-
 });

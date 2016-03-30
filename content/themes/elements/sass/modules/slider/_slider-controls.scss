@@ -8,18 +8,38 @@
 
   width: 100%;
 
-  .arrow{
+  a{
     top: 0;
     position: absolute;
 
-    &.arrow-left{
+    width: 50px;
+    height: 50px;
+
+    background-image: url('/modiste/content/themes/elements/img/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15px;
+
+    &.slider-prev{
       left: 0;
       margin-left: 2em;
+
+      &:hover,
+      &:focus{
+        margin-left: 1.5em;
+      }
     }
 
-    &.arrow-right{
+    &.slider-next{
+      @include transform( rotate(180deg) );
+
       right: 0;
       margin-right: 2em;
+
+      &:hover,
+      &:focus{
+        margin-right: 1.5em;
+      }
     }
   }
 }
