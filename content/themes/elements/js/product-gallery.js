@@ -51,6 +51,7 @@ $(document).ready(function(){
             var next = $('.product .slider-next');
 
             prev.click(function() {
+              console.log('prev');
               var parent = $(this).closest('.slider')
               var current = parent.find('.is-active');
 
@@ -65,6 +66,7 @@ $(document).ready(function(){
             });
 
             next.click(function() {
+              console.log('next');
               var parent = $(this).closest('.slider')
               var current = parent.find('.is-active');
 
