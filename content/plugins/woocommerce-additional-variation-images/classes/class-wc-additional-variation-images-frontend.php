@@ -115,8 +115,10 @@ class WC_Additional_Variation_Images_Frontend {
 
 		if ( 0 < count( $image_ids ) ) {
 
-			if ( apply_filters( 'wc_additional_variation_images_get_first_image', false ) ) {
-				array_unshift( $image_ids, (string) $variation_id );
+			if ( apply_filters( 'wc_additional_variation_images_get_first_image', false ) || $this->cloud_zoom_exists() ) {
+				if ( $variation_main_image = get_post_meta( $variation_id, '_thumbnail_id', true ) ) {
+					array_unshift( $image_ids, $variation_main_image );
+				}
 			}
 
 			// build html
@@ -135,14 +137,14 @@ class WC_Additional_Variation_Images_Frontend {
 
 				$image_link = wp_get_attachment_url( $id );
 
-				if ( ! apply_filters( 'wc_additional_variation_images_get_first_image', false ) ) {
+				if ( ! apply_filters( 'wc_additional_variation_images_get_first_image', false ) || $this->cloud_zoom_exists() ) {
 					if ( ! $image_link ) {
 						continue;
 					}
 				}
 
 				$gallery_image = wp_get_attachment_image( $id, apply_filters( 'single_product_small_thumbnail_size', 'shop_thumbnail' ) );
-				$main_image = wp_get_attachment_image( $id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ) );
+				$main_image    = wp_get_attachment_image( $id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ) );
 
 				$image_title = esc_attr( get_the_title( $id ) );
 
@@ -160,18 +162,18 @@ class WC_Additional_Variation_Images_Frontend {
 				
 				// see if we need to get the first image of the variation
 				// only run one time
-				if ( apply_filters( 'wc_additional_variation_images_get_first_image', false ) && $loop === 0 ) {
-					$main_image_title = esc_attr( get_the_title( get_post_thumbnail_id( $id ) ) );
-					$main_image_link  = wp_get_attachment_url( get_post_thumbnail_id( $id ) );
-					$main_image       = get_the_post_thumbnail( $id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), array(
+				if ( ( apply_filters( 'wc_additional_variation_images_get_first_image', false ) || $this->cloud_zoom_exists() ) && $loop === 0 ) {
+					$main_image_title = esc_attr( get_the_title( $id ) );
+					$main_image_link  = wp_get_attachment_url( $id );
+					$main_image       = wp_get_attachment_image( $id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), false, array(
 						'title' => $main_image_title
 						) );
 
 					$main_images .= apply_filters( 'woocommerce_single_product_image_html', sprintf( '<a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s">%s</a>', $main_image_link, $main_image_title, $main_image ), $id );
 
-					$gallery_image_title = esc_attr( get_the_title( get_post_thumbnail_id( $id ) ) );
-					$gallery_image_link  = wp_get_attachment_url( get_post_thumbnail_id( $id ) );
-					$gallery_image       = get_the_post_thumbnail( $id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), array(
+					$gallery_image_title = esc_attr( get_the_title( $id ) );
+					$gallery_image_link  = wp_get_attachment_url( $id );
+					$gallery_image       = wp_get_attachment_image( $id, apply_filters( 'single_product_large_thumbnail_size', 'shop_thumbnail' ), false,  array(
 						'title' => $gallery_image_title
 						) );
 
