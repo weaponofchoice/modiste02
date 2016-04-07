@@ -82,7 +82,8 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 			</tbody>
 		</table>
 
-    <a class="product-download">Download product sheet</a>
+    <?php $product_sheet = get_field('product_sheet'); ?>
+    <a class="product-download" href="<?php echo $product_sheet['url']; ?>" target="_blank">Download product sheet</a>
 
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
