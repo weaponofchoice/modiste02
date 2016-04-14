@@ -78,9 +78,14 @@ body.single-product .product .images{
       }
 
       .images{
-        img{
-          width: 100%;
-          height: auto;
+        .thumbnails{
+          height: 0;
+          padding-bottom: 70%;
+
+          img{
+            width: auto;
+            height: 100%;
+          }
         }
       }
     }

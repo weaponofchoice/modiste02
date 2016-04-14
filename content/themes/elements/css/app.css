@@ -2668,9 +2668,12 @@ body.single-product .product .images .slider-controls {
     body.single-product .product .images,
     body.single-product .product .summary {
       width: 100%; }
-    body.single-product .product .images img {
-      width: 100%;
-      height: auto; } }
+    body.single-product .product .images .thumbnails {
+      height: 0;
+      padding-bottom: 70%; }
+      body.single-product .product .images .thumbnails img {
+        width: auto;
+        height: 100%; } }
 body.single-product .product .summary .link-arrow img {
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
