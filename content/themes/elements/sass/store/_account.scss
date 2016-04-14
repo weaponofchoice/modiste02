@@ -32,9 +32,22 @@
 }
 
 #customer_login{
+  h2{
+    margin-bottom: 25px;
+  }
+
   form{
     margin: 0;
-    padding: 0;
+    margin-bottom: 50px;
+    padding: 25px;
+
+    .woocommerce-password-strength{
+      margin-top: 1em;
+    }
+
+    .form-row:last-child{
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -42,6 +55,10 @@
 .woocommerce-account{
   table.my_account_orders{
     margin: 25px 0 50px;
+
+    td{
+      vertical-align: middle;
+    }
   }
 
   .myaccount_user,
@@ -113,11 +130,15 @@
       text-align: left;
     }
 
-    .customer_details{
+    table.customer_details{
+      width: auto;
       text-align: left;
 
       td{
-        padding-left: 5px;
+        padding: 0;
+        padding-left: 10px;
+
+        text-align: left;
       }
     }
 

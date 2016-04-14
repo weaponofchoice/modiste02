@@ -65,3 +65,13 @@ table{
     }
   }
 }
+
+@media #{$small-only}{
+  table{
+    tfoot{
+      tr th{
+        width: 50%;
+      }
+    }
+  }
+}
