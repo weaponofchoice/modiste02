@@ -1498,15 +1498,21 @@ ul.posts li:nth-child(even) {
   text-align: right; }
 
 body.single-post article section {
-  margin-bottom: 50px; }
+  margin-bottom: 100px; }
 
 body.single-post article section.image {
   width: calc(100% + 6.25rem);
   margin-left: -6.25rem; }
-body.single-post article section.text .section-body {
-  margin-left: 0; }
-  body.single-post article section.text .section-body h1 {
-    margin-bottom: 30px; }
+body.single-post article section.text {
+  margin-bottom: 50px; }
+  body.single-post article section.text .section-body {
+    margin-left: 0; }
+    body.single-post article section.text .section-body h1 {
+      margin-bottom: 30px; }
+body.single-post article section.grid li:nth-child(odd) {
+  padding-right: 50px; }
+body.single-post article section.grid li:nth-child(even) {
+  padding-left: 50px; }
 
 @media only screen and (max-width: 500px) {
   body.single-post article section.text h1 {
