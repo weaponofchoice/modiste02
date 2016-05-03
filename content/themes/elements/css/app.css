@@ -1044,6 +1044,8 @@ nav ul {
         padding-right: 0;
         margin-bottom: 15px;
         text-align: right; }
+        nav ul li a, nav ul li button {
+          font-size: 30px; }
         nav ul li a:hover, nav ul li button:hover {
           text-decoration: underline; }
         nav ul li.current-menu-item a, nav ul li.current-menu-item button {
