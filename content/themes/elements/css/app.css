@@ -1195,6 +1195,14 @@ a.nav-open i, button.nav-open i {
       visibility: visible;
       transition: .5s; }
 
+@media only screen and (max-width: 500px) {
+  .slider {
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
+    .slider .slider-images {
+      left: 0;
+      width: 100%;
+      padding-bottom: 80%; } }
 .slider-bullets {
   position: absolute;
   bottom: 1em;
