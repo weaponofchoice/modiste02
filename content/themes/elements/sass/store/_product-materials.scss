@@ -80,3 +80,21 @@
     }
   }
 }
+
+@media #{$small-only}{
+  #product-materials{
+    ul{
+      li{
+        @include flex-direction( column );
+
+        img{
+          margin-bottom: 15px;
+        }
+
+        p{
+          text-align: center;
+        }
+      }
+    }
+  }
+}

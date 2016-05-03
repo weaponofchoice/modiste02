@@ -12,3 +12,13 @@ section.text{
     }
   }
 }
+
+@media #{$small-only}{
+  section.text{
+    .section-body{
+      h1{
+        padding-left: 0 !important;
+      }
+    }
+  }
+}

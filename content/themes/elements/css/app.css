@@ -1346,6 +1346,9 @@ section.text .section-body button {
   section.text .section-body button:last-child {
     margin-bottom: 0; }
 
+@media only screen and (max-width: 500px) {
+  section.text .section-body h1 {
+    padding-left: 0 !important; } }
 section.quote .section-body {
   max-width: 700px;
   margin: auto;
@@ -2886,3 +2889,18 @@ body.single-product .product .summary .single_add_to_cart_button {
     #product-materials ul li .woocommerce-error, #product-materials ul li body.single-product .product .summary .price small, body.single-product .product .summary .price #product-materials ul li small {
       padding-left: 15px;
       text-align: left; } }
+@media only screen and (max-width: 500px) {
+  #product-materials ul li {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    #product-materials ul li img {
+      margin-bottom: 15px; }
+    #product-materials ul li p, #product-materials ul li input,
+    #product-materials ul li label, #product-materials ul li table.variations div.option-placeholder, table.variations #product-materials ul li div.option-placeholder, #product-materials ul li .woocommerce-message,
+    #product-materials ul li .woocommerce-info,
+    #product-materials ul li .woocommerce-error, #product-materials ul li body.single-product .product .summary .price small, body.single-product .product .summary .price #product-materials ul li small {
+      text-align: center; } }
