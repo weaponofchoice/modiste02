@@ -1339,11 +1339,11 @@ section.module .section-body {
   section.module .section-body .module-text {
     width: 50%; }
   section.module .section-body .module-image {
-    padding-right: 45px; }
+    padding-right: 50px; }
     section.module .section-body .module-image img {
       width: 100%; }
   section.module .section-body .module-text {
-    padding-left: 45px; }
+    padding-left: 50px; }
     section.module .section-body .module-text p, section.module .section-body .module-text input,
     section.module .section-body .module-text label, section.module .section-body .module-text table.variations div.option-placeholder, table.variations section.module .section-body .module-text div.option-placeholder, section.module .section-body .module-text .woocommerce-message,
     section.module .section-body .module-text .woocommerce-info,
