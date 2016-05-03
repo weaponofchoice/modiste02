@@ -44,10 +44,6 @@ table.shop_table.cart{
   }
 
   tbody{
-    tr{
-      background-color: $grey-light;
-    }
-
     td{
       padding: 35px 15px;
     }
@@ -113,7 +109,6 @@ table.shop_table.cart{
       padding: 15px;
 
       border-top: thin solid $grey;
-      background-color: $grey-light;
 
       a{
         @extend .button-sec;

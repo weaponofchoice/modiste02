@@ -1505,7 +1505,13 @@ body.single-post article section.image {
   margin-left: -6.25rem; }
 body.single-post article section.text .section-body {
   margin-left: 0; }
+  body.single-post article section.text .section-body h1 {
+    margin-bottom: 30px; }
 
+@media only screen and (max-width: 500px) {
+  body.single-post article section.text h1 {
+    font-size: 15vw;
+    text-align: left !important; } }
 button {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -2299,8 +2305,6 @@ table.shop_table.cart thead .product-quantity {
 table.shop_table.cart thead .product-subtotal {
   width: 20%;
   padding-right: 15px; }
-table.shop_table.cart tbody tr {
-  background-color: #f0f0f0; }
 table.shop_table.cart tbody td {
   padding: 35px 15px; }
 table.shop_table.cart tbody .product-remove {
@@ -2340,8 +2344,7 @@ table.shop_table.cart tbody .product-quantity .incrementer {
   margin-top: -5px; }
 table.shop_table.cart tbody tr:last-child td {
   padding: 15px;
-  border-top: thin solid #c8c8c8;
-  background-color: #f0f0f0; }
+  border-top: thin solid #c8c8c8; }
 
 .cart-collaterals {
   width: 100%;

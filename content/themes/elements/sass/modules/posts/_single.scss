@@ -14,5 +14,20 @@ body.single-post article{
 
   section.text .section-body{
     margin-left: 0;
+
+    h1{
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media #{$small-only}{
+  body.single-post article{
+    section.text{
+      h1{
+        font-size: 15vw;
+        text-align: left !important;
+      }
+    }
   }
 }
