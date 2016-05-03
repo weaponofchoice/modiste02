@@ -1483,6 +1483,9 @@ section.grid ul.isotope-masonry li:nth-child(n) {
   section.grid ul.isotope-masonry li:nth-child(n) img {
     margin-bottom: 0; }
 
+@media only screen and (max-width: 500px) {
+  section.grid ul li {
+    margin-bottom: 40px; } }
 ul.posts li {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1513,6 +1516,10 @@ ul.posts li:nth-child(even) {
   float: right;
   text-align: right; }
 
+@media only screen and (max-width: 500px) {
+  ul.posts li {
+    padding-left: 15px;
+    padding-right: 15px; } }
 body.single-post article section {
   margin-bottom: 100px; }
 
@@ -1531,11 +1538,15 @@ body.single-post article section.grid li:nth-child(even) {
   padding-left: 50px; }
 
 @media only screen and (max-width: 500px) {
+  body.single-post article section {
+    margin-bottom: 40px; }
   body.single-post article section.text h1 {
     font-size: 15vw;
     text-align: left !important; }
   body.single-post article section.grid li:nth-child(n) {
-    padding: 0 30px; } }
+    padding: 0 30px; }
+    body.single-post article section.grid li:nth-child(n) img {
+      margin-bottom: 0; } }
 button {
   -moz-appearance: none;
   -webkit-appearance: none;
