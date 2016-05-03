@@ -1,5 +1,8 @@
 *** WooCommerce Additional Variation Images Changelog ***
 
+2016.03.31 - version 1.7.3
+* Fix - When Cloud Zoom ( Professor Cloud Zoom ) is enabled, first variation image was not loading.
+
 2015.11.30 - version 1.7.2
 * Fix - Variation images were not saving properly
 

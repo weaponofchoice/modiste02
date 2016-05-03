@@ -24,18 +24,22 @@ table.shop_table.cart{
 
     .product-name{
       width: 30%;
+      padding-left: 15px;
     }
 
     .product-price{
       width: 20%;
+      padding-left: 15px;
     }
 
     .product-quantity{
       width: 20%;
+      padding-left: 15px;
     }
 
     .product-subtotal{
       width: 20%;
+      padding-right: 15px;
     }
   }
 
@@ -105,7 +109,6 @@ table.shop_table.cart{
       padding: 15px;
 
       border-top: thin solid $grey;
-      background-color: $grey-light;
 
       a{
         @extend .button-sec;

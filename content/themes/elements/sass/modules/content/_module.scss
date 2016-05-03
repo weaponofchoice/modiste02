@@ -9,7 +9,7 @@ section.module{
 
     // Image
     .module-image{
-      padding-right: 45px;
+      padding-right: 50px;
 
       img{
         width: 100%;
@@ -18,7 +18,7 @@ section.module{
 
     // Text
     .module-text{
-      padding-left: 45px;
+      padding-left: 50px;
 
       p,
       h2{
@@ -27,7 +27,7 @@ section.module{
     }
 
     // Side caption
-    > p{
+    .module-caption{
       @include transform( rotate(-90deg) );
 
       top: 90px;
@@ -50,7 +50,7 @@ section.module{
         padding-right: 45px;
       }
 
-      > p{
+      .module-caption{
         @include transform( rotate(90deg) );
 
         left: auto;
@@ -90,19 +90,8 @@ section.module{
 
 @media #{$small-only}{
   section.module{
-    .section-body{
-      > p{
-        left: -120px;
-      }
-    }
-
-    &.orientated-right{
-      .section-body{
-        > p{
-          left: auto;
-          right: -120px;
-        }
-      }
+    .module-caption{
+      display: none !important;
     }
   }
 }

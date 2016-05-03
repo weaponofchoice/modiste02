@@ -3,7 +3,7 @@
 Plugin Name: Tamed Wordpress Admin Theme
 Plugin URI: http://codecanyon.net/item/tamed-wordpress-admin-theme/13800689
 Description: A powerful WordPress Admin Theme that transforms your WordPress backend into a more calm, clean and overall better place to work, personalised for your client or project.
-Version: 2.5.4
+Version: 2.5.5
 Author: Luc Awater
 Author URI: http://lucawater.nl
 Copyright: Luc Awater

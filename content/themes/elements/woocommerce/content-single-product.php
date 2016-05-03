@@ -92,8 +92,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div id="product-materials">
   <?php get_template_part( 'woocommerce/single-product/materials' ); ?>
 
-
-  <a class="button" href="">download product sheet</a>
+  <?php $product_sheet = get_field('product_sheet'); ?>
+  <a class="button" href="<?php echo $product_sheet['url']; ?>" target="_blank">download product sheet</a>
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

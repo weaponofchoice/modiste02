@@ -5,8 +5,13 @@ $(document).ready( function() {
   var options = $('td.value');
 
   for(a = 0; a < options.length; a++){
-    var defaultValue = $(options[a]).find('input[checked="checked"]')[0].value;
-    $(options[a]).prepend('<div class="option-placeholder">' + defaultValue + '</div>');
+    if( $(options[a]).find('input[checked="checked"]').length > 0 ){
+      var defaultValue = $(options[a]).find('input[checked="checked"]')[0].value;
+      $(options[a]).prepend('<div class="option-placeholder">' + defaultValue + '</div>');
+    } else {
+      $(options[a]).prepend('<div class="option-placeholder">Choose option</div>');
+    }
+
   }
 
   var label = $('label');

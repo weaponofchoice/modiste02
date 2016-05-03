@@ -54,8 +54,8 @@
 
         // Next and previous arrow buttons
         if( settings.buttons === true ) {
-          next.click(function() {
-            var parent = $(this).closest('.slider')
+          next.unbind('click').click(function() {
+            var parent = $(this).closest('.slider');
             var current = parent.find('.is-active');
 
             if (current.hasClass("last")) {
@@ -68,8 +68,8 @@
             target.addClass("is-active");
           });
 
-          prev.click(function() {
-            var parent = $(this).closest('.slider')
+          prev.unbind('click').click(function() {
+            var parent = $(this).closest('.slider');
             var current = parent.find('.is-active');
 
             if (current.hasClass("first")) {

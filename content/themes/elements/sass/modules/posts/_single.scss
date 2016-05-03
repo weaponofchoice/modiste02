@@ -1,7 +1,7 @@
 body.single-post{
   article{
     section{
-      margin-bottom: 50px;
+      margin-bottom: 100px;
     }
   }
 }
@@ -12,7 +12,50 @@ body.single-post article{
     margin-left: -#{$space-sides};
   }
 
-  section.text .section-body{
-    margin-left: 0;
+  section.text {
+    margin-bottom: 50px;
+
+    .section-body{
+      margin-left: 0;
+
+      h1{
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  section.grid{
+    li:nth-child(odd){
+      padding-right: 50px;
+    }
+
+    li:nth-child(even){
+      padding-left: 50px;
+    }
+  }
+}
+
+@media #{$small-only}{
+  body.single-post article{
+    section{
+      margin-bottom: 40px;
+    }
+
+    section.text{
+      h1{
+        font-size: 15vw;
+        text-align: left !important;
+      }
+    }
+
+    section.grid{
+      li:nth-child(n){
+        padding: 0 30px;
+
+        img{
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }

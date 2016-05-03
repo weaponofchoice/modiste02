@@ -730,7 +730,7 @@ elseif( $option_theme === 'clean' ):
       color: {$color_4};
     }
     #adminmenuwrap ul#adminmenu li a .wp-menu-image:before {
-      color: white;
+      color: {white};
     }
     #adminmenuwrap ul#adminmenu li a .wp-menu-name {
       color: white;
@@ -742,12 +742,12 @@ elseif( $option_theme === 'clean' ):
       color: white;
     }
     #adminmenuwrap ul#adminmenu li.current a .wp-menu-image:before, #adminmenuwrap ul#adminmenu li.wp-has-current-submenu a .wp-menu-image:before {
-      color: {$color_4};
+      color: {$color_4} !important;
     }
     #adminmenuwrap ul#adminmenu li.wp-has-submenu ul.wp-submenu {
       width: 200px;
       padding-left: 25px;
-      background: transparent;
+      background: {$color_2} !important;
     }
     #adminmenuwrap ul#adminmenu li.wp-has-submenu ul.wp-submenu li a {
       color: {$color_3};

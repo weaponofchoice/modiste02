@@ -63,41 +63,6 @@ body.single-product .product .images{
 
   .slider-controls{
     display: block !important;
-    
-    a{
-      top: 0;
-      position: absolute;
-
-      width: 50px;
-      height: 50px;
-
-      background-image: url('/modiste/content/themes/elements/img/arrow.svg');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 15px;
-
-      &.slider-prev{
-        left: 0;
-        margin-left: 2em;
-
-        &:hover,
-        &:focus{
-          margin-left: 1.5em;
-        }
-      }
-
-      &.slider-next{
-        @include transform( rotate(180deg) );
-
-        right: 0;
-        margin-right: 2em;
-
-        &:hover,
-        &:focus{
-          margin-right: 1.5em;
-        }
-      }
-    }
   }
 }
 
@@ -113,9 +78,14 @@ body.single-product .product .images{
       }
 
       .images{
-        img{
-          width: 100%;
-          height: auto;
+        .thumbnails{
+          height: 0;
+          padding-bottom: 70%;
+
+          img{
+            width: auto;
+            height: 100%;
+          }
         }
       }
     }

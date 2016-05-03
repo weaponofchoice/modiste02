@@ -1,1 +1,0 @@
-!function($){if($("section.slider").length>0){var i=$("section.slider");i.slider({lightbox:!1})}}(jQuery);

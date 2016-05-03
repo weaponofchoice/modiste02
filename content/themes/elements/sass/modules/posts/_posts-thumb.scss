@@ -29,3 +29,12 @@ ul.posts{
     text-align: right;
   }
 }
+
+@media #{$small-only}{
+  ul.posts{
+    li{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}

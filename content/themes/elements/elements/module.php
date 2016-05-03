@@ -31,7 +31,7 @@ section_start( $class_section );
      * Body content
      * This is the flexible part, that is different for each element
      */
-    echo '<p class="is-bold">' . $b_caption . '</p>';
+    echo '<p class="module-caption">' . $b_caption . '</p>';
 
     echo '<div class="module-image"><img src="' . $b_image_url . '" width="' . $b_image_width . '" height="' . $b_image_height . '"></div>';
 
