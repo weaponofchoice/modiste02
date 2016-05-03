@@ -73,3 +73,8 @@ legend{
   font-size: 15px;
   line-height: 1.35;
 }
+
+@media #{$small-only}{
+  h1{ font-size: 70px; font-size: 15vw; }
+  h2{ font-size: 30px; }
+}

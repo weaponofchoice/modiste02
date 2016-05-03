@@ -758,6 +758,13 @@ li {
   font-size: 15px;
   line-height: 1.35; }
 
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 70px;
+    font-size: 15vw; }
+
+  h2, h3, legend {
+    font-size: 30px; } }
 a, button {
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
@@ -837,15 +844,15 @@ main > *,
   main > *,
   #product-editorial > *,
   #product-materials {
-    padding: 3.75rem 2.5rem; }
+    padding: 2.5rem 2.5rem; }
     main > *:first-child,
     #product-editorial > *:first-child,
     #product-materials:first-child {
-      padding-top: 3.75rem; }
+      padding-top: 2.5rem; }
     main > *:last-child,
     #product-editorial > *:last-child,
     #product-materials:last-child {
-      padding-bottom: 3.75rem; } }
+      padding-bottom: 2.5rem; } }
 main {
   z-index: 900;
   height: auto !important;
@@ -1314,6 +1321,20 @@ section.text .section-body a,
 section.text .section-body button {
   max-width: 700px;
   margin-bottom: 1em; }
+  section.text .section-body h2:last-child, section.text .section-body h3:last-child, section.text .section-body legend:last-child,
+  section.text .section-body p:last-child,
+  section.text .section-body input:last-child,
+  section.text .section-body label:last-child,
+  section.text .section-body table.variations div.option-placeholder:last-child,
+  table.variations section.text .section-body div.option-placeholder:last-child,
+  section.text .section-body .woocommerce-message:last-child,
+  section.text .section-body .woocommerce-info:last-child,
+  section.text .section-body .woocommerce-error:last-child,
+  section.text .section-body body.single-product .product .summary .price small:last-child,
+  body.single-product .product .summary .price section.text .section-body small:last-child,
+  section.text .section-body a:last-child,
+  section.text .section-body button:last-child {
+    margin-bottom: 0; }
 
 section.quote .section-body {
   max-width: 700px;
@@ -1352,10 +1373,7 @@ section.module .section-body {
     section.module .section-body .module-text h3,
     section.module .section-body .module-text legend {
       margin-bottom: 1em; }
-  section.module .section-body > p, section.module .section-body > input,
-  section.module .section-body > label, section.module table.variations .section-body > div.option-placeholder, table.variations section.module .section-body > div.option-placeholder, section.module .section-body > .woocommerce-message,
-  section.module .section-body > .woocommerce-info,
-  section.module .section-body > .woocommerce-error, section.module body.single-product .product .summary .price .section-body > small, body.single-product .product .summary .price section.module .section-body > small {
+  section.module .section-body .module-caption {
     -moz-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
@@ -1377,10 +1395,7 @@ section.module.orientated-right .section-body {
   section.module.orientated-right .section-body .module-text {
     padding-left: 0;
     padding-right: 45px; }
-  section.module.orientated-right .section-body > p, section.module.orientated-right .section-body > input,
-  section.module.orientated-right .section-body > label, section.module.orientated-right table.variations .section-body > div.option-placeholder, table.variations section.module.orientated-right .section-body > div.option-placeholder, section.module.orientated-right .section-body > .woocommerce-message,
-  section.module.orientated-right .section-body > .woocommerce-info,
-  section.module.orientated-right .section-body > .woocommerce-error, section.module.orientated-right body.single-product .product .summary .price .section-body > small, body.single-product .product .summary .price section.module.orientated-right .section-body > small {
+  section.module.orientated-right .section-body .module-caption {
     -moz-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -1405,17 +1420,8 @@ section.module.align-bottom .section-body {
     section.module.orientated-right .section-body .module-image, section.module.orientated-left .section-body .module-image {
       margin-bottom: 45px; } }
 @media only screen and (max-width: 500px) {
-  section.module .section-body > p, section.module .section-body > input,
-  section.module .section-body > label, section.module table.variations .section-body > div.option-placeholder, table.variations section.module .section-body > div.option-placeholder, section.module .section-body > .woocommerce-message,
-  section.module .section-body > .woocommerce-info,
-  section.module .section-body > .woocommerce-error, section.module body.single-product .product .summary .price .section-body > small, body.single-product .product .summary .price section.module .section-body > small {
-    left: -120px; }
-  section.module.orientated-right .section-body > p, section.module.orientated-right .section-body > input,
-  section.module.orientated-right .section-body > label, section.module.orientated-right table.variations .section-body > div.option-placeholder, table.variations section.module.orientated-right .section-body > div.option-placeholder, section.module.orientated-right .section-body > .woocommerce-message,
-  section.module.orientated-right .section-body > .woocommerce-info,
-  section.module.orientated-right .section-body > .woocommerce-error, section.module.orientated-right body.single-product .product .summary .price .section-body > small, body.single-product .product .summary .price section.module.orientated-right .section-body > small {
-    left: auto;
-    right: -120px; } }
+  section.module .module-caption {
+    display: none !important; } }
 section.grid ul {
   width: 100%; }
   section.grid ul li {
@@ -1517,7 +1523,9 @@ body.single-post article section.grid li:nth-child(even) {
 @media only screen and (max-width: 500px) {
   body.single-post article section.text h1 {
     font-size: 15vw;
-    text-align: left !important; } }
+    text-align: left !important; }
+  body.single-post article section.grid li:nth-child(n) {
+    padding: 0 30px; } }
 button {
   -moz-appearance: none;
   -webkit-appearance: none;

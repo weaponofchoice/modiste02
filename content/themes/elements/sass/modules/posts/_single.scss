@@ -43,5 +43,11 @@ body.single-post article{
         text-align: left !important;
       }
     }
+
+    section.grid{
+      li:nth-child(n){
+        padding: 0 30px;
+      }
+    }
   }
 }

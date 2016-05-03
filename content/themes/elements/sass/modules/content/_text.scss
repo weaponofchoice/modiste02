@@ -5,6 +5,10 @@ section.text{
     a{
       max-width: 700px;
       margin-bottom: 1em;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
     }
   }
 }

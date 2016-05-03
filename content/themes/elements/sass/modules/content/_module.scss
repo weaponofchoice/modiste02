@@ -27,7 +27,7 @@ section.module{
     }
 
     // Side caption
-    > p{
+    .module-caption{
       @include transform( rotate(-90deg) );
 
       top: 90px;
@@ -50,7 +50,7 @@ section.module{
         padding-right: 45px;
       }
 
-      > p{
+      .module-caption{
         @include transform( rotate(90deg) );
 
         left: auto;
@@ -90,19 +90,8 @@ section.module{
 
 @media #{$small-only}{
   section.module{
-    .section-body{
-      > p{
-        left: -120px;
-      }
-    }
-
-    &.orientated-right{
-      .section-body{
-        > p{
-          left: auto;
-          right: -120px;
-        }
-      }
+    .module-caption{
+      display: none !important;
     }
   }
 }
