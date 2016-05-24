@@ -1550,6 +1550,11 @@ body.single-post article section.grid li:nth-child(even) {
     padding: 0 30px; }
     body.single-post article section.grid li:nth-child(n) img {
       margin-bottom: 0; } }
+/*
+ * To use the button animation(where the text flies up on hover), put content of button in twice in a span
+ *
+ * Example: '<button><span>click here</span><span>click here</span></button>'
+ */
 button {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -2700,6 +2705,16 @@ body.single-product .product {
     float: left; }
 body.single-product #product-editorial {
   padding: 0; }
+body.single-product #product-inquiry {
+  display: none; }
+  body.single-product #product-inquiry h2, body.single-product #product-inquiry h3, body.single-product #product-inquiry legend {
+    margin-bottom: 25px;
+    text-align: center; }
+  body.single-product #product-inquiry form {
+    max-width: 700px;
+    margin: auto;
+    padding: 25px;
+    background-color: #f0f0f0; }
 
 body.single-product .product .images .woocommerce-main-image {
   display: none; }

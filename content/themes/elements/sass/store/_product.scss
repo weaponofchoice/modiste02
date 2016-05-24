@@ -33,6 +33,24 @@ body.single-product{
   #product-editorial{
     padding: 0;
   }
+
+  #product-inquiry{
+    display: none;
+    
+    h2{
+      margin-bottom: 25px;
+
+      text-align: center;
+    }
+
+    form{
+      max-width: 700px;
+      margin: auto;
+      padding: 25px;
+
+      background-color: $grey-light;
+    }
+  }
 }
 
 body.single-product .product .images{

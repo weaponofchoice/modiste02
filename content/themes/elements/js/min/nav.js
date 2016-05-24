@@ -1,1 +1,0 @@
-$(document).ready(function(){var e=$("nav"),a=$(".nav-open"),v=$(".nav-close");a.click(function(){e.addClass("is-active"),$("body").append('<div class="overlay"></div>'),v.click(function(){e.removeClass("is-active"),$(".overlay").remove()}),$(".overlay").click(function(){e.removeClass("is-active"),$(".overlay").remove()})})});

@@ -85,6 +85,76 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </div><!-- #product-<?php the_ID(); ?> -->
 
+<div id="product-inquiry">
+  <?php
+  if(isset($_POST['submit'])){
+    $to = "lucawater@gmail.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+  }
+
+  $to = "lucawater@gmail.com";
+$subject = "My subject";
+$txt = "Hello world!";
+$headers = "From: luc@monomark.nl" . "\r\n" .
+"CC: somebodyelse@example.com";
+
+mail($to,$subject,$txt,$headers);
+  ?>
+  <h2>Inquiry</h2>
+  <form action="" method="post">
+    <p class="form-row form-row-wide">
+      <label>First name:</label>
+      <input type="text" name="first_name" required>
+    </p>
+
+    <p class="form-row form-row-wide">
+      <label>Last name:</label>
+      <input type="text" name="last_name" required>
+    </p>
+
+    <p class="form-row form-row-wide">
+      <label>Email:</label>
+      <input type="text" name="email" required>
+    </p>
+
+    <p class="form-row form-row-wide">
+      <label>Color:</label>
+      <input type="text" name="color" required>
+    </p>
+
+    <p class="form-row form-row-wide">
+      <label>Size:</label>
+      <input type="text" name="size" required>
+    </p>
+
+    <p class="form-row form-row-wide">
+      <label>Add-on:</label>
+      <input type="text" name="add-on" required>
+    </p>
+
+    <p class="form-row form-row-wide">
+      <label>Message:</label>
+      <textarea rows="5" name="message" cols="30"></textarea>
+    </p>
+
+    <button type="submit"><span>Send inquiry</span><span>Send inquiry</span></button>
+  </form>
+</div>
+
+
 <div id="product-editorial">
   <?php get_elements(); ?>
 </div>
