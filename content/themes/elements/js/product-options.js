@@ -44,8 +44,10 @@ $(document).ready( function() {
       var value = $(options[a]).find('.option-placeholder').text();
       value = value.replace(/-/g, ' ');
       var label = $(options[a]).parent().find('.label label').attr('for').substring(3);
+      label = label.replace(/-/g, '');
 
       $('.option-' + label + ' span').html(value);
+      $('input[name="option_' + label + '"]').attr('value', value);
     }
   });
 
