@@ -97,8 +97,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     $option_addon = $_POST['option_addon'];
     $subject = "Form submission";
     $subject2 = "Copy of your form submission";
-    $message = "Product selection: " . "\n" . "Color: " . $option_color . "\n" . "Size: " . $option_size . "\n" . "Add-on: " . $option_addon . "\n\n" . $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
-    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+    if( $_POST['message'] ){
+      $message = "Name:" . $first_name . " " . $last_name . "\n\n" . "Product selection: " . "\n" . "Color: " . $option_color . "\n" . "Size: " . $option_size . "\n" . "Add-on: " . $option_addon . "\n\n" . $first_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    } else {
+      $message = "Name:" . $first_name . " " . $last_name . "\n\n" . "Product selection: " . "\n" . "Color: " . $option_color . "\n" . "Size: " . $option_size . "\n" . "Add-on: " . $option_addon;
+    }
+
+    $message2 = "Dear " . $first_name . ", \n\n" . "You made an inquiry at Modiste Furniture with this selection:" . "\n" . "Color: " . $option_color . "\n" . "Size: " . $option_size . "\n" . "Add-on: " . $option_addon . "\n\n" . "We will get back to you as soon as possible" . "\n\n" . "Sincerely," . "\n" . "Modiste team";
 
     $headers = "From:" . $from;
     $headers2 = "From:" . $to;
