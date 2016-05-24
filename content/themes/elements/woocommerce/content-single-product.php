@@ -115,6 +115,13 @@ mail($to,$subject,$txt,$headers);
   ?>
   <h2>Inquiry</h2>
   <form action="" method="post">
+    <div>
+      <h3>Your selection:</h3>
+      <h3 class="option-color">Color: <span></span></h3>
+      <h3 class="option-size">Size: <span></span></h3>
+      <h3 class="option-add-on">Add-on: <span></span></h3>
+    </div>
+
     <p class="form-row form-row-wide">
       <label>First name:</label>
       <input type="text" name="first_name" required>
@@ -128,21 +135,6 @@ mail($to,$subject,$txt,$headers);
     <p class="form-row form-row-wide">
       <label>Email:</label>
       <input type="text" name="email" required>
-    </p>
-
-    <p class="form-row form-row-wide">
-      <label>Color:</label>
-      <input type="text" name="color" required>
-    </p>
-
-    <p class="form-row form-row-wide">
-      <label>Size:</label>
-      <input type="text" name="size" required>
-    </p>
-
-    <p class="form-row form-row-wide">
-      <label>Add-on:</label>
-      <input type="text" name="add-on" required>
     </p>
 
     <p class="form-row form-row-wide">

@@ -19,12 +19,9 @@ $(document).ready( function() {
   label.on( 'click', function() {
     var parent = $(this).parents('tr');
     var placeholder = parent.find('.option-placeholder');
-    var label = parent.find('.label label').attr('for').substring(3);
     var value = $(this).text();
 
     placeholder.html(value);
-
-    $('input[name="' + label + '"]').attr('value', value);
 
     parent.find('.option-placeholder').show();
     parent.find('div:not(.option-placeholder)').hide();
@@ -42,13 +39,13 @@ $(document).ready( function() {
 
   inquiryBtn.on( 'click', function() {
     $('#product-inquiry').show();
-    
+
     for(a = 0; a < options.length; a++){
-      var value = $(options[a]).find('input[checked="checked"]')[0].value;
+      var value = $(options[a]).find('.option-placeholder').text();
       value = value.replace(/-/g, ' ');
       var label = $(options[a]).parent().find('.label label').attr('for').substring(3);
 
-      $('input[name="' + label + '"]').attr('value', value);
+      $('.option-' + label + ' span').html(value);
     }
   });
 

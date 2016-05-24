@@ -2706,7 +2706,8 @@ body.single-product .product {
 body.single-product #product-editorial {
   padding: 0; }
 body.single-product #product-inquiry {
-  display: none; }
+  display: none;
+  padding-top: 100px; }
   body.single-product #product-inquiry h2, body.single-product #product-inquiry h3, body.single-product #product-inquiry legend {
     margin-bottom: 25px;
     text-align: center; }
@@ -2715,6 +2716,13 @@ body.single-product #product-inquiry {
     margin: auto;
     padding: 25px;
     background-color: #f0f0f0; }
+    body.single-product #product-inquiry form div {
+      margin-bottom: 25px; }
+      body.single-product #product-inquiry form div h3, body.single-product #product-inquiry form div legend {
+        margin-bottom: 0 !important;
+        text-align: left; }
+        body.single-product #product-inquiry form div h3 span, body.single-product #product-inquiry form div legend span {
+          font-size: inherit; }
 
 body.single-product .product .images .woocommerce-main-image {
   display: none; }
