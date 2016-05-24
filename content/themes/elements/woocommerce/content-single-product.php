@@ -142,7 +142,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <textarea rows="5" name="message" cols="30"></textarea>
     </p>
 
-    <button type="submit"><span>Send inquiry</span><span>Send inquiry</span></button>
+    <button type="submit" name="submit"><span>Send inquiry</span><span>Send inquiry</span></button>
   </form>
 </div>
 
