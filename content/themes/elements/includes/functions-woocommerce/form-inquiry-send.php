@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['email'])) {
+if($_SERVER['REQUEST_METHOD'] == "POST") {
 
   // addresses and subjects
   $email_to = "lucawater@gmail.com";
@@ -25,6 +25,10 @@ if(isset($_POST['email'])) {
   $last_name = $_POST['last_name']; // required
   $email_from = $_POST['email']; // required
   $message = $_POST['message']; // not required
+
+  $option_color = $_POST['option_color'];
+  $option_size = $_POST['option_size'];
+  $option_addon = $_POST['option_addon'];
 
   // build error message
   $error_message = "";
@@ -62,7 +66,7 @@ if(isset($_POST['email'])) {
   $email_message .= "Product selection: " . "\n" . "Color: " . clean_string($option_color) . "\n" . "Size: " . clean_string($option_size) . "\n" . "Add-on: " . clean_string($option_addon) . "\n\n";
   $email_message .= clean_string($first_name) . "wrote the following: \n\n" . clean_string($message);
 
-  $email_message2 .= "Dear: " . clean_string($first_name) . ", \n\n";
+  $email_message2 = "Dear: " . clean_string($first_name) . ", \n\n";
   $email_message2 .= "You made an inquiry at Modiste Furniture with this selection: \n";
   $email_message2 .= "Color: " . $option_color . "\n" . "Size: " . $option_size . "\n" . "Add-on: " . $option_addon . "\n\n";
   $email_message2 .= "We will get back to you as soon as possible" . "\n\n" . "Sincerely," . "\n" . "Modiste team";
@@ -78,11 +82,8 @@ if(isset($_POST['email'])) {
 
   @mail($email_to, $email_subject, $email_message, $headers);
   @mail($email_from, $email_subject2, $email_message2, $headers2);
-  ?>
 
-  <!-- include your own success html here -->
-  <p>Thank you for contacting us. We will be in touch with you very soon.</p>
-
-  <?php
+  $notice = "<div><p>Thank you for contacting us. We will be in touch with you very soon.</p></div>";
+  wc_add_notice( $notice );
 }
 ?>

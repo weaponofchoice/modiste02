@@ -33,3 +33,18 @@
     margin: 50px auto 0;
   }
 }
+
+.wpcf7-response-output{
+  @extend p;
+
+  margin: 25px 0 !important;
+  padding: 10px !important;
+
+  border: none !important;
+  border-left: 3px solid red !important;
+  background-color: $grey !important;
+
+  &.wpcf7-mail-sent-ok{
+    border-left: 3px solid green !important;
+  }
+}

@@ -5,6 +5,7 @@ function get_form_inquiry(){
   //   $from = $_POST['email']; // this is the sender's Email address
   //   $first_name = $_POST['first_name'];
   //   $last_name = $_POST['last_name'];
+
   //   $option_color = $_POST['option_color'];
   //   $option_size = $_POST['option_size'];
   //   $option_addon = $_POST['option_addon'];
@@ -25,43 +26,46 @@ function get_form_inquiry(){
   //   echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
   //   // You can also use header('Location: thank_you.php'); to redirect to another page.
   // }
+  require_once('form-inquiry-send.php');
   ?>
 
-  <h2>Inquiry</h2>
-  <form method="post" action="<?php echo get_template_directory_uri(); ?>/thankyou.php">
-    <div>
-      <h3>Your selection:</h3>
-      <h3 class="option-color">Color: <span></span></h3>
-      <h3 class="option-size">Size: <span></span></h3>
-      <h3 class="option-addon">Add-on: <span></span></h3>
-    </div>
+  <div id="product-inquiry">
+    <h2>Inquiry</h2>
+    <form method="post">
+      <div>
+        <h3>Your selection:</h3>
+        <h3 class="option-color">Color: <span></span></h3>
+        <h3 class="option-size">Size: <span></span></h3>
+        <h3 class="option-addon">Add-on: <span></span></h3>
+      </div>
 
-    <input type="hidden" name="option_color" value="">
-    <input type="hidden" name="option_size" value="">
-    <input type="hidden" name="option_addon" value="">
+      <input type="hidden" name="option_color" value="">
+      <input type="hidden" name="option_size" value="">
+      <input type="hidden" name="option_addon" value="">
 
-    <p class="form-row form-row-wide">
-      <label>First name:</label>
-      <input type="text" name="first_name" required>
-    </p>
+      <p class="form-row form-row-wide">
+        <label>First name:</label>
+        <input type="text" name="first_name" required>
+      </p>
 
-    <p class="form-row form-row-wide">
-      <label>Last name:</label>
-      <input type="text" name="last_name" required>
-    </p>
+      <p class="form-row form-row-wide">
+        <label>Last name:</label>
+        <input type="text" name="last_name" required>
+      </p>
 
-    <p class="form-row form-row-wide">
-      <label>Email:</label>
-      <input type="text" name="email" required>
-    </p>
+      <p class="form-row form-row-wide">
+        <label>Email:</label>
+        <input type="text" name="email" required>
+      </p>
 
-    <p class="form-row form-row-wide">
-      <label>Message:</label>
-      <textarea rows="5" name="message" cols="30"></textarea>
-    </p>
+      <p class="form-row form-row-wide">
+        <label>Message:</label>
+        <textarea rows="5" name="message" cols="30"></textarea>
+      </p>
 
-    <button type="submit" name="submit"><span>Send inquiry</span><span>Send inquiry</span></button>
-  </form>
+      <button type="submit" name="submit"><span>Send inquiry</span><span>Send inquiry</span></button>
+    </form>
+  </div>
   <?php
 }
 ?>

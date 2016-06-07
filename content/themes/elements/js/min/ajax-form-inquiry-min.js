@@ -1,0 +1,1 @@
+$(function(){var a=$("#product-inquiry form"),e=$("#form-messages");$(a).submit(function(r){r.preventDefault();var s=$(a).serialize();$.ajax({type:"POST",url:$(a).attr("action"),data:s}).done(function(a){$(e).removeClass("error"),$(e).addClass("success"),$(e).text(a),$("#name").val(""),$("#email").val(""),$("#message").val("")})})});
