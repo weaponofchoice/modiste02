@@ -1,5 +1,6 @@
-body.woocommerce.archive{
-  .product{
+body.woocommerce.archive,
+body.blog{
+  li{
     div{
       bottom: 180px;
       left: 0;
@@ -28,8 +29,10 @@ body.woocommerce.archive{
 }
 
 @media #{$medium-down}{
-  body.woocommerce.archive{
-    .product{
+  body.woocommerce.archive,
+  body.blog{
+    .product,
+    .posts li{
       div{
         bottom: 80px;
       }
@@ -38,14 +41,17 @@ body.woocommerce.archive{
 }
 
 @media #{$small-only}{
-  body.woocommerce.archive{
-    ul.products{
+  body.woocommerce.archive,
+  body.blog{
+    ul.products,
+    ul.posts{
       width: 100%;
       padding: 0;
       margin: 0;
     }
 
-    .product{
+    .product,
+    .posts li{
       div{
         bottom: 50px;
 

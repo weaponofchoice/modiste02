@@ -1,5 +1,7 @@
-body.woocommerce.archive{
-  .products{
+body.woocommerce.archive,
+body.blog{
+  .products,
+  .posts{
     @extend .is-fullwidth;
 
     padding-top: 0;
