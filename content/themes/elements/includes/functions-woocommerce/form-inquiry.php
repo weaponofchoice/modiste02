@@ -25,10 +25,11 @@ function get_form_inquiry(){
   //   echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
   //   // You can also use header('Location: thank_you.php'); to redirect to another page.
   // }
+  include_once('form-inquiry-send.php');
   ?>
 
   <h2>Inquiry</h2>
-  <form method="post" action="<?php echo get_template_directory_uri(); ?>/thankyou.php">
+  <form method="post" action="<?php the_permalink(); ?>">
     <div>
       <h3>Your selection:</h3>
       <h3 class="option-color">Color: <span></span></h3>
