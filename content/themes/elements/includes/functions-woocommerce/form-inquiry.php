@@ -28,7 +28,7 @@ function get_form_inquiry(){
   ?>
 
   <h2>Inquiry</h2>
-  <form method="post" action="form-inquiry-send.php">
+  <form method="post" action="<?php echo get_template_directory_uri(); ?>/thankyou.php">
     <div>
       <h3>Your selection:</h3>
       <h3 class="option-color">Color: <span></span></h3>
