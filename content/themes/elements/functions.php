@@ -16,7 +16,6 @@ require_once('includes/functions-template/section-slider.php');
 
 // Includes: WooCommerce
 require_once('woocommerce/woo-functions.php');
-// require_once('includes/functions-woocommerce/form-inquiry.php');
 require_once('includes/functions-woocommerce/cart-update.php');
 
 // Add ACF options page for footer info
