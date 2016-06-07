@@ -1,4 +1,9 @@
 <?php
+/*
+Template name: thank you
+*/
+get_header();
+
 if(isset($_POST['email'])) {
 
   // addresses and subjects
@@ -80,9 +85,11 @@ if(isset($_POST['email'])) {
   @mail($email_from, $email_subject2, $email_message2, $headers2);
   ?>
 
-  <!-- include your own success html here -->
-  <p>Thank you for contacting us. We will be in touch with you very soon.</p>
 
   <?php
 }
 ?>
+
+<p>Thank you for contacting us. We will be in touch with you very soon.</p>
+
+<?php get_footer(); ?>
