@@ -2647,7 +2647,8 @@ body.blog li div {
     margin-bottom: 30px; }
 body.woocommerce.archive li figure,
 body.blog li figure {
-  height: 90vh; }
+  height: 90vh;
+  overflow: hidden; }
   body.woocommerce.archive li figure:after,
   body.blog li figure:after {
     content: "";

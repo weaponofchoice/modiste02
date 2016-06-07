@@ -24,6 +24,7 @@ body.blog{
 
     figure{
       height: 90vh;
+      overflow: hidden;
       
       &:after{
         content: "";
