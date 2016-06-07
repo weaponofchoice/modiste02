@@ -23,6 +23,8 @@ body.blog{
     }
 
     figure{
+      height: 90vh;
+      
       &:after{
         content: "";
 

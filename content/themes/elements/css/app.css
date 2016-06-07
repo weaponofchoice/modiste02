@@ -2645,15 +2645,18 @@ body.blog li div {
   body.blog li body.single-product .product .summary .price div > small,
   body.single-product .product .summary .price body.blog li div > small {
     margin-bottom: 30px; }
-body.woocommerce.archive li figure:after,
-body.blog li figure:after {
-  content: "";
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); }
+body.woocommerce.archive li figure,
+body.blog li figure {
+  height: 90vh; }
+  body.woocommerce.archive li figure:after,
+  body.blog li figure:after {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); }
 body.woocommerce.archive li img,
 body.blog li img {
   display: block; }
