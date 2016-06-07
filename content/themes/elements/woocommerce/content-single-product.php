@@ -98,7 +98,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     $subject = "Form submission";
     $subject2 = "Copy of your form submission";
     if( $_POST['message'] ){
-      $message = "Name:" . $first_name . " " . $last_name . "\n\n" . "Product selection: " . "\n" . "Color: " . $option_color . "\n" . "Size: " . $option_size . "\n" . "Add-on: " . $option_addon . "\n\n" . $first_name . " wrote the following:" . "\n\n" . $_POST['message'];
+      $message = "Name: " . $first_name . " " . $last_name . "\n\n" . "Product selection: " . "\n" . "Color: " . $option_color . "\n" . "Size: " . $option_size . "\n" . "Add-on: " . $option_addon . "\n\n" . $first_name . " wrote the following:" . "\n\n" . $_POST['message'];
     } else {
       $message = "Name:" . $first_name . " " . $last_name . "\n\n" . "Product selection: " . "\n" . "Color: " . $option_color . "\n" . "Size: " . $option_size . "\n" . "Add-on: " . $option_addon;
     }
