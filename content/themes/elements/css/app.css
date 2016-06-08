@@ -1501,6 +1501,8 @@ body.single-post article section {
 body.single-post article section.image {
   width: calc(100% + 6.25rem);
   margin-left: -6.25rem; }
+  body.single-post article section.image img {
+    width: 100%; }
 body.single-post article section.text {
   margin-bottom: 50px; }
   body.single-post article section.text .section-body {
