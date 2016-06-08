@@ -12,6 +12,8 @@
 }
 
 table.shop_table.cart{
+  table-layout: fixed;
+  
   thead{
     .product-remove{
       padding: 0;

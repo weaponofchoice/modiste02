@@ -2310,63 +2310,65 @@ table.variations {
 .woocommerce-cart .woocommerce {
   padding: 0; }
 
-table.shop_table.cart thead .product-remove {
-  padding: 0;
-  position: absolute; }
-table.shop_table.cart thead .product-thumbnail {
-  width: 30%; }
-table.shop_table.cart thead .product-name {
-  width: 30%;
-  padding-left: 15px; }
-table.shop_table.cart thead .product-price {
-  width: 20%;
-  padding-left: 15px; }
-table.shop_table.cart thead .product-quantity {
-  width: 20%;
-  padding-left: 15px; }
-table.shop_table.cart thead .product-subtotal {
-  width: 20%;
-  padding-right: 15px; }
-table.shop_table.cart tbody td {
-  padding: 35px 15px; }
-table.shop_table.cart tbody .product-remove {
-  z-index: 999;
-  padding: 0; }
-  table.shop_table.cart tbody .product-remove a, table.shop_table.cart tbody .product-remove button {
-    top: 25px;
-    left: -35px;
-    position: absolute;
-    font-size: 30px; }
-table.shop_table.cart tbody .product-thumbnail {
-  padding: 15px; }
-  table.shop_table.cart tbody .product-thumbnail img {
-    border: 5px solid white; }
-table.shop_table.cart tbody .product-name a, table.shop_table.cart tbody .product-name button {
-  margin-bottom: 15px;
-  display: block;
-  font-size: 30px;
-  line-height: 25px; }
-table.shop_table.cart tbody .product-name .variation {
-  *zoom: 1;
-  margin-bottom: 25px; }
-  table.shop_table.cart tbody .product-name .variation:before, table.shop_table.cart tbody .product-name .variation:after {
-    content: " ";
-    display: table; }
-  table.shop_table.cart tbody .product-name .variation:after {
-    clear: both; }
-  table.shop_table.cart tbody .product-name .variation dt,
-  table.shop_table.cart tbody .product-name .variation dd {
-    float: left;
-    display: inline-block; }
-  table.shop_table.cart tbody .product-name .variation dt {
-    clear: left;
-    margin-right: 5px; }
-table.shop_table.cart tbody .product-quantity .incrementer {
-  margin-left: -20px;
-  margin-top: -5px; }
-table.shop_table.cart tbody tr:last-child td {
-  padding: 15px;
-  border-top: thin solid #c8c8c8; }
+table.shop_table.cart {
+  table-layout: fixed; }
+  table.shop_table.cart thead .product-remove {
+    padding: 0;
+    position: absolute; }
+  table.shop_table.cart thead .product-thumbnail {
+    width: 30%; }
+  table.shop_table.cart thead .product-name {
+    width: 30%;
+    padding-left: 15px; }
+  table.shop_table.cart thead .product-price {
+    width: 20%;
+    padding-left: 15px; }
+  table.shop_table.cart thead .product-quantity {
+    width: 20%;
+    padding-left: 15px; }
+  table.shop_table.cart thead .product-subtotal {
+    width: 20%;
+    padding-right: 15px; }
+  table.shop_table.cart tbody td {
+    padding: 35px 15px; }
+  table.shop_table.cart tbody .product-remove {
+    z-index: 999;
+    padding: 0; }
+    table.shop_table.cart tbody .product-remove a, table.shop_table.cart tbody .product-remove button {
+      top: 25px;
+      left: -35px;
+      position: absolute;
+      font-size: 30px; }
+  table.shop_table.cart tbody .product-thumbnail {
+    padding: 15px; }
+    table.shop_table.cart tbody .product-thumbnail img {
+      border: 5px solid white; }
+  table.shop_table.cart tbody .product-name a, table.shop_table.cart tbody .product-name button {
+    margin-bottom: 15px;
+    display: block;
+    font-size: 30px;
+    line-height: 25px; }
+  table.shop_table.cart tbody .product-name .variation {
+    *zoom: 1;
+    margin-bottom: 25px; }
+    table.shop_table.cart tbody .product-name .variation:before, table.shop_table.cart tbody .product-name .variation:after {
+      content: " ";
+      display: table; }
+    table.shop_table.cart tbody .product-name .variation:after {
+      clear: both; }
+    table.shop_table.cart tbody .product-name .variation dt,
+    table.shop_table.cart tbody .product-name .variation dd {
+      float: left;
+      display: inline-block; }
+    table.shop_table.cart tbody .product-name .variation dt {
+      clear: left;
+      margin-right: 5px; }
+  table.shop_table.cart tbody .product-quantity .incrementer {
+    margin-left: -20px;
+    margin-top: -5px; }
+  table.shop_table.cart tbody tr:last-child td {
+    padding: 15px;
+    border-top: thin solid #c8c8c8; }
 
 .cart-collaterals {
   width: 100%;
