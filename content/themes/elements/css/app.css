@@ -2906,7 +2906,8 @@ body.single-product .product .summary .single_add_to_cart_button {
       -ms-flex-align: center;
       align-items: center; }
       #product-materials ul li img {
-        max-width: 150px; }
+        max-width: 150px;
+        object-fit: contain; }
       #product-materials ul li p, #product-materials ul li input,
       #product-materials ul li label, #product-materials ul li table.variations div.option-placeholder, table.variations #product-materials ul li div.option-placeholder, #product-materials ul li .woocommerce-message,
       #product-materials ul li .woocommerce-info,
