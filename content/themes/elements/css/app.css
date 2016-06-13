@@ -1508,6 +1508,55 @@ section.grid ul.isotope-masonry li:nth-child(n) {
 @media only screen and (max-width: 500px) {
   section.grid ul li {
     margin-bottom: 40px; } }
+body.blog .posts {
+  padding-top: 0; }
+
+body.blog li div {
+  bottom: 180px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  max-width: 500px;
+  margin: auto;
+  color: white;
+  text-align: center; }
+  body.blog li div h2, body.blog li div h3, body.blog li div legend {
+    margin-bottom: 20px; }
+  body.blog li div > p, body.blog li div > input,
+  body.blog li div > label, body.blog li table.variations div > div.option-placeholder, table.variations body.blog li div > div.option-placeholder, body.blog li div > .woocommerce-message,
+  body.blog li div > .woocommerce-info,
+  body.blog li div > .woocommerce-error, body.blog li div > .wpcf7-response-output, body.blog li body.single-product .product .summary .price div > small, body.single-product .product .summary .price body.blog li div > small {
+    margin-bottom: 30px; }
+body.blog li img {
+  display: block; }
+
+@media only screen and (max-width: 1000px) {
+  body.blog .posts li div {
+    bottom: 80px; } }
+@media only screen and (max-width: 500px) {
+  body.blog ul.posts {
+    width: 100%;
+    padding: 0;
+    margin: 0; }
+  body.blog .product div,
+  body.blog .posts li div {
+    bottom: 50px; }
+    body.blog .product div p, body.blog .product div input,
+    body.blog .product div label, body.blog .product div table.variations div.option-placeholder, table.variations body.blog .product div div.option-placeholder, body.blog .product div .woocommerce-message,
+    body.blog .product div .woocommerce-info,
+    body.blog .product div .woocommerce-error, body.blog .product div .wpcf7-response-output, body.blog body.single-product .product div .summary .price small, body.single-product body.blog .product div .summary .price small, body.blog body.single-product .product .summary .price div small, body.single-product body.blog .product .summary .price div small,
+    body.blog .posts li div p,
+    body.blog .posts li div input,
+    body.blog .posts li div label,
+    body.blog .posts li div table.variations div.option-placeholder,
+    table.variations body.blog .posts li div div.option-placeholder,
+    body.blog .posts li div .woocommerce-message,
+    body.blog .posts li div .woocommerce-info,
+    body.blog .posts li div .woocommerce-error,
+    body.blog .posts li div .wpcf7-response-output,
+    body.blog .posts li div body.single-product .product .summary .price small,
+    body.single-product .product .summary .price body.blog .posts li div small {
+      display: none; } }
 body.single-post article section {
   margin-bottom: 100px; }
 
@@ -2280,18 +2329,12 @@ body.is-mobile.is-loading > * {
   opacity: 1;
   visibility: visible; }
 
-.is-fullwidth, body.woocommerce.archive .products,
-body.woocommerce.archive .posts,
-body.blog .products,
-body.blog .posts {
+.is-fullwidth, body.blog .posts, body.woocommerce.archive .products {
   width: calc(100% + (6.25rem * 2));
   margin-left: -6.25rem; }
 
 @media only screen and (max-width: 500px) {
-  .is-fullwidth, body.woocommerce.archive .products,
-  body.woocommerce.archive .posts,
-  body.blog .products,
-  body.blog .posts {
+  .is-fullwidth, body.blog .posts, body.woocommerce.archive .products {
     margin-left: -2.5rem; } }
 table.variations {
   position: relative; }
@@ -2625,14 +2668,10 @@ table.shop_table.cart {
   .woocommerce-order-received table.customer_details td {
     padding-left: 15px; }
 
-body.woocommerce.archive .products,
-body.woocommerce.archive .posts,
-body.blog .products,
-body.blog .posts {
+body.woocommerce.archive .products {
   padding-top: 0; }
 
-body.woocommerce.archive li div,
-body.blog li div {
+body.woocommerce.archive li div {
   bottom: 180px;
   left: 0;
   right: 0;
@@ -2641,33 +2680,17 @@ body.blog li div {
   margin: auto;
   color: white;
   text-align: center; }
-  body.woocommerce.archive li div h2, body.woocommerce.archive li div h3, body.woocommerce.archive li div legend,
-  body.blog li div h2,
-  body.blog li div h3,
-  body.blog li div legend {
+  body.woocommerce.archive li div h2, body.woocommerce.archive li div h3, body.woocommerce.archive li div legend {
     margin-bottom: 20px; }
   body.woocommerce.archive li div > p, body.woocommerce.archive li div > input,
   body.woocommerce.archive li div > label, body.woocommerce.archive li table.variations div > div.option-placeholder, table.variations body.woocommerce.archive li div > div.option-placeholder, body.woocommerce.archive li div > .woocommerce-message,
   body.woocommerce.archive li div > .woocommerce-info,
-  body.woocommerce.archive li div > .woocommerce-error, body.woocommerce.archive li div > .wpcf7-response-output, body.woocommerce.archive li body.single-product .product .summary .price div > small, body.single-product .product .summary .price body.woocommerce.archive li div > small,
-  body.blog li div > p,
-  body.blog li div > input,
-  body.blog li div > label,
-  body.blog li table.variations div > div.option-placeholder,
-  table.variations body.blog li div > div.option-placeholder,
-  body.blog li div > .woocommerce-message,
-  body.blog li div > .woocommerce-info,
-  body.blog li div > .woocommerce-error,
-  body.blog li div > .wpcf7-response-output,
-  body.blog li body.single-product .product .summary .price div > small,
-  body.single-product .product .summary .price body.blog li div > small {
+  body.woocommerce.archive li div > .woocommerce-error, body.woocommerce.archive li div > .wpcf7-response-output, body.woocommerce.archive li body.single-product .product .summary .price div > small, body.single-product .product .summary .price body.woocommerce.archive li div > small {
     margin-bottom: 30px; }
-body.woocommerce.archive li figure,
-body.blog li figure {
+body.woocommerce.archive li figure {
   height: 90vh;
   overflow: hidden; }
-  body.woocommerce.archive li figure:after,
-  body.blog li figure:after {
+  body.woocommerce.archive li figure:after {
     content: "";
     top: 0;
     left: 0;
@@ -2675,68 +2698,23 @@ body.blog li figure {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4); }
-body.woocommerce.archive li img,
-body.blog li img {
+body.woocommerce.archive li img {
   display: block; }
 
 @media only screen and (max-width: 1000px) {
-  body.woocommerce.archive .product div,
-  body.woocommerce.archive .posts li div,
-  body.blog .product div,
-  body.blog .posts li div {
+  body.woocommerce.archive .product div {
     bottom: 80px; } }
 @media only screen and (max-width: 500px) {
-  body.woocommerce.archive ul.products,
-  body.woocommerce.archive ul.posts,
-  body.blog ul.products,
-  body.blog ul.posts {
+  body.woocommerce.archive ul.products {
     width: 100%;
     padding: 0;
     margin: 0; }
-  body.woocommerce.archive .product div,
-  body.woocommerce.archive .posts li div,
-  body.blog .product div,
-  body.blog .posts li div {
+  body.woocommerce.archive .product div {
     bottom: 50px; }
     body.woocommerce.archive .product div p, body.woocommerce.archive .product div input,
     body.woocommerce.archive .product div label, body.woocommerce.archive .product div table.variations div.option-placeholder, table.variations body.woocommerce.archive .product div div.option-placeholder, body.woocommerce.archive .product div .woocommerce-message,
     body.woocommerce.archive .product div .woocommerce-info,
-    body.woocommerce.archive .product div .woocommerce-error, body.woocommerce.archive .product div .wpcf7-response-output, body.woocommerce.archive body.single-product .product div .summary .price small, body.single-product body.woocommerce.archive .product div .summary .price small, body.woocommerce.archive body.single-product .product .summary .price div small, body.single-product body.woocommerce.archive .product .summary .price div small,
-    body.woocommerce.archive .posts li div p,
-    body.woocommerce.archive .posts li div input,
-    body.woocommerce.archive .posts li div label,
-    body.woocommerce.archive .posts li div table.variations div.option-placeholder,
-    table.variations body.woocommerce.archive .posts li div div.option-placeholder,
-    body.woocommerce.archive .posts li div .woocommerce-message,
-    body.woocommerce.archive .posts li div .woocommerce-info,
-    body.woocommerce.archive .posts li div .woocommerce-error,
-    body.woocommerce.archive .posts li div .wpcf7-response-output,
-    body.woocommerce.archive .posts li div body.single-product .product .summary .price small,
-    body.single-product .product .summary .price body.woocommerce.archive .posts li div small,
-    body.blog .product div p,
-    body.blog .product div input,
-    body.blog .product div label,
-    body.blog .product div table.variations div.option-placeholder,
-    table.variations body.blog .product div div.option-placeholder,
-    body.blog .product div .woocommerce-message,
-    body.blog .product div .woocommerce-info,
-    body.blog .product div .woocommerce-error,
-    body.blog .product div .wpcf7-response-output,
-    body.blog body.single-product .product div .summary .price small,
-    body.single-product body.blog .product div .summary .price small,
-    body.blog body.single-product .product .summary .price div small,
-    body.single-product body.blog .product .summary .price div small,
-    body.blog .posts li div p,
-    body.blog .posts li div input,
-    body.blog .posts li div label,
-    body.blog .posts li div table.variations div.option-placeholder,
-    table.variations body.blog .posts li div div.option-placeholder,
-    body.blog .posts li div .woocommerce-message,
-    body.blog .posts li div .woocommerce-info,
-    body.blog .posts li div .woocommerce-error,
-    body.blog .posts li div .wpcf7-response-output,
-    body.blog .posts li div body.single-product .product .summary .price small,
-    body.single-product .product .summary .price body.blog .posts li div small {
+    body.woocommerce.archive .product div .woocommerce-error, body.woocommerce.archive .product div .wpcf7-response-output, body.woocommerce.archive body.single-product .product div .summary .price small, body.single-product body.woocommerce.archive .product div .summary .price small, body.woocommerce.archive body.single-product .product .summary .price div small, body.single-product body.woocommerce.archive .product .summary .price div small {
       display: none; } }
 body.single-product .product {
   height: 100vh;
