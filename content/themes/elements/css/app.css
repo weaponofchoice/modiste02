@@ -1393,14 +1393,24 @@ section.module .section-body {
     section.module .section-body .module-text legend {
       margin-bottom: 1em; }
   section.module .section-body .module-caption {
-    -moz-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    top: 90px;
-    left: -150px;
-    position: absolute; }
+    top: 0;
+    left: -100px;
+    position: absolute;
+    width: 100px; }
+    section.module .section-body .module-caption p, section.module .section-body .module-caption input,
+    section.module .section-body .module-caption label, section.module .section-body .module-caption table.variations div.option-placeholder, table.variations section.module .section-body .module-caption div.option-placeholder, section.module .section-body .module-caption .woocommerce-message,
+    section.module .section-body .module-caption .woocommerce-info,
+    section.module .section-body .module-caption .woocommerce-error, section.module .section-body .module-caption .wpcf7-response-output, section.module .section-body .module-caption body.single-product .product .summary .price small, body.single-product .product .summary .price section.module .section-body .module-caption small {
+      -moz-transform: rotate(-90deg) translateX(-100%);
+      -o-transform: rotate(-90deg) translateX(-100%);
+      -ms-transform: rotate(-90deg) translateX(-100%);
+      -webkit-transform: rotate(-90deg) translateX(-100%);
+      transform: rotate(-90deg) translateX(-100%);
+      top: 0px;
+      left: 50px;
+      position: absolute;
+      transform-origin: left;
+      white-space: nowrap; }
 section.module.orientated-right .section-body {
   -webkit-box-direction: reverse;
   -webkit-box-orient: horizontal;
@@ -1415,13 +1425,16 @@ section.module.orientated-right .section-body {
     padding-left: 0;
     padding-right: 45px; }
   section.module.orientated-right .section-body .module-caption {
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-    left: auto;
-    right: -150px; }
+    left: auto; }
+    section.module.orientated-right .section-body .module-caption p, section.module.orientated-right .section-body .module-caption input,
+    section.module.orientated-right .section-body .module-caption label, section.module.orientated-right .section-body .module-caption table.variations div.option-placeholder, table.variations section.module.orientated-right .section-body .module-caption div.option-placeholder, section.module.orientated-right .section-body .module-caption .woocommerce-message,
+    section.module.orientated-right .section-body .module-caption .woocommerce-info,
+    section.module.orientated-right .section-body .module-caption .woocommerce-error, section.module.orientated-right .section-body .module-caption .wpcf7-response-output, section.module.orientated-right .section-body .module-caption body.single-product .product .summary .price small, body.single-product .product .summary .price section.module.orientated-right .section-body .module-caption small {
+      -moz-transform: rotate(90deg) translateX(0);
+      -o-transform: rotate(90deg) translateX(0);
+      -ms-transform: rotate(90deg) translateX(0);
+      -webkit-transform: rotate(90deg) translateX(0);
+      transform: rotate(90deg) translateX(0); }
 section.module.align-bottom .section-body {
   -webkit-align-items: flex-end;
   -ms-flex-align: flex-end;
