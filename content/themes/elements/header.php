@@ -40,7 +40,15 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<?php
+global $post;
+
+if( $post ){
+  $body_class = 'page-' . $post->post_name;
+}
+?>
+
+<body <?php body_class($body_class); ?>>
   <!-- Header -->
   <header>
     <a class="link-logo" href="<?php echo home_url(); ?>">

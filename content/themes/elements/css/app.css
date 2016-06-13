@@ -1161,6 +1161,17 @@ a.nav-open i, button.nav-open i {
     z-index: 1100;
     margin: auto; }
 
+.link-arrow img {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  width: 15px;
+  margin-left: 10px; }
+.link-arrow:hover img, .link-arrow:active img {
+  margin-left: 5px; }
+
 .slider {
   position: relative; }
 
@@ -2668,6 +2679,79 @@ table.shop_table.cart {
   .woocommerce-order-received table.customer_details td {
     padding-left: 15px; }
 
+body.page-terms section.text .section-header h2, body.page-terms section.text .section-header h3, body.page-terms section.text .section-header legend,
+body.page-terms section.text .section-header p,
+body.page-terms section.text .section-header input,
+body.page-terms section.text .section-header label,
+body.page-terms section.text .section-header table.variations div.option-placeholder,
+table.variations body.page-terms section.text .section-header div.option-placeholder,
+body.page-terms section.text .section-header .woocommerce-message,
+body.page-terms section.text .section-header .woocommerce-info,
+body.page-terms section.text .section-header .woocommerce-error,
+body.page-terms section.text .section-header .wpcf7-response-output,
+body.page-terms section.text .section-header body.single-product .product .summary .price small,
+body.single-product .product .summary .price body.page-terms section.text .section-header small,
+body.page-terms section.text .section-body h2,
+body.page-terms section.text .section-body h3,
+body.page-terms section.text .section-body legend,
+body.page-terms section.text .section-body p,
+body.page-terms section.text .section-body input,
+body.page-terms section.text .section-body label,
+body.page-terms section.text .section-body table.variations div.option-placeholder,
+table.variations body.page-terms section.text .section-body div.option-placeholder,
+body.page-terms section.text .section-body .woocommerce-message,
+body.page-terms section.text .section-body .woocommerce-info,
+body.page-terms section.text .section-body .woocommerce-error,
+body.page-terms section.text .section-body .wpcf7-response-output,
+body.page-terms section.text .section-body body.single-product .product .summary .price small,
+body.single-product .product .summary .price body.page-terms section.text .section-body small,
+body.page-shipping section.text .section-header h2,
+body.page-shipping section.text .section-header h3,
+body.page-shipping section.text .section-header legend,
+body.page-shipping section.text .section-header p,
+body.page-shipping section.text .section-header input,
+body.page-shipping section.text .section-header label,
+body.page-shipping section.text .section-header table.variations div.option-placeholder,
+table.variations body.page-shipping section.text .section-header div.option-placeholder,
+body.page-shipping section.text .section-header .woocommerce-message,
+body.page-shipping section.text .section-header .woocommerce-info,
+body.page-shipping section.text .section-header .woocommerce-error,
+body.page-shipping section.text .section-header .wpcf7-response-output,
+body.page-shipping section.text .section-header body.single-product .product .summary .price small,
+body.single-product .product .summary .price body.page-shipping section.text .section-header small,
+body.page-shipping section.text .section-body h2,
+body.page-shipping section.text .section-body h3,
+body.page-shipping section.text .section-body legend,
+body.page-shipping section.text .section-body p,
+body.page-shipping section.text .section-body input,
+body.page-shipping section.text .section-body label,
+body.page-shipping section.text .section-body table.variations div.option-placeholder,
+table.variations body.page-shipping section.text .section-body div.option-placeholder,
+body.page-shipping section.text .section-body .woocommerce-message,
+body.page-shipping section.text .section-body .woocommerce-info,
+body.page-shipping section.text .section-body .woocommerce-error,
+body.page-shipping section.text .section-body .wpcf7-response-output,
+body.page-shipping section.text .section-body body.single-product .product .summary .price small,
+body.single-product .product .summary .price body.page-shipping section.text .section-body small {
+  max-width: 700px;
+  margin: 0 auto 1em; }
+body.page-terms section.text .section-header,
+body.page-shipping section.text .section-header {
+  max-width: 1000px;
+  padding-bottom: 0px;
+  text-align: center;
+  border-bottom: thin solid black; }
+  body.page-terms section.text .section-header a, body.page-terms section.text .section-header button,
+  body.page-shipping section.text .section-header a,
+  body.page-shipping section.text .section-header button {
+    display: block;
+    margin-bottom: 2em; }
+  body.page-terms section.text .section-header h2, body.page-terms section.text .section-header h3, body.page-terms section.text .section-header legend,
+  body.page-shipping section.text .section-header h2,
+  body.page-shipping section.text .section-header h3,
+  body.page-shipping section.text .section-header legend {
+    margin-bottom: 10px; }
+
 body.woocommerce.archive .products {
   padding-top: 0; }
 
@@ -2818,16 +2902,6 @@ body.single-product .product .images .slider-controls {
       body.single-product .product .images .thumbnails img {
         width: auto;
         height: 100%; } }
-body.single-product .product .summary .link-arrow img {
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -ms-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-  width: 15px;
-  margin-left: 10px; }
-body.single-product .product .summary .link-arrow:hover img, body.single-product .product .summary .link-arrow:active img {
-  margin-left: 5px; }
 body.single-product .product .summary p[itemprop="name"], body.single-product .product .summary input[itemprop="name"],
 body.single-product .product .summary label[itemprop="name"], body.single-product .product .summary table.variations div[itemprop="name"].option-placeholder, table.variations body.single-product .product .summary div[itemprop="name"].option-placeholder, body.single-product .product .summary [itemprop="name"].woocommerce-message,
 body.single-product .product .summary [itemprop="name"].woocommerce-info,

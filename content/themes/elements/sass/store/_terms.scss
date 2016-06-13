@@ -1,0 +1,30 @@
+body.page-terms,
+body.page-shipping{
+  section.text{
+    .section-header,
+    .section-body{
+      h2,
+      p{
+        max-width: 700px;
+        margin: 0 auto 1em;
+      }
+    }
+
+    .section-header{
+      max-width: 1000px;
+      padding-bottom: 0px;
+
+      text-align: center;
+      border-bottom: thin solid $black;
+
+      a{
+        display: block;
+        margin-bottom: 2em;
+      }
+
+      h2{
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
