@@ -14,7 +14,7 @@
 
     <div>
       <p>Want to receive updates?</p>
-      <a>Join our Mailinglist</a>
+      <a href="http://eepurl.com/VR0Xv" target="_blank">Join our Mailinglist</a>
       <ul>
         <?php foreach( $socials as $social ): ?>
           <li>
