@@ -1636,7 +1636,7 @@ button,
   .button:focus span {
     top: -40px; }
 
-.button-sec, table.shop_table.cart tbody tr:last-child td a, table.shop_table.cart tbody tr:last-child td button {
+.button-sec {
   border-color: #c8c8c8;
   background-color: #c8c8c8; }
 
@@ -2374,16 +2374,13 @@ table.variations {
 .woocommerce-cart form {
   max-width: none;
   margin: 0;
-  margin-bottom: 50px;
   padding: 0; }
 .woocommerce-cart .woocommerce {
   padding: 0; }
 
 table.shop_table.cart {
-  table-layout: fixed; }
-  table.shop_table.cart thead .product-remove {
-    padding: 0;
-    position: absolute; }
+  table-layout: fixed;
+  border-bottom: thin solid #c8c8c8; }
   table.shop_table.cart thead .product-thumbnail {
     width: 30%; }
   table.shop_table.cart thead .product-name {
@@ -2398,7 +2395,7 @@ table.shop_table.cart {
     text-align: center; }
   table.shop_table.cart thead .product-subtotal {
     width: 20%;
-    padding-right: 15px; }
+    text-align: right; }
   table.shop_table.cart tbody td {
     padding: 35px 15px; }
   table.shop_table.cart tbody .product-remove {
@@ -2410,9 +2407,8 @@ table.shop_table.cart {
       position: absolute;
       font-size: 30px; }
   table.shop_table.cart tbody .product-thumbnail {
-    padding: 15px; }
-    table.shop_table.cart tbody .product-thumbnail img {
-      border: 5px solid white; }
+    padding: 15px;
+    padding-left: 0; }
   table.shop_table.cart tbody .product-name a, table.shop_table.cart tbody .product-name button {
     margin-bottom: 15px;
     display: block;
@@ -2451,24 +2447,28 @@ table.shop_table.cart {
       margin: auto;
       padding: 0;
       border: none; }
-  table.shop_table.cart tbody tr:last-child td {
-    padding: 15px;
-    border-top: thin solid #c8c8c8; }
+  table.shop_table.cart tbody .product-subtotal {
+    padding-right: 0; }
 
 .cart-collaterals {
-  width: 100%;
-  max-width: 500px;
-  padding: 50px;
-  float: right;
-  background-color: #f0f0f0; }
-  .cart-collaterals h2, .cart-collaterals h3, .cart-collaterals legend {
-    text-align: left;
-    margin-bottom: 25px; }
+  width: 100%; }
+  .cart-collaterals #cart-shipping > div,
+  .cart-collaterals table,
+  .cart-collaterals div.wc-proceed-to-checkout {
+    max-width: 500px;
+    margin: auto; }
+  .cart-collaterals #cart-shipping,
+  .cart-collaterals #cart-totals {
+    padding: 30px 0;
+    margin-bottom: 0;
+    border-bottom: thin solid #c8c8c8; }
   .cart-collaterals table tbody th,
   .cart-collaterals table tbody td {
     padding: 5px 0; }
   .cart-collaterals .wc-proceed-to-checkout {
-    margin-top: 25px; }
+    margin-top: 25px;
+    padding: 30px 0;
+    text-align: center; }
 
 .woocommerce-checkout form {
   max-width: 700px;

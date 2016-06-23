@@ -37,8 +37,8 @@ if ( ! defined( 'ABSPATH' ) ) {
   <table class="shop_table shop_table_responsive cart" cellspacing="0">
   	<thead>
   		<tr>
-  			<th class="product-thumbnail">&nbsp;</th>
-  			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
+  			<th class="product-thumbnail"><?php _e( 'Product', 'woocommerce' ); ?></th>
+  			<th class="product-name"></th>
   			<th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>
   			<th class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
   			<th class="product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></th>
@@ -131,24 +131,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   		}
 
   		do_action( 'woocommerce_cart_contents' );
-  		?>
-  		<tr>
-  			<td colspan="6" class="actions">
-
-  				<?php if ( wc_coupons_enabled() ) { ?>
-  					<div class="coupon">
-
-  						<label for="coupon_code"><?php _e( 'Coupon', 'woocommerce' ); ?>:</label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <input type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply Coupon', 'woocommerce' ); ?>" />
-
-  						<?php do_action( 'woocommerce_cart_coupon' ); ?>
-  					</div>
-  				<?php } ?>
-
-  				<?php do_action( 'woocommerce_cart_actions' ); ?>
-
-  				<?php wp_nonce_field( 'woocommerce-cart' ); ?>
-  			</td>
-  		</tr>
+      ?>
 
   		<?php do_action( 'woocommerce_after_cart_contents' ); ?>
   	</tbody>

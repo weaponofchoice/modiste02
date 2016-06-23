@@ -2,7 +2,6 @@
   form{
     max-width: none;
     margin: 0;
-    margin-bottom: 50px;
     padding: 0;
   }
 
@@ -14,12 +13,9 @@
 table.shop_table.cart{
   table-layout: fixed;
 
-  thead{
-    .product-remove{
-      padding: 0;
-      position: absolute;
-    }
+  border-bottom: thin solid $grey;
 
+  thead{
     .product-thumbnail{
       width: 30%;
     }
@@ -43,7 +39,7 @@ table.shop_table.cart{
 
     .product-subtotal{
       width: 20%;
-      padding-right: 15px;
+      text-align: right;
     }
   }
 
@@ -68,10 +64,7 @@ table.shop_table.cart{
 
     .product-thumbnail{
       padding: 15px;
-
-      img{
-        border: 5px solid $white;
-      }
+      padding-left: 0;
     }
 
     .product-name{
@@ -132,30 +125,28 @@ table.shop_table.cart{
       }
     }
 
-    // Update cart button
-    tr:last-child td{
-      padding: 15px;
-
-      border-top: thin solid $grey;
-
-      a{
-        @extend .button-sec;
-      }
+    .product-subtotal{
+      padding-right: 0;
     }
   }
 }
 
 .cart-collaterals{
   width: 100%;
-  max-width: 500px;
-  padding: 50px;
-  float: right;
 
-  background-color: $grey-light;
+  #cart-shipping > div,
+  table,
+  div.wc-proceed-to-checkout{
+    max-width: 500px;
+    margin: auto;
+  }
 
-  h2{
-    text-align: left;
-    margin-bottom: 25px;
+  #cart-shipping,
+  #cart-totals{
+    padding: 30px 0;
+    margin-bottom: 0;
+
+    border-bottom: thin solid $grey;
   }
 
   table{
@@ -169,5 +160,8 @@ table.shop_table.cart{
 
   .wc-proceed-to-checkout{
     margin-top: 25px;
+    padding: 30px 0;
+
+    text-align: center;
   }
 }
