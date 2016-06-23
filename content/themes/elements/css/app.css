@@ -2394,7 +2394,8 @@ table.shop_table.cart {
     padding-left: 15px; }
   table.shop_table.cart thead .product-quantity {
     width: 20%;
-    padding-left: 15px; }
+    padding-left: 15px;
+    text-align: center; }
   table.shop_table.cart thead .product-subtotal {
     width: 20%;
     padding-right: 15px; }
@@ -2432,9 +2433,24 @@ table.shop_table.cart {
     table.shop_table.cart tbody .product-name .variation dt {
       clear: left;
       margin-right: 5px; }
-  table.shop_table.cart tbody .product-quantity .incrementer {
-    margin-left: -20px;
-    margin-top: -5px; }
+  table.shop_table.cart tbody .product-quantity {
+    padding-right: 0;
+    text-align: center; }
+    table.shop_table.cart tbody .product-quantity .quantity {
+      margin-top: -5px;
+      margin-bottom: 20px; }
+      table.shop_table.cart tbody .product-quantity .quantity input[type="number"] {
+        border: none; }
+    table.shop_table.cart tbody .product-quantity a, table.shop_table.cart tbody .product-quantity button,
+    table.shop_table.cart tbody .product-quantity input[type="submit"] {
+      cursor: pointer; }
+      table.shop_table.cart tbody .product-quantity a:hover, table.shop_table.cart tbody .product-quantity button:hover,
+      table.shop_table.cart tbody .product-quantity input[type="submit"]:hover {
+        text-decoration: underline; }
+    table.shop_table.cart tbody .product-quantity input[type="submit"] {
+      margin: auto;
+      padding: 0;
+      border: none; }
   table.shop_table.cart tbody tr:last-child td {
     padding: 15px;
     border-top: thin solid #c8c8c8; }

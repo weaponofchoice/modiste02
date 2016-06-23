@@ -13,7 +13,7 @@
 
 table.shop_table.cart{
   table-layout: fixed;
-  
+
   thead{
     .product-remove{
       padding: 0;
@@ -37,6 +37,8 @@ table.shop_table.cart{
     .product-quantity{
       width: 20%;
       padding-left: 15px;
+
+      text-align: center;
     }
 
     .product-subtotal{
@@ -100,9 +102,33 @@ table.shop_table.cart{
     }
 
     .product-quantity{
-      .incrementer{
-        margin-left: -20px;
+      padding-right: 0;
+
+      text-align: center;
+
+      .quantity{
         margin-top: -5px;
+        margin-bottom: 20px;
+
+        input[type="number"]{
+          border: none;
+        }
+      }
+
+      a,
+      input[type="submit"]{
+        cursor: pointer;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+
+      input[type="submit"]{
+        margin: auto;
+        padding: 0;
+
+        border: none;
       }
     }
 
