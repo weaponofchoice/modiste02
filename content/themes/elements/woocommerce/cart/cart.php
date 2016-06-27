@@ -117,6 +117,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                 echo
                 '<input type="submit" name="update_cart" value="' . esc_attr( 'update cart', 'woocommerce' ) . '" />';
+
+                wp_nonce_field( 'woocommerce-cart' );
   						?>
   					</td>
 
