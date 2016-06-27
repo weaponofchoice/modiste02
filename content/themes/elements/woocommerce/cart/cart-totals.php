@@ -27,22 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   <!-- Shipping -->
   <div id="cart-shipping">
     <div>
-      <?php if ( WC()->cart->needs_shipping() && WC()->cart->show_shipping() ) : ?>
-
-        <?php do_action( 'woocommerce_cart_totals_before_shipping' ); ?>
-
-        <?php wc_cart_totals_shipping_html(); ?>
-
-        <?php do_action( 'woocommerce_cart_totals_after_shipping' ); ?>
-
-      <?php elseif ( WC()->cart->needs_shipping() && 'yes' === get_option( 'woocommerce_enable_shipping_calc' ) ) : ?>
-
-        <tr class="shipping">
-          <th><?php _e( 'Shipping', 'woocommerce' ); ?></th>
-          <td data-title="<?php _e( 'Shipping', 'woocommerce' ); ?>"><?php woocommerce_shipping_calculator(); ?></td>
-        </tr>
-
-      <?php endif; ?>
+      <?php woocommerce_shipping_calculator(); ?>
     </div>
   </div>
 
@@ -53,6 +38,13 @@ if ( ! defined( 'ABSPATH' ) ) {
   			<th><?php _e( 'Subtotal', 'woocommerce' ); ?></th>
   			<td data-title="<?php _e( 'Subtotal', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
   		</tr>
+
+      <tr class="shipping">
+      	<th>Shipping & handling fee</th>
+      	<td data-title="<?php echo esc_attr( $package_name ); ?>">
+          <?php echo WC()->cart->get_cart_shipping_total(); ?>
+        </td>
+      </tr>
 
   		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
   			<tr class="cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
@@ -96,12 +88,12 @@ if ( ! defined( 'ABSPATH' ) ) {
     <?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
 
     <tr class="order-total">
-      <th><?php _e( 'Total', 'woocommerce' ); ?></th>
-      <td data-title="<?php _e( 'Total', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
+      <th></th>
+      <td data-title="<?php _e( 'Total', 'woocommerce' ); ?>"><h3>Order total: <?php wc_cart_totals_order_total_html(); ?></h3></td>
     </tr>
 
     <?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
-    
+
 		<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 	</div>
 

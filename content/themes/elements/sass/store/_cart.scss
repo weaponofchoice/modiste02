@@ -137,7 +137,7 @@ table.shop_table.cart{
   #cart-shipping > div,
   table,
   div.wc-proceed-to-checkout{
-    max-width: 500px;
+    max-width: 400px;
     margin: auto;
   }
 
@@ -149,6 +149,12 @@ table.shop_table.cart{
     border-bottom: thin solid $grey;
   }
 
+  #cart-shipping{
+    .shipping-calculator-form {
+      display:block !important;
+    }
+  }
+
   table{
     tbody{
       th,
@@ -158,10 +164,39 @@ table.shop_table.cart{
     }
   }
 
+  form.woocommerce-shipping-calculator{
+    height: auto;
+    overflow: hidden;
+
+    .shipping-label{
+      width: 80px;
+      float: left;
+      padding: 6px 0;
+    }
+
+    > section{
+      width: calc(100% - 80px);
+      float: left;
+    }
+
+    button{
+      margin: auto;
+      display: block;
+    }
+  }
+
   .wc-proceed-to-checkout{
     margin-top: 25px;
     padding: 30px 0;
 
     text-align: center;
+
+    h3{
+      margin-bottom: 30px;
+
+      .amount{
+        @extend h3;
+      }
+    }
   }
 }
