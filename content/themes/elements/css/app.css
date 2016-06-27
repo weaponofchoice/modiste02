@@ -2385,6 +2385,11 @@ table.variations {
   padding: 0; }
 .woocommerce-cart .woocommerce {
   padding: 0; }
+.woocommerce-cart .link-shop {
+  width: 100%;
+  display: block;
+  padding-top: 50px;
+  text-align: center; }
 
 table.shop_table.cart {
   table-layout: fixed;

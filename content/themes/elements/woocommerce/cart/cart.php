@@ -20,8 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="management-heading">
-  <h3>Modiste Cart</h3>
+<div class="link-shop">
+  <a class="link-arrow" href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>">Return to furniture shop<img src="<?php echo get_template_directory_uri() . '/img/arrow.svg'; ?>"></a>
 </div>
 
 <?php wc_print_notices(); ?>

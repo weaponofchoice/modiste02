@@ -20,10 +20,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="management-heading">
-  <h3>Modiste Checkout</h3>
-</div>
-
 <?php wc_print_notices(); ?>
 
 <div class="management-content">
