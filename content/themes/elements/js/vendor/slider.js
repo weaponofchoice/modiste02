@@ -87,8 +87,9 @@
 
         // Next and previous with keyboard
         if( settings.keys === true ) {
-          $(window).keydown(function(e) {
+          $(window).unbind('keydown').keydown(function(e) {
             if (e.which === 39) {
+
               var current = $('.is-active');
 
               if (current.hasClass("last")) {
