@@ -43,8 +43,7 @@ $(document).ready(function(){
 
               $('.single-product .images').slider({
                 lightbox: false,
-                bullets: false,
-                keys: false
+                bullets: false
               });
             }
           });
