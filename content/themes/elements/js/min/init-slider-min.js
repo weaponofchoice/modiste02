@@ -1,0 +1,1 @@
+!function($){if($("section.slider").length>0){var e=$("section.slider");e.slider({lightbox:!1,keys:!1})}}(jQuery);
