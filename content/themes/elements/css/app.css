@@ -1012,16 +1012,16 @@ a.trigger-menu:hover i:after, button.trigger-menu:hover i:after {
 a.trigger-menu:focus i:before, button.trigger-menu:focus i:before {
   -webkit-animation: activebefore .4s linear; }
 
-nav ul {
+header nav ul {
   display: inline; }
-  nav ul li {
+  header nav ul li {
     display: inline-block;
     padding-right: 60px; }
-    nav ul li:last-child {
+    header nav ul li:last-child {
       padding-right: 0; }
 
 @media only screen and (max-width: 1000px) {
-  nav {
+  header nav {
     -webkit-transition: 0.2s;
     -moz-transition: 0.2s;
     -ms-transition: 0.2s;
@@ -1034,27 +1034,27 @@ nav ul {
     width: 300px;
     height: 100%;
     background-color: #f0f0f0; }
-    nav.is-active {
+    header nav.is-active {
       right: 0; }
-    nav a:hover, nav button:hover {
+    header nav a:hover, header nav button:hover {
       padding-bottom: 0;
       border-color: transparent; }
-    nav ul {
+    header nav ul {
       width: 100%;
       height: auto;
       overflow: hidden;
       display: block;
       padding-right: 6.25rem; }
-      nav ul li {
+      header nav ul li {
         display: block;
         padding-right: 0;
         margin-bottom: 15px;
         text-align: right; }
-        nav ul li a, nav ul li button {
+        header nav ul li a, header nav ul li button {
           font-size: 30px; }
-        nav ul li a:hover, nav ul li button:hover {
+        header nav ul li a:hover, header nav ul li button:hover {
           text-decoration: underline; }
-        nav ul li.current-menu-item a, nav ul li.current-menu-item button {
+        header nav ul li.current-menu-item a, header nav ul li.current-menu-item button {
           text-decoration: underline;
           border-color: transparent; }
 
@@ -1068,7 +1068,7 @@ nav ul {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.3); } }
 @media only screen and (max-width: 500px) {
-  nav ul {
+  header nav ul {
     padding-right: 2.5rem; } }
 a.nav-open, button.nav-open,
 a.nav-close,
@@ -2597,6 +2597,15 @@ table.shop_table.cart {
     .woocommerce-checkout #order_review table tfoot tr.shipping td span {
       color: black; }
 
+.woocommerce-account nav ul li {
+  display: inline-block;
+  padding-right: 60px; }
+.woocommerce-account .management-content,
+.woocommerce-account .woocommerce-MyAccount-navigation {
+  padding: 0; }
+.woocommerce-account .woocommerce-MyAccount-navigation {
+  max-width: 700px;
+  margin: 50px auto 0; }
 .woocommerce-account form {
   max-width: 700px;
   margin: 50px auto 0;
@@ -2640,21 +2649,21 @@ table.shop_table.cart {
 .woocommerce-account .myaccount_address {
   margin-bottom: 25px;
   text-align: center; }
-.woocommerce-account .addresses {
+.woocommerce-account .woocommerce-Addresses {
   width: 100%;
   height: auto;
   overflow: hidden; }
-  .woocommerce-account .addresses .address {
+  .woocommerce-account .woocommerce-Addresses .woocommerce-Address {
     width: 50%;
     float: left;
     text-align: left; }
-    .woocommerce-account .addresses .address h2, .woocommerce-account .addresses .address h3, .woocommerce-account .addresses .address legend, .woocommerce-account .addresses .address .cart-collaterals .wc-proceed-to-checkout h3 span, .cart-collaterals .wc-proceed-to-checkout h3 .woocommerce-account .addresses .address span {
+    .woocommerce-account .woocommerce-Addresses .woocommerce-Address h2, .woocommerce-account .woocommerce-Addresses .woocommerce-Address h3, .woocommerce-account .woocommerce-Addresses .woocommerce-Address legend, .woocommerce-account .woocommerce-Addresses .woocommerce-Address .cart-collaterals .wc-proceed-to-checkout h3 span, .cart-collaterals .wc-proceed-to-checkout h3 .woocommerce-account .woocommerce-Addresses .woocommerce-Address span {
       text-align: left; }
-    .woocommerce-account .addresses .address a, .woocommerce-account .addresses .address button {
+    .woocommerce-account .woocommerce-Addresses .woocommerce-Address a, .woocommerce-account .woocommerce-Addresses .woocommerce-Address button {
       text-decoration: underline; }
-  .woocommerce-account .addresses .col-1 {
+  .woocommerce-account .woocommerce-Addresses .col-1 {
     padding-right: 5%; }
-  .woocommerce-account .addresses .col-2 {
+  .woocommerce-account .woocommerce-Addresses .col-2 {
     padding-left: 5%; }
 
 .woocommerce-view-order .management-content {
@@ -2673,15 +2682,25 @@ table.shop_table.cart {
       padding: 0;
       padding-left: 10px;
       text-align: left; }
-  .woocommerce-view-order .management-content .addresses {
+  .woocommerce-view-order .management-content .woocommerce-Addresses {
     padding: 0; }
-    .woocommerce-view-order .management-content .addresses > div {
+    .woocommerce-view-order .management-content .woocommerce-Addresses > div {
       width: 50%;
       float: left; }
-      .woocommerce-view-order .management-content .addresses > div h3, .woocommerce-view-order .management-content .addresses > div legend, .woocommerce-view-order .management-content .addresses > div .cart-collaterals .wc-proceed-to-checkout h3 span, .cart-collaterals .wc-proceed-to-checkout h3 .woocommerce-view-order .management-content .addresses > div span {
+      .woocommerce-view-order .management-content .woocommerce-Addresses > div h3, .woocommerce-view-order .management-content .woocommerce-Addresses > div legend, .woocommerce-view-order .management-content .woocommerce-Addresses > div .cart-collaterals .wc-proceed-to-checkout h3 span, .cart-collaterals .wc-proceed-to-checkout h3 .woocommerce-view-order .management-content .woocommerce-Addresses > div span {
         text-align: left;
         margin-bottom: 15px; }
 
+@media only screen and (max-width: 1000px) {
+  .woocommerce-account nav ul li {
+    display: block; }
+  .woocommerce-account .management-content,
+  .woocommerce-account .woocommerce-MyAccount-navigation {
+    padding: 0 6.25rem; } }
+@media only screen and (max-width: 500px) {
+  .woocommerce-account .management-content,
+  .woocommerce-account .woocommerce-MyAccount-navigation {
+    padding: 0 2.5rem; } }
 .woocommerce-message,
 .woocommerce-info,
 .woocommerce-error {
