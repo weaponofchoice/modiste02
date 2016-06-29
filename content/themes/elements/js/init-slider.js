@@ -4,7 +4,8 @@
     var object = $('section.slider');
 
     object.slider({
-      lightbox: false
+      lightbox: false,
+      keys: false
     });
   };
 
