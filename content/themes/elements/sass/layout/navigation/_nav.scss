@@ -1,4 +1,4 @@
-nav ul{
+header nav ul{
   display: inline;
 
   li{
@@ -12,7 +12,7 @@ nav ul{
 }
 
 @media #{$medium-down}{
-  nav{
+  header nav{
     @include transition( .2s );
 
     top: 0;
@@ -79,7 +79,7 @@ nav ul{
 }
 
 @media #{$small-only}{
-  nav{
+  header nav{
     ul{
       padding-right: $space-sides-small;
     }

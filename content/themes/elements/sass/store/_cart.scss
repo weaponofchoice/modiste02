@@ -202,7 +202,7 @@ table.shop_table.cart{
     h3{
       margin-bottom: 30px;
 
-      .amount{
+      span{
         @extend h3;
       }
     }

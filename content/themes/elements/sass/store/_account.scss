@@ -1,4 +1,19 @@
 .woocommerce-account{
+  nav ul li{
+    display: inline-block;
+    padding-right: 60px;
+  }
+
+  .management-content,
+  .woocommerce-MyAccount-navigation{
+    padding: 0;
+  }
+
+  .woocommerce-MyAccount-navigation{
+    max-width: 700px;
+    margin: 50px auto 0;
+  }
+
   form{
     max-width: 700px;
     margin: 50px auto 0;
@@ -81,12 +96,12 @@
     text-align: center;
   }
 
-  .addresses{
+  .woocommerce-Addresses{
     width: 100%;
     height: auto;
     overflow: hidden;
 
-    .address{
+    .woocommerce-Address{
       width: 50%;
       float: left;
 
@@ -142,7 +157,7 @@
       }
     }
 
-    .addresses{
+    .woocommerce-Addresses{
       padding: 0;
 
       > div{
@@ -154,6 +169,28 @@
           margin-bottom: 15px;
         }
       }
+    }
+  }
+}
+
+@media #{$medium-down}{
+  .woocommerce-account{
+    nav ul li{
+      display: block;
+    }
+
+    .management-content,
+    .woocommerce-MyAccount-navigation{
+      padding: 0 $space-sides;
+    }
+  }
+}
+
+@media #{$small-only}{
+  .woocommerce-account{
+    .management-content,
+    .woocommerce-MyAccount-navigation{
+      padding: 0 $space-sides-small;
     }
   }
 }
