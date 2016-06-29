@@ -653,13 +653,13 @@ ul {
   font-family: 'baskerville', 'serif';
   src: url("../fonts/30A5DE_0_0.eot");
   src: url("../fonts/30A5DE_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/30A5DE_0_0.woff2") format("woff2"), url("../fonts/30A5DE_0_0.woff") format("woff"), url("../fonts/30A5DE_0_0.ttf") format("truetype"); }
-h1, h2, h3, legend, p, input,
+h1, h2, h3, legend, .cart-collaterals .wc-proceed-to-checkout h3 .amount, p, input,
 label, table.variations div.option-placeholder, .woocommerce-message,
 .woocommerce-info,
-.woocommerce-error, body.single-product .product .summary .price small, section.module .module-text p, section.module .module-text input,
+.woocommerce-error, .wpcf7-response-output, body.single-product .product .summary .price small, section.module .module-text p, section.module .module-text input,
 section.module .module-text label, section.module .module-text .woocommerce-message,
 section.module .module-text .woocommerce-info,
-section.module .module-text .woocommerce-error, span,
+section.module .module-text .woocommerce-error, section.module .module-text .wpcf7-response-output, span,
 time,
 address,
 th,
@@ -675,24 +675,24 @@ h1 {
   font-size: 90px;
   line-height: 0.8; }
 
-h2, h3, legend {
+h2, h3, legend, .cart-collaterals .wc-proceed-to-checkout h3 .amount {
   font-size: 40px;
   line-height: 1.2; }
 
-h3, legend {
+h3, legend, .cart-collaterals .wc-proceed-to-checkout h3 .amount {
   font-size: 30px; }
 
 p, input,
 label, table.variations div.option-placeholder, .woocommerce-message,
 .woocommerce-info,
-.woocommerce-error, body.single-product .product .summary .price small {
+.woocommerce-error, .wpcf7-response-output, body.single-product .product .summary .price small {
   font-size: 13px;
   line-height: 1.35; }
 
 article p, article input,
 article label, article table.variations div.option-placeholder, table.variations article div.option-placeholder, article .woocommerce-message,
 article .woocommerce-info,
-article .woocommerce-error, article body.single-product .product .summary .price small, body.single-product .product .summary .price article small,
+article .woocommerce-error, article .wpcf7-response-output, article body.single-product .product .summary .price small, body.single-product .product .summary .price article small,
 section.module p,
 section.module input,
 section.module label,
@@ -701,6 +701,7 @@ table.variations section.module div.option-placeholder,
 section.module .woocommerce-message,
 section.module .woocommerce-info,
 section.module .woocommerce-error,
+section.module .wpcf7-response-output,
 section.module body.single-product .product .summary .price small,
 body.single-product .product .summary .price section.module small,
 section.quote p,
@@ -711,6 +712,7 @@ table.variations section.quote div.option-placeholder,
 section.quote .woocommerce-message,
 section.quote .woocommerce-info,
 section.quote .woocommerce-error,
+section.quote .wpcf7-response-output,
 section.quote body.single-product .product .summary .price small,
 body.single-product .product .summary .price section.quote small,
 .products .product p,
@@ -721,6 +723,7 @@ table.variations .products .product div.option-placeholder,
 .products .product .woocommerce-message,
 .products .product .woocommerce-info,
 .products .product .woocommerce-error,
+.products .product .wpcf7-response-output,
 .products body.single-product .product .summary .price small,
 body.single-product .products .product .summary .price small,
 #product-materials p,
@@ -731,6 +734,7 @@ table.variations #product-materials div.option-placeholder,
 #product-materials .woocommerce-message,
 #product-materials .woocommerce-info,
 #product-materials .woocommerce-error,
+#product-materials .wpcf7-response-output,
 #product-materials body.single-product .product .summary .price small,
 body.single-product .product .summary .price #product-materials small {
   margin-bottom: 1em;
@@ -739,7 +743,7 @@ body.single-product .product .summary .price #product-materials small {
 section.module .module-text p, section.module .module-text input,
 section.module .module-text label, section.module .module-text table.variations div.option-placeholder, table.variations section.module .module-text div.option-placeholder, section.module .module-text .woocommerce-message,
 section.module .module-text .woocommerce-info,
-section.module .module-text .woocommerce-error, section.module .module-text body.single-product .product .summary .price small, body.single-product .product .summary .price section.module .module-text small {
+section.module .module-text .woocommerce-error, section.module .module-text .wpcf7-response-output, section.module .module-text body.single-product .product .summary .price small, body.single-product .product .summary .price section.module .module-text small {
   font-family: baskerville;
   font-size: 20px; }
 
@@ -763,7 +767,7 @@ li {
     font-size: 70px;
     font-size: 15vw; }
 
-  h2, h3, legend {
+  h2, h3, legend, .cart-collaterals .wc-proceed-to-checkout h3 .amount {
     font-size: 30px; } }
 a, button {
   -webkit-transition: 0.2s;
@@ -786,10 +790,10 @@ a.has-content, button.has-content {
 main p a, main input a,
 main label a, main table.variations div.option-placeholder a, table.variations main div.option-placeholder a, main .woocommerce-message a,
 main .woocommerce-info a,
-main .woocommerce-error a, main body.single-product .product .summary .price small a, body.single-product .product .summary .price main small a, main p button, main input button,
+main .woocommerce-error a, main .wpcf7-response-output a, main body.single-product .product .summary .price small a, body.single-product .product .summary .price main small a, main p button, main input button,
 main label button, main table.variations div.option-placeholder button, table.variations main div.option-placeholder button, main .woocommerce-message button,
 main .woocommerce-info button,
-main .woocommerce-error button, main body.single-product .product .summary .price small button, body.single-product .product .summary .price main small button,
+main .woocommerce-error button, main .wpcf7-response-output button, main body.single-product .product .summary .price small button, body.single-product .product .summary .price main small button,
 article a,
 article button {
   font-size: 1em;
@@ -859,6 +863,8 @@ main {
   height: 100%;
   min-height: 100%;
   overflow: hidden;
+  max-width: 1500px;
+  margin: auto;
   background-color: white; }
 
 body > header {
@@ -904,19 +910,19 @@ body > footer {
     body > footer div p, body > footer div input,
     body > footer div label, body > footer div table.variations div.option-placeholder, table.variations body > footer div div.option-placeholder, body > footer div .woocommerce-message,
     body > footer div .woocommerce-info,
-    body > footer div .woocommerce-error, body > footer div body.single-product .product .summary .price small, body.single-product .product .summary .price body > footer div small {
+    body > footer div .woocommerce-error, body > footer div .wpcf7-response-output, body > footer div body.single-product .product .summary .price small, body.single-product .product .summary .price body > footer div small {
       margin-bottom: 1em; }
       body > footer div p:last-child, body > footer div input:last-child,
       body > footer div label:last-child, body > footer div table.variations div.option-placeholder:last-child, table.variations body > footer div div.option-placeholder:last-child, body > footer div .woocommerce-message:last-child,
       body > footer div .woocommerce-info:last-child,
-      body > footer div .woocommerce-error:last-child, body > footer div body.single-product .product .summary .price small:last-child, body.single-product .product .summary .price body > footer div small:last-child {
+      body > footer div .woocommerce-error:last-child, body > footer div .wpcf7-response-output:last-child, body > footer div body.single-product .product .summary .price small:last-child, body.single-product .product .summary .price body > footer div small:last-child {
         margin-bottom: 0; }
   body > footer div:nth-child(2) {
     text-align: center; }
     body > footer div:nth-child(2) p, body > footer div:nth-child(2) input,
     body > footer div:nth-child(2) label, body > footer div:nth-child(2) table.variations div.option-placeholder, table.variations body > footer div:nth-child(2) div.option-placeholder, body > footer div:nth-child(2) .woocommerce-message,
     body > footer div:nth-child(2) .woocommerce-info,
-    body > footer div:nth-child(2) .woocommerce-error, body > footer div:nth-child(2) body.single-product .product .summary .price small, body.single-product .product .summary .price body > footer div:nth-child(2) small {
+    body > footer div:nth-child(2) .woocommerce-error, body > footer div:nth-child(2) .wpcf7-response-output, body > footer div:nth-child(2) body.single-product .product .summary .price small, body.single-product .product .summary .price body > footer div:nth-child(2) small {
       margin-bottom: 0; }
   body > footer div:last-child {
     text-align: right; }
@@ -944,7 +950,7 @@ body > footer {
       footer div p, footer div input,
       footer div label, footer div table.variations div.option-placeholder, table.variations footer div div.option-placeholder, footer div .woocommerce-message,
       footer div .woocommerce-info,
-      footer div .woocommerce-error, footer div body.single-product .product .summary .price small, body.single-product .product .summary .price footer div small {
+      footer div .woocommerce-error, footer div .wpcf7-response-output, footer div body.single-product .product .summary .price small, body.single-product .product .summary .price footer div small {
         margin-bottom: 0 !important; }
     footer div:nth-child(1) {
       order: 1; }
@@ -958,10 +964,10 @@ body.error404 #error404-content {
   margin: 100px auto;
   display: block !important;
   background-color: transparent; }
-  body.error404 #error404-content h2, body.error404 #error404-content h3, body.error404 #error404-content legend, body.error404 #error404-content p, body.error404 #error404-content input,
+  body.error404 #error404-content h2, body.error404 #error404-content h3, body.error404 #error404-content legend, body.error404 #error404-content .cart-collaterals .wc-proceed-to-checkout h3 .amount, .cart-collaterals .wc-proceed-to-checkout h3 body.error404 #error404-content .amount, body.error404 #error404-content p, body.error404 #error404-content input,
   body.error404 #error404-content label, body.error404 #error404-content table.variations div.option-placeholder, table.variations body.error404 #error404-content div.option-placeholder, body.error404 #error404-content .woocommerce-message,
   body.error404 #error404-content .woocommerce-info,
-  body.error404 #error404-content .woocommerce-error, body.error404 #error404-content body.single-product .product .summary .price small, body.single-product .product .summary .price body.error404 #error404-content small {
+  body.error404 #error404-content .woocommerce-error, body.error404 #error404-content .wpcf7-response-output, body.error404 #error404-content body.single-product .product .summary .price small, body.single-product .product .summary .price body.error404 #error404-content small {
     margin-bottom: 1em; }
 
 a.trigger-menu, button.trigger-menu {
@@ -1157,6 +1163,17 @@ a.nav-open i, button.nav-open i {
     z-index: 1100;
     margin: auto; }
 
+.link-arrow img {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  width: 15px;
+  margin-left: 10px; }
+.link-arrow:hover img, .link-arrow:active img {
+  margin-left: 5px; }
+
 .slider {
   position: relative; }
 
@@ -1316,7 +1333,7 @@ section.hero {
     position: absolute;
     margin: auto; }
 
-section.text .section-body h2, section.text .section-body h3, section.text .section-body legend,
+section.text .section-body h2, section.text .section-body h3, section.text .section-body legend, section.text .section-body .cart-collaterals .wc-proceed-to-checkout h3 .amount, .cart-collaterals .wc-proceed-to-checkout h3 section.text .section-body .amount,
 section.text .section-body p,
 section.text .section-body input,
 section.text .section-body label,
@@ -1325,13 +1342,14 @@ table.variations section.text .section-body div.option-placeholder,
 section.text .section-body .woocommerce-message,
 section.text .section-body .woocommerce-info,
 section.text .section-body .woocommerce-error,
+section.text .section-body .wpcf7-response-output,
 section.text .section-body body.single-product .product .summary .price small,
 body.single-product .product .summary .price section.text .section-body small,
 section.text .section-body a,
 section.text .section-body button {
   max-width: 700px;
   margin-bottom: 1em; }
-  section.text .section-body h2:last-child, section.text .section-body h3:last-child, section.text .section-body legend:last-child,
+  section.text .section-body h2:last-child, section.text .section-body h3:last-child, section.text .section-body legend:last-child, section.text .section-body .cart-collaterals .wc-proceed-to-checkout h3 .amount:last-child, .cart-collaterals .wc-proceed-to-checkout h3 section.text .section-body .amount:last-child,
   section.text .section-body p:last-child,
   section.text .section-body input:last-child,
   section.text .section-body label:last-child,
@@ -1340,6 +1358,7 @@ section.text .section-body button {
   section.text .section-body .woocommerce-message:last-child,
   section.text .section-body .woocommerce-info:last-child,
   section.text .section-body .woocommerce-error:last-child,
+  section.text .section-body .wpcf7-response-output:last-child,
   section.text .section-body body.single-product .product .summary .price small:last-child,
   body.single-product .product .summary .price section.text .section-body small:last-child,
   section.text .section-body a:last-child,
@@ -1356,7 +1375,7 @@ section.quote .section-body {
   section.quote .section-body p, section.quote .section-body input,
   section.quote .section-body label, section.quote .section-body table.variations div.option-placeholder, table.variations section.quote .section-body div.option-placeholder, section.quote .section-body .woocommerce-message,
   section.quote .section-body .woocommerce-info,
-  section.quote .section-body .woocommerce-error, section.quote .section-body body.single-product .product .summary .price small, body.single-product .product .summary .price section.quote .section-body small {
+  section.quote .section-body .woocommerce-error, section.quote .section-body .wpcf7-response-output, section.quote .section-body body.single-product .product .summary .price small, body.single-product .product .summary .price section.quote .section-body small {
     margin-bottom: 30px; }
 
 section.image .section-body figure {
@@ -1381,20 +1400,32 @@ section.module .section-body {
     section.module .section-body .module-text p, section.module .section-body .module-text input,
     section.module .section-body .module-text label, section.module .section-body .module-text table.variations div.option-placeholder, table.variations section.module .section-body .module-text div.option-placeholder, section.module .section-body .module-text .woocommerce-message,
     section.module .section-body .module-text .woocommerce-info,
-    section.module .section-body .module-text .woocommerce-error, section.module .section-body .module-text body.single-product .product .summary .price small, body.single-product .product .summary .price section.module .section-body .module-text small,
+    section.module .section-body .module-text .woocommerce-error, section.module .section-body .module-text .wpcf7-response-output, section.module .section-body .module-text body.single-product .product .summary .price small, body.single-product .product .summary .price section.module .section-body .module-text small,
     section.module .section-body .module-text h2,
     section.module .section-body .module-text h3,
-    section.module .section-body .module-text legend {
+    section.module .section-body .module-text legend,
+    section.module .section-body .module-text .cart-collaterals .wc-proceed-to-checkout h3 .amount,
+    .cart-collaterals .wc-proceed-to-checkout h3 section.module .section-body .module-text .amount {
       margin-bottom: 1em; }
   section.module .section-body .module-caption {
-    -moz-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    top: 90px;
-    left: -150px;
-    position: absolute; }
+    top: 0;
+    left: -100px;
+    position: absolute;
+    width: 100px; }
+    section.module .section-body .module-caption p, section.module .section-body .module-caption input,
+    section.module .section-body .module-caption label, section.module .section-body .module-caption table.variations div.option-placeholder, table.variations section.module .section-body .module-caption div.option-placeholder, section.module .section-body .module-caption .woocommerce-message,
+    section.module .section-body .module-caption .woocommerce-info,
+    section.module .section-body .module-caption .woocommerce-error, section.module .section-body .module-caption .wpcf7-response-output, section.module .section-body .module-caption body.single-product .product .summary .price small, body.single-product .product .summary .price section.module .section-body .module-caption small {
+      -moz-transform: rotate(-90deg) translateX(-100%);
+      -o-transform: rotate(-90deg) translateX(-100%);
+      -ms-transform: rotate(-90deg) translateX(-100%);
+      -webkit-transform: rotate(-90deg) translateX(-100%);
+      transform: rotate(-90deg) translateX(-100%);
+      top: 0px;
+      left: 50px;
+      position: absolute;
+      transform-origin: left;
+      white-space: nowrap; }
 section.module.orientated-right .section-body {
   -webkit-box-direction: reverse;
   -webkit-box-orient: horizontal;
@@ -1409,13 +1440,16 @@ section.module.orientated-right .section-body {
     padding-left: 0;
     padding-right: 45px; }
   section.module.orientated-right .section-body .module-caption {
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-    left: auto;
-    right: -150px; }
+    left: auto; }
+    section.module.orientated-right .section-body .module-caption p, section.module.orientated-right .section-body .module-caption input,
+    section.module.orientated-right .section-body .module-caption label, section.module.orientated-right .section-body .module-caption table.variations div.option-placeholder, table.variations section.module.orientated-right .section-body .module-caption div.option-placeholder, section.module.orientated-right .section-body .module-caption .woocommerce-message,
+    section.module.orientated-right .section-body .module-caption .woocommerce-info,
+    section.module.orientated-right .section-body .module-caption .woocommerce-error, section.module.orientated-right .section-body .module-caption .wpcf7-response-output, section.module.orientated-right .section-body .module-caption body.single-product .product .summary .price small, body.single-product .product .summary .price section.module.orientated-right .section-body .module-caption small {
+      -moz-transform: rotate(90deg) translateX(0);
+      -o-transform: rotate(90deg) translateX(0);
+      -ms-transform: rotate(90deg) translateX(0);
+      -webkit-transform: rotate(90deg) translateX(0);
+      transform: rotate(90deg) translateX(0); }
 section.module.align-bottom .section-body {
   -webkit-align-items: flex-end;
   -ms-flex-align: flex-end;
@@ -1489,46 +1523,63 @@ section.grid ul.isotope-masonry li:nth-child(n) {
 @media only screen and (max-width: 500px) {
   section.grid ul li {
     margin-bottom: 40px; } }
-ul.posts li {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: auto;
-  margin-bottom: 100px; }
-  ul.posts li div {
-    max-width: 700px; }
-    ul.posts li div a, ul.posts li div button {
-      height: auto;
-      overflow: hidden;
-      display: block;
-      margin-bottom: 30px; }
-  ul.posts li img {
-    display: block; }
-ul.posts li:nth-child(even) {
-  -webkit-align-items: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  float: right;
-  text-align: right; }
+body.blog .posts {
+  padding-top: 0; }
 
+body.blog li div {
+  bottom: 180px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  max-width: 500px;
+  margin: auto;
+  color: white;
+  text-align: center; }
+  body.blog li div h2, body.blog li div h3, body.blog li div legend, body.blog li div .cart-collaterals .wc-proceed-to-checkout h3 .amount, .cart-collaterals .wc-proceed-to-checkout h3 body.blog li div .amount {
+    margin-bottom: 20px; }
+  body.blog li div > p, body.blog li div > input,
+  body.blog li div > label, body.blog li table.variations div > div.option-placeholder, table.variations body.blog li div > div.option-placeholder, body.blog li div > .woocommerce-message,
+  body.blog li div > .woocommerce-info,
+  body.blog li div > .woocommerce-error, body.blog li div > .wpcf7-response-output, body.blog li body.single-product .product .summary .price div > small, body.single-product .product .summary .price body.blog li div > small {
+    margin-bottom: 30px; }
+body.blog li img {
+  display: block; }
+
+@media only screen and (max-width: 1000px) {
+  body.blog .posts li div {
+    bottom: 80px; } }
 @media only screen and (max-width: 500px) {
-  ul.posts li {
-    padding-left: 15px;
-    padding-right: 15px; } }
+  body.blog ul.posts {
+    width: 100%;
+    padding: 0;
+    margin: 0; }
+  body.blog .product div,
+  body.blog .posts li div {
+    bottom: 50px; }
+    body.blog .product div p, body.blog .product div input,
+    body.blog .product div label, body.blog .product div table.variations div.option-placeholder, table.variations body.blog .product div div.option-placeholder, body.blog .product div .woocommerce-message,
+    body.blog .product div .woocommerce-info,
+    body.blog .product div .woocommerce-error, body.blog .product div .wpcf7-response-output, body.blog body.single-product .product div .summary .price small, body.single-product body.blog .product div .summary .price small, body.blog body.single-product .product .summary .price div small, body.single-product body.blog .product .summary .price div small,
+    body.blog .posts li div p,
+    body.blog .posts li div input,
+    body.blog .posts li div label,
+    body.blog .posts li div table.variations div.option-placeholder,
+    table.variations body.blog .posts li div div.option-placeholder,
+    body.blog .posts li div .woocommerce-message,
+    body.blog .posts li div .woocommerce-info,
+    body.blog .posts li div .woocommerce-error,
+    body.blog .posts li div .wpcf7-response-output,
+    body.blog .posts li div body.single-product .product .summary .price small,
+    body.single-product .product .summary .price body.blog .posts li div small {
+      display: none; } }
 body.single-post article section {
   margin-bottom: 100px; }
 
 body.single-post article section.image {
   width: calc(100% + 6.25rem);
   margin-left: -6.25rem; }
+  body.single-post article section.image img {
+    width: 100%; }
 body.single-post article section.text {
   margin-bottom: 50px; }
   body.single-post article section.text .section-body {
@@ -1550,6 +1601,11 @@ body.single-post article section.grid li:nth-child(even) {
     padding: 0 30px; }
     body.single-post article section.grid li:nth-child(n) img {
       margin-bottom: 0; } }
+/*
+ * To use the button animation(where the text flies up on hover), put content of button in twice in a span
+ *
+ * Example: '<button><span>click here</span><span>click here</span></button>'
+ */
 button {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -1584,7 +1640,7 @@ button,
   .button:focus span {
     top: -40px; }
 
-.button-sec, table.shop_table.cart tbody tr:last-child td a, table.shop_table.cart tbody tr:last-child td button {
+.button-sec {
   border-color: #c8c8c8;
   background-color: #c8c8c8; }
 
@@ -1599,7 +1655,7 @@ button[disabled="disabled"] {
 form input[type="submit"] {
   display: block;
   margin: 50px auto 0; }
-form h3, form legend {
+form h3, form legend, form .cart-collaterals .wc-proceed-to-checkout h3 .amount, .cart-collaterals .wc-proceed-to-checkout h3 form .amount {
   margin-bottom: 1em;
   text-align: center; }
 form .form-row {
@@ -1616,7 +1672,7 @@ form fieldset {
 form.login p:first-child, form.login input:first-child,
 form.login label:first-child, form.login table.variations div.option-placeholder:first-child, table.variations form.login div.option-placeholder:first-child, form.login .woocommerce-message:first-child,
 form.login .woocommerce-info:first-child,
-form.login .woocommerce-error:first-child, form.login body.single-product .product .summary .price small:first-child, body.single-product .product .summary .price form.login small:first-child {
+form.login .woocommerce-error:first-child, form.login .wpcf7-response-output:first-child, form.login body.single-product .product .summary .price small:first-child, body.single-product .product .summary .price form.login small:first-child {
   margin-bottom: 25px; }
 form.login label[for="rememberme"] {
   display: none; }
@@ -1777,7 +1833,11 @@ table {
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
+  appearance: none;
   margin: 0; }
+
+input[type="number"] {
+  -moz-appearance: textfield; }
 
 .incrementer span {
   -webkit-user-select: none;
@@ -2045,13 +2105,13 @@ section.image .section-body.is-pos-center {
 section.image .section-body.is-pos-right {
   text-align: right; }
 
-h1.is-italic, h2.is-italic, h3.is-italic, legend.is-italic, p.is-italic, input.is-italic,
+h1.is-italic, h2.is-italic, h3.is-italic, legend.is-italic, .cart-collaterals .wc-proceed-to-checkout h3 .is-italic.amount, p.is-italic, input.is-italic,
 label.is-italic, table.variations div.is-italic.option-placeholder, .is-italic.woocommerce-message,
 .is-italic.woocommerce-info,
-.is-italic.woocommerce-error, body.single-product .product .summary .price small.is-italic, section.module .module-text p.is-italic, section.module .module-text input.is-italic,
+.is-italic.woocommerce-error, .is-italic.wpcf7-response-output, body.single-product .product .summary .price small.is-italic, section.module .module-text p.is-italic, section.module .module-text input.is-italic,
 section.module .module-text label.is-italic, section.module .module-text .is-italic.woocommerce-message,
 section.module .module-text .is-italic.woocommerce-info,
-section.module .module-text .is-italic.woocommerce-error, span.is-italic,
+section.module .module-text .is-italic.woocommerce-error, section.module .module-text .is-italic.wpcf7-response-output, span.is-italic,
 time.is-italic,
 address.is-italic,
 th.is-italic,
@@ -2060,13 +2120,13 @@ dt.is-italic,
 dd.is-italic,
 li.is-italic, .is-italic.founders-15, a.is-italic, button.is-italic {
   font-style: italic; }
-h1.is-underlined, h2.is-underlined, h3.is-underlined, legend.is-underlined, p.is-underlined, input.is-underlined,
+h1.is-underlined, h2.is-underlined, h3.is-underlined, legend.is-underlined, .cart-collaterals .wc-proceed-to-checkout h3 .is-underlined.amount, p.is-underlined, input.is-underlined,
 label.is-underlined, table.variations div.is-underlined.option-placeholder, .is-underlined.woocommerce-message,
 .is-underlined.woocommerce-info,
-.is-underlined.woocommerce-error, body.single-product .product .summary .price small.is-underlined, section.module .module-text p.is-underlined, section.module .module-text input.is-underlined,
+.is-underlined.woocommerce-error, .is-underlined.wpcf7-response-output, body.single-product .product .summary .price small.is-underlined, section.module .module-text p.is-underlined, section.module .module-text input.is-underlined,
 section.module .module-text label.is-underlined, section.module .module-text .is-underlined.woocommerce-message,
 section.module .module-text .is-underlined.woocommerce-info,
-section.module .module-text .is-underlined.woocommerce-error, span.is-underlined,
+section.module .module-text .is-underlined.woocommerce-error, section.module .module-text .is-underlined.wpcf7-response-output, span.is-underlined,
 time.is-underlined,
 address.is-underlined,
 th.is-underlined,
@@ -2075,13 +2135,13 @@ dt.is-underlined,
 dd.is-underlined,
 li.is-underlined, .is-underlined.founders-15, a.is-underlined, button.is-underlined {
   text-decoration: underline; }
-h1.is-capitalized, h2.is-capitalized, h3.is-capitalized, legend.is-capitalized, p.is-capitalized, input.is-capitalized,
+h1.is-capitalized, h2.is-capitalized, h3.is-capitalized, legend.is-capitalized, .cart-collaterals .wc-proceed-to-checkout h3 .is-capitalized.amount, p.is-capitalized, input.is-capitalized,
 label.is-capitalized, table.variations div.is-capitalized.option-placeholder, .is-capitalized.woocommerce-message,
 .is-capitalized.woocommerce-info,
-.is-capitalized.woocommerce-error, body.single-product .product .summary .price small.is-capitalized, section.module .module-text p.is-capitalized, section.module .module-text input.is-capitalized,
+.is-capitalized.woocommerce-error, .is-capitalized.wpcf7-response-output, body.single-product .product .summary .price small.is-capitalized, section.module .module-text p.is-capitalized, section.module .module-text input.is-capitalized,
 section.module .module-text label.is-capitalized, section.module .module-text .is-capitalized.woocommerce-message,
 section.module .module-text .is-capitalized.woocommerce-info,
-section.module .module-text .is-capitalized.woocommerce-error, span.is-capitalized,
+section.module .module-text .is-capitalized.woocommerce-error, section.module .module-text .is-capitalized.wpcf7-response-output, span.is-capitalized,
 time.is-capitalized,
 address.is-capitalized,
 th.is-capitalized,
@@ -2090,13 +2150,13 @@ dt.is-capitalized,
 dd.is-capitalized,
 li.is-capitalized, .is-capitalized.founders-15, a.is-capitalized, button.is-capitalized {
   text-transform: capitalize; }
-h1.is-uppercase, h2.is-uppercase, h3.is-uppercase, legend.is-uppercase, p.is-uppercase, input.is-uppercase,
+h1.is-uppercase, h2.is-uppercase, h3.is-uppercase, legend.is-uppercase, .cart-collaterals .wc-proceed-to-checkout h3 .is-uppercase.amount, p.is-uppercase, input.is-uppercase,
 label.is-uppercase, table.variations div.is-uppercase.option-placeholder, .is-uppercase.woocommerce-message,
 .is-uppercase.woocommerce-info,
-.is-uppercase.woocommerce-error, body.single-product .product .summary .price small.is-uppercase, section.module .module-text p.is-uppercase, section.module .module-text input.is-uppercase,
+.is-uppercase.woocommerce-error, .is-uppercase.wpcf7-response-output, body.single-product .product .summary .price small.is-uppercase, section.module .module-text p.is-uppercase, section.module .module-text input.is-uppercase,
 section.module .module-text label.is-uppercase, section.module .module-text .is-uppercase.woocommerce-message,
 section.module .module-text .is-uppercase.woocommerce-info,
-section.module .module-text .is-uppercase.woocommerce-error, span.is-uppercase,
+section.module .module-text .is-uppercase.woocommerce-error, section.module .module-text .is-uppercase.wpcf7-response-output, span.is-uppercase,
 time.is-uppercase,
 address.is-uppercase,
 th.is-uppercase,
@@ -2105,13 +2165,13 @@ dt.is-uppercase,
 dd.is-uppercase,
 li.is-uppercase, .is-uppercase.founders-15, a.is-uppercase, button.is-uppercase {
   text-transform: uppercase; }
-h1.is-lowercase, h2.is-lowercase, h3.is-lowercase, legend.is-lowercase, p.is-lowercase, input.is-lowercase,
+h1.is-lowercase, h2.is-lowercase, h3.is-lowercase, legend.is-lowercase, .cart-collaterals .wc-proceed-to-checkout h3 .is-lowercase.amount, p.is-lowercase, input.is-lowercase,
 label.is-lowercase, table.variations div.is-lowercase.option-placeholder, .is-lowercase.woocommerce-message,
 .is-lowercase.woocommerce-info,
-.is-lowercase.woocommerce-error, body.single-product .product .summary .price small.is-lowercase, section.module .module-text p.is-lowercase, section.module .module-text input.is-lowercase,
+.is-lowercase.woocommerce-error, .is-lowercase.wpcf7-response-output, body.single-product .product .summary .price small.is-lowercase, section.module .module-text p.is-lowercase, section.module .module-text input.is-lowercase,
 section.module .module-text label.is-lowercase, section.module .module-text .is-lowercase.woocommerce-message,
 section.module .module-text .is-lowercase.woocommerce-info,
-section.module .module-text .is-lowercase.woocommerce-error, span.is-lowercase,
+section.module .module-text .is-lowercase.woocommerce-error, section.module .module-text .is-lowercase.wpcf7-response-output, span.is-lowercase,
 time.is-lowercase,
 address.is-lowercase,
 th.is-lowercase,
@@ -2120,13 +2180,13 @@ dt.is-lowercase,
 dd.is-lowercase,
 li.is-lowercase, .is-lowercase.founders-15, a.is-lowercase, button.is-lowercase {
   text-transform: lowercase; }
-h1.is-bold, h2.is-bold, h3.is-bold, legend.is-bold, p.is-bold, input.is-bold,
+h1.is-bold, h2.is-bold, h3.is-bold, legend.is-bold, .cart-collaterals .wc-proceed-to-checkout h3 .is-bold.amount, p.is-bold, input.is-bold,
 label.is-bold, table.variations div.is-bold.option-placeholder, .is-bold.woocommerce-message,
 .is-bold.woocommerce-info,
-.is-bold.woocommerce-error, body.single-product .product .summary .price small.is-bold, section.module .module-text p.is-bold, section.module .module-text input.is-bold,
+.is-bold.woocommerce-error, .is-bold.wpcf7-response-output, body.single-product .product .summary .price small.is-bold, section.module .module-text p.is-bold, section.module .module-text input.is-bold,
 section.module .module-text label.is-bold, section.module .module-text .is-bold.woocommerce-message,
 section.module .module-text .is-bold.woocommerce-info,
-section.module .module-text .is-bold.woocommerce-error, span.is-bold,
+section.module .module-text .is-bold.woocommerce-error, section.module .module-text .is-bold.wpcf7-response-output, span.is-bold,
 time.is-bold,
 address.is-bold,
 th.is-bold,
@@ -2135,13 +2195,13 @@ dt.is-bold,
 dd.is-bold,
 li.is-bold, .is-bold.founders-15, a.is-bold, button.is-bold {
   font-weight: 700; }
-h1.is-aligned-center, h2.is-aligned-center, h3.is-aligned-center, legend.is-aligned-center, p.is-aligned-center, input.is-aligned-center,
+h1.is-aligned-center, h2.is-aligned-center, h3.is-aligned-center, legend.is-aligned-center, .cart-collaterals .wc-proceed-to-checkout h3 .is-aligned-center.amount, p.is-aligned-center, input.is-aligned-center,
 label.is-aligned-center, table.variations div.is-aligned-center.option-placeholder, .is-aligned-center.woocommerce-message,
 .is-aligned-center.woocommerce-info,
-.is-aligned-center.woocommerce-error, body.single-product .product .summary .price small.is-aligned-center, section.module .module-text p.is-aligned-center, section.module .module-text input.is-aligned-center,
+.is-aligned-center.woocommerce-error, .is-aligned-center.wpcf7-response-output, body.single-product .product .summary .price small.is-aligned-center, section.module .module-text p.is-aligned-center, section.module .module-text input.is-aligned-center,
 section.module .module-text label.is-aligned-center, section.module .module-text .is-aligned-center.woocommerce-message,
 section.module .module-text .is-aligned-center.woocommerce-info,
-section.module .module-text .is-aligned-center.woocommerce-error, span.is-aligned-center,
+section.module .module-text .is-aligned-center.woocommerce-error, section.module .module-text .is-aligned-center.wpcf7-response-output, span.is-aligned-center,
 time.is-aligned-center,
 address.is-aligned-center,
 th.is-aligned-center,
@@ -2150,13 +2210,13 @@ dt.is-aligned-center,
 dd.is-aligned-center,
 li.is-aligned-center, .is-aligned-center.founders-15, a.is-aligned-center, button.is-aligned-center {
   text-align: center; }
-h1.is-aligned-left, h2.is-aligned-left, h3.is-aligned-left, legend.is-aligned-left, p.is-aligned-left, input.is-aligned-left,
+h1.is-aligned-left, h2.is-aligned-left, h3.is-aligned-left, legend.is-aligned-left, .cart-collaterals .wc-proceed-to-checkout h3 .is-aligned-left.amount, p.is-aligned-left, input.is-aligned-left,
 label.is-aligned-left, table.variations div.is-aligned-left.option-placeholder, .is-aligned-left.woocommerce-message,
 .is-aligned-left.woocommerce-info,
-.is-aligned-left.woocommerce-error, body.single-product .product .summary .price small.is-aligned-left, section.module .module-text p.is-aligned-left, section.module .module-text input.is-aligned-left,
+.is-aligned-left.woocommerce-error, .is-aligned-left.wpcf7-response-output, body.single-product .product .summary .price small.is-aligned-left, section.module .module-text p.is-aligned-left, section.module .module-text input.is-aligned-left,
 section.module .module-text label.is-aligned-left, section.module .module-text .is-aligned-left.woocommerce-message,
 section.module .module-text .is-aligned-left.woocommerce-info,
-section.module .module-text .is-aligned-left.woocommerce-error, span.is-aligned-left,
+section.module .module-text .is-aligned-left.woocommerce-error, section.module .module-text .is-aligned-left.wpcf7-response-output, span.is-aligned-left,
 time.is-aligned-left,
 address.is-aligned-left,
 th.is-aligned-left,
@@ -2165,13 +2225,13 @@ dt.is-aligned-left,
 dd.is-aligned-left,
 li.is-aligned-left, .is-aligned-left.founders-15, a.is-aligned-left, button.is-aligned-left {
   text-align: left; }
-h1.is-aligned-right, h2.is-aligned-right, h3.is-aligned-right, legend.is-aligned-right, p.is-aligned-right, input.is-aligned-right,
+h1.is-aligned-right, h2.is-aligned-right, h3.is-aligned-right, legend.is-aligned-right, .cart-collaterals .wc-proceed-to-checkout h3 .is-aligned-right.amount, p.is-aligned-right, input.is-aligned-right,
 label.is-aligned-right, table.variations div.is-aligned-right.option-placeholder, .is-aligned-right.woocommerce-message,
 .is-aligned-right.woocommerce-info,
-.is-aligned-right.woocommerce-error, body.single-product .product .summary .price small.is-aligned-right, section.module .module-text p.is-aligned-right, section.module .module-text input.is-aligned-right,
+.is-aligned-right.woocommerce-error, .is-aligned-right.wpcf7-response-output, body.single-product .product .summary .price small.is-aligned-right, section.module .module-text p.is-aligned-right, section.module .module-text input.is-aligned-right,
 section.module .module-text label.is-aligned-right, section.module .module-text .is-aligned-right.woocommerce-message,
 section.module .module-text .is-aligned-right.woocommerce-info,
-section.module .module-text .is-aligned-right.woocommerce-error, span.is-aligned-right,
+section.module .module-text .is-aligned-right.woocommerce-error, section.module .module-text .is-aligned-right.wpcf7-response-output, span.is-aligned-right,
 time.is-aligned-right,
 address.is-aligned-right,
 th.is-aligned-right,
@@ -2180,13 +2240,13 @@ dt.is-aligned-right,
 dd.is-aligned-right,
 li.is-aligned-right, .is-aligned-right.founders-15, a.is-aligned-right, button.is-aligned-right {
   text-align: right; }
-h1.is-black, h2.is-black, h3.is-black, legend.is-black, p.is-black, input.is-black,
+h1.is-black, h2.is-black, h3.is-black, legend.is-black, .cart-collaterals .wc-proceed-to-checkout h3 .is-black.amount, p.is-black, input.is-black,
 label.is-black, table.variations div.is-black.option-placeholder, .is-black.woocommerce-message,
 .is-black.woocommerce-info,
-.is-black.woocommerce-error, body.single-product .product .summary .price small.is-black, section.module .module-text p.is-black, section.module .module-text input.is-black,
+.is-black.woocommerce-error, .is-black.wpcf7-response-output, body.single-product .product .summary .price small.is-black, section.module .module-text p.is-black, section.module .module-text input.is-black,
 section.module .module-text label.is-black, section.module .module-text .is-black.woocommerce-message,
 section.module .module-text .is-black.woocommerce-info,
-section.module .module-text .is-black.woocommerce-error, span.is-black,
+section.module .module-text .is-black.woocommerce-error, section.module .module-text .is-black.wpcf7-response-output, span.is-black,
 time.is-black,
 address.is-black,
 th.is-black,
@@ -2195,13 +2255,13 @@ dt.is-black,
 dd.is-black,
 li.is-black, .is-black.founders-15, a.is-black, button.is-black {
   color: black; }
-h1.is-white, h2.is-white, h3.is-white, legend.is-white, p.is-white, input.is-white,
+h1.is-white, h2.is-white, h3.is-white, legend.is-white, .cart-collaterals .wc-proceed-to-checkout h3 .is-white.amount, p.is-white, input.is-white,
 label.is-white, table.variations div.is-white.option-placeholder, .is-white.woocommerce-message,
 .is-white.woocommerce-info,
-.is-white.woocommerce-error, body.single-product .product .summary .price small.is-white, section.module .module-text p.is-white, section.module .module-text input.is-white,
+.is-white.woocommerce-error, .is-white.wpcf7-response-output, body.single-product .product .summary .price small.is-white, section.module .module-text p.is-white, section.module .module-text input.is-white,
 section.module .module-text label.is-white, section.module .module-text .is-white.woocommerce-message,
 section.module .module-text .is-white.woocommerce-info,
-section.module .module-text .is-white.woocommerce-error, span.is-white,
+section.module .module-text .is-white.woocommerce-error, section.module .module-text .is-white.wpcf7-response-output, span.is-white,
 time.is-white,
 address.is-white,
 th.is-white,
@@ -2210,13 +2270,13 @@ dt.is-white,
 dd.is-white,
 li.is-white, .is-white.founders-15, a.is-white, button.is-white {
   color: white; }
-h1.is-grey, h2.is-grey, h3.is-grey, legend.is-grey, p.is-grey, input.is-grey,
+h1.is-grey, h2.is-grey, h3.is-grey, legend.is-grey, .cart-collaterals .wc-proceed-to-checkout h3 .is-grey.amount, p.is-grey, input.is-grey,
 label.is-grey, table.variations div.is-grey.option-placeholder, .is-grey.woocommerce-message,
 .is-grey.woocommerce-info,
-.is-grey.woocommerce-error, body.single-product .product .summary .price small.is-grey, section.module .module-text p.is-grey, section.module .module-text input.is-grey,
+.is-grey.woocommerce-error, .is-grey.wpcf7-response-output, body.single-product .product .summary .price small.is-grey, section.module .module-text p.is-grey, section.module .module-text input.is-grey,
 section.module .module-text label.is-grey, section.module .module-text .is-grey.woocommerce-message,
 section.module .module-text .is-grey.woocommerce-info,
-section.module .module-text .is-grey.woocommerce-error, span.is-grey,
+section.module .module-text .is-grey.woocommerce-error, section.module .module-text .is-grey.wpcf7-response-output, span.is-grey,
 time.is-grey,
 address.is-grey,
 th.is-grey,
@@ -2229,7 +2289,7 @@ li.is-grey, .is-grey.founders-15, a.is-grey, button.is-grey {
 p.is-small, input.is-small,
 label.is-small, table.variations div.is-small.option-placeholder, .is-small.woocommerce-message,
 .is-small.woocommerce-info,
-.is-small.woocommerce-error, body.single-product .product .summary .price small.is-small {
+.is-small.woocommerce-error, .is-small.wpcf7-response-output, body.single-product .product .summary .price small.is-small {
   font-size: 15px; }
 
 .is-stretched-wrapper {
@@ -2288,12 +2348,12 @@ body.is-mobile.is-loading > * {
   opacity: 1;
   visibility: visible; }
 
-.is-fullwidth, body.woocommerce.archive .products {
+.is-fullwidth, body.blog .posts, body.woocommerce.archive .products {
   width: calc(100% + (6.25rem * 2));
   margin-left: -6.25rem; }
 
 @media only screen and (max-width: 500px) {
-  .is-fullwidth, body.woocommerce.archive .products {
+  .is-fullwidth, body.blog .posts, body.woocommerce.archive .products {
     margin-left: -2.5rem; } }
 table.variations {
   position: relative; }
@@ -2322,84 +2382,161 @@ table.variations {
 .woocommerce-cart form {
   max-width: none;
   margin: 0;
-  margin-bottom: 50px;
   padding: 0; }
 .woocommerce-cart .woocommerce {
   padding: 0; }
-
-table.shop_table.cart thead .product-remove {
-  padding: 0;
-  position: absolute; }
-table.shop_table.cart thead .product-thumbnail {
-  width: 30%; }
-table.shop_table.cart thead .product-name {
-  width: 30%;
-  padding-left: 15px; }
-table.shop_table.cart thead .product-price {
-  width: 20%;
-  padding-left: 15px; }
-table.shop_table.cart thead .product-quantity {
-  width: 20%;
-  padding-left: 15px; }
-table.shop_table.cart thead .product-subtotal {
-  width: 20%;
-  padding-right: 15px; }
-table.shop_table.cart tbody td {
-  padding: 35px 15px; }
-table.shop_table.cart tbody .product-remove {
-  z-index: 999;
-  padding: 0; }
-  table.shop_table.cart tbody .product-remove a, table.shop_table.cart tbody .product-remove button {
-    top: 25px;
-    left: -35px;
-    position: absolute;
-    font-size: 30px; }
-table.shop_table.cart tbody .product-thumbnail {
-  padding: 15px; }
-  table.shop_table.cart tbody .product-thumbnail img {
-    border: 5px solid white; }
-table.shop_table.cart tbody .product-name a, table.shop_table.cart tbody .product-name button {
-  margin-bottom: 15px;
+.woocommerce-cart .link-shop {
+  width: 100%;
   display: block;
-  font-size: 30px;
-  line-height: 25px; }
-table.shop_table.cart tbody .product-name .variation {
-  *zoom: 1;
-  margin-bottom: 25px; }
-  table.shop_table.cart tbody .product-name .variation:before, table.shop_table.cart tbody .product-name .variation:after {
-    content: " ";
-    display: table; }
-  table.shop_table.cart tbody .product-name .variation:after {
-    clear: both; }
-  table.shop_table.cart tbody .product-name .variation dt,
-  table.shop_table.cart tbody .product-name .variation dd {
-    float: left;
-    display: inline-block; }
-  table.shop_table.cart tbody .product-name .variation dt {
-    clear: left;
-    margin-right: 5px; }
-table.shop_table.cart tbody .product-quantity .incrementer {
-  margin-left: -20px;
-  margin-top: -5px; }
-table.shop_table.cart tbody tr:last-child td {
-  padding: 15px;
-  border-top: thin solid #c8c8c8; }
+  padding-top: 50px;
+  text-align: center; }
+
+table.shop_table.cart {
+  table-layout: fixed;
+  border-bottom: thin solid #c8c8c8; }
+  table.shop_table.cart thead .product-thumbnail {
+    width: 30%; }
+  table.shop_table.cart thead .product-name {
+    width: 30%;
+    padding-left: 15px; }
+  table.shop_table.cart thead .product-price {
+    width: 20%;
+    padding-left: 15px; }
+  table.shop_table.cart thead .product-quantity {
+    width: 20%;
+    padding-left: 15px;
+    text-align: center; }
+  table.shop_table.cart thead .product-subtotal {
+    width: 20%;
+    text-align: right; }
+  table.shop_table.cart tbody td {
+    padding: 35px 15px; }
+  table.shop_table.cart tbody .product-remove {
+    z-index: 999;
+    padding: 0; }
+    table.shop_table.cart tbody .product-remove a, table.shop_table.cart tbody .product-remove button {
+      top: 25px;
+      left: -35px;
+      position: absolute;
+      font-size: 30px; }
+  table.shop_table.cart tbody .product-thumbnail {
+    padding: 15px;
+    padding-left: 0; }
+  table.shop_table.cart tbody .product-name a, table.shop_table.cart tbody .product-name button {
+    margin-bottom: 15px;
+    display: block;
+    font-size: 30px;
+    line-height: 25px; }
+  table.shop_table.cart tbody .product-name .variation {
+    *zoom: 1;
+    margin-bottom: 25px; }
+    table.shop_table.cart tbody .product-name .variation:before, table.shop_table.cart tbody .product-name .variation:after {
+      content: " ";
+      display: table; }
+    table.shop_table.cart tbody .product-name .variation:after {
+      clear: both; }
+    table.shop_table.cart tbody .product-name .variation dt,
+    table.shop_table.cart tbody .product-name .variation dd {
+      float: left;
+      display: inline-block; }
+    table.shop_table.cart tbody .product-name .variation dt {
+      clear: left;
+      margin-right: 5px; }
+  table.shop_table.cart tbody .product-quantity {
+    padding-right: 0;
+    text-align: center; }
+    table.shop_table.cart tbody .product-quantity .quantity {
+      margin-top: -5px;
+      margin-bottom: 20px; }
+      table.shop_table.cart tbody .product-quantity .quantity input[type="number"] {
+        border: none; }
+    table.shop_table.cart tbody .product-quantity a, table.shop_table.cart tbody .product-quantity button,
+    table.shop_table.cart tbody .product-quantity input[type="submit"] {
+      cursor: pointer; }
+      table.shop_table.cart tbody .product-quantity a:hover, table.shop_table.cart tbody .product-quantity button:hover,
+      table.shop_table.cart tbody .product-quantity input[type="submit"]:hover {
+        text-decoration: underline; }
+    table.shop_table.cart tbody .product-quantity input[type="submit"] {
+      margin: auto;
+      padding: 0;
+      border: none; }
+  table.shop_table.cart tbody .product-subtotal {
+    padding-right: 0; }
 
 .cart-collaterals {
-  width: 100%;
-  max-width: 500px;
-  padding: 50px;
-  float: right;
-  background-color: #f0f0f0; }
-  .cart-collaterals h2, .cart-collaterals h3, .cart-collaterals legend {
-    text-align: left;
-    margin-bottom: 25px; }
+  width: 100%; }
+  .cart-collaterals #cart-shipping > div,
+  .cart-collaterals table,
+  .cart-collaterals div.wc-proceed-to-checkout {
+    max-width: 400px;
+    margin: auto; }
+  .cart-collaterals #cart-shipping,
+  .cart-collaterals #cart-totals {
+    padding: 30px 0;
+    margin-bottom: 0;
+    border-bottom: thin solid #c8c8c8; }
+  .cart-collaterals #cart-shipping .shipping-calculator-form {
+    display: block !important; }
   .cart-collaterals table tbody th,
   .cart-collaterals table tbody td {
     padding: 5px 0; }
+  .cart-collaterals form.woocommerce-shipping-calculator {
+    height: auto;
+    overflow: hidden; }
+    .cart-collaterals form.woocommerce-shipping-calculator .shipping-label {
+      width: 80px;
+      float: left;
+      padding: 6px 0; }
+    .cart-collaterals form.woocommerce-shipping-calculator > section {
+      width: calc(100% - 80px);
+      float: left; }
+    .cart-collaterals form.woocommerce-shipping-calculator button {
+      margin: auto;
+      display: block; }
   .cart-collaterals .wc-proceed-to-checkout {
-    margin-top: 25px; }
+    margin-top: 25px;
+    padding: 30px 0;
+    text-align: center; }
+    .cart-collaterals .wc-proceed-to-checkout h3, .cart-collaterals .wc-proceed-to-checkout legend, .cart-collaterals .wc-proceed-to-checkout h3 .amount {
+      margin-bottom: 30px; }
 
+@media screen and (max-width: 800px) {
+  .woocommerce-cart table.shop_table.cart thead {
+    display: none; }
+  .woocommerce-cart table.shop_table.cart tbody tr {
+    display: block;
+    padding: 15px 0;
+    border-bottom: thin solid #c8c8c8; }
+    .woocommerce-cart table.shop_table.cart tbody tr:last-child {
+      border-bottom: none; }
+    .woocommerce-cart table.shop_table.cart tbody tr td {
+      display: inline-block;
+      padding: 0 15px; }
+    .woocommerce-cart table.shop_table.cart tbody tr .product-thumbnail {
+      width: 50%;
+      float: left; }
+    .woocommerce-cart table.shop_table.cart tbody tr .product-name {
+      width: 50%; }
+    .woocommerce-cart table.shop_table.cart tbody tr .product-quantity {
+      width: 100%; }
+      .woocommerce-cart table.shop_table.cart tbody tr .product-quantity .incrementer {
+        margin: 15px 0; }
+        .woocommerce-cart table.shop_table.cart tbody tr .product-quantity .incrementer > * {
+          width: 30%;
+          padding: 7px;
+          background-color: #c8c8c8; }
+        .woocommerce-cart table.shop_table.cart tbody tr .product-quantity .incrementer .min {
+          float: left; }
+        .woocommerce-cart table.shop_table.cart tbody tr .product-quantity .incrementer .plus {
+          float: right; }
+    .woocommerce-cart table.shop_table.cart tbody tr .product-subtotal {
+      width: 100%;
+      text-align: center; }
+  .woocommerce-cart .cart-collaterals #cart-shipping,
+  .woocommerce-cart .cart-collaterals #cart-totals,
+  .woocommerce-cart .cart-collaterals div.wc-proceed-to-checkout {
+    padding-left: 15px;
+    padding-right: 15px; } }
 .woocommerce-checkout form {
   max-width: 700px;
   margin: 50px auto 0;
@@ -2418,7 +2555,7 @@ table.shop_table.cart tbody tr:last-child td {
     width: 100%; }
 .woocommerce-checkout .create-account {
   margin-bottom: 10px !important; }
-.woocommerce-checkout h3#ship-to-different-address, .woocommerce-checkout legend#ship-to-different-address {
+.woocommerce-checkout h3#ship-to-different-address, .woocommerce-checkout legend#ship-to-different-address, .woocommerce-checkout .cart-collaterals .wc-proceed-to-checkout h3 #ship-to-different-address.amount, .cart-collaterals .wc-proceed-to-checkout h3 .woocommerce-checkout #ship-to-different-address.amount {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -2477,7 +2614,7 @@ table.shop_table.cart tbody tr:last-child td {
   margin: 0;
   background-color: transparent; }
 
-#customer_login h2, #customer_login h3, #customer_login legend {
+#customer_login h2, #customer_login h3, #customer_login legend, #customer_login .cart-collaterals .wc-proceed-to-checkout h3 .amount, .cart-collaterals .wc-proceed-to-checkout h3 #customer_login .amount {
   margin-bottom: 25px; }
 #customer_login form {
   margin: 0;
@@ -2498,7 +2635,7 @@ table.shop_table.cart tbody tr:last-child td {
   background-color: #f0f0f0; }
 .woocommerce-account .myaccount_user {
   margin-bottom: 50px; }
-.woocommerce-account h2, .woocommerce-account h3, .woocommerce-account legend {
+.woocommerce-account h2, .woocommerce-account h3, .woocommerce-account legend, .woocommerce-account .cart-collaterals .wc-proceed-to-checkout h3 .amount, .cart-collaterals .wc-proceed-to-checkout h3 .woocommerce-account .amount {
   text-align: center; }
 .woocommerce-account .myaccount_address {
   margin-bottom: 25px;
@@ -2511,7 +2648,7 @@ table.shop_table.cart tbody tr:last-child td {
     width: 50%;
     float: left;
     text-align: left; }
-    .woocommerce-account .addresses .address h2, .woocommerce-account .addresses .address h3, .woocommerce-account .addresses .address legend {
+    .woocommerce-account .addresses .address h2, .woocommerce-account .addresses .address h3, .woocommerce-account .addresses .address legend, .woocommerce-account .addresses .address .cart-collaterals .wc-proceed-to-checkout h3 .amount, .cart-collaterals .wc-proceed-to-checkout h3 .woocommerce-account .addresses .address .amount {
       text-align: left; }
     .woocommerce-account .addresses .address a, .woocommerce-account .addresses .address button {
       text-decoration: underline; }
@@ -2527,7 +2664,7 @@ table.shop_table.cart tbody tr:last-child td {
     margin-bottom: 25px; }
   .woocommerce-view-order .management-content table {
     margin-bottom: 50px; }
-  .woocommerce-view-order .management-content header h2, .woocommerce-view-order .management-content header h3, .woocommerce-view-order .management-content header legend {
+  .woocommerce-view-order .management-content header h2, .woocommerce-view-order .management-content header h3, .woocommerce-view-order .management-content header legend, .woocommerce-view-order .management-content header .cart-collaterals .wc-proceed-to-checkout h3 .amount, .cart-collaterals .wc-proceed-to-checkout h3 .woocommerce-view-order .management-content header .amount {
     text-align: left; }
   .woocommerce-view-order .management-content table.customer_details {
     width: auto;
@@ -2541,7 +2678,7 @@ table.shop_table.cart tbody tr:last-child td {
     .woocommerce-view-order .management-content .addresses > div {
       width: 50%;
       float: left; }
-      .woocommerce-view-order .management-content .addresses > div h3, .woocommerce-view-order .management-content .addresses > div legend {
+      .woocommerce-view-order .management-content .addresses > div h3, .woocommerce-view-order .management-content .addresses > div legend, .woocommerce-view-order .management-content .addresses > div .cart-collaterals .wc-proceed-to-checkout h3 .amount, .cart-collaterals .wc-proceed-to-checkout h3 .woocommerce-view-order .management-content .addresses > div .amount {
         text-align: left;
         margin-bottom: 15px; }
 
@@ -2581,12 +2718,21 @@ table.shop_table.cart tbody tr:last-child td {
   max-width: 700px;
   margin: 50px auto 0; }
 
+.wpcf7-response-output {
+  margin: 25px 0 !important;
+  padding: 10px !important;
+  border: none !important;
+  border-left: 3px solid red !important;
+  background-color: #c8c8c8 !important; }
+  .wpcf7-response-output.wpcf7-mail-sent-ok {
+    border-left: 3px solid green !important; }
+
 .management-heading {
   width: 100%;
   padding: 100px;
   text-align: center;
   background-color: #f0f0f0; }
-  .management-heading h3, .management-heading legend {
+  .management-heading h3, .management-heading legend, .management-heading .cart-collaterals .wc-proceed-to-checkout h3 .amount, .cart-collaterals .wc-proceed-to-checkout h3 .management-heading .amount {
     margin-bottom: 0; }
 
 .management-content {
@@ -2604,7 +2750,7 @@ table.shop_table.cart tbody tr:last-child td {
   background-color: #f0f0f0; }
 .woocommerce-order-received .woocommerce-thankyou-order-received {
   margin-bottom: 1em; }
-.woocommerce-order-received h2, .woocommerce-order-received h3, .woocommerce-order-received legend {
+.woocommerce-order-received h2, .woocommerce-order-received h3, .woocommerce-order-received legend, .woocommerce-order-received .cart-collaterals .wc-proceed-to-checkout h3 .amount, .cart-collaterals .wc-proceed-to-checkout h3 .woocommerce-order-received .amount {
   margin: 25px 0; }
 .woocommerce-order-received table.customer_details {
   width: auto;
@@ -2616,10 +2762,91 @@ table.shop_table.cart tbody tr:last-child td {
   .woocommerce-order-received table.customer_details td {
     padding-left: 15px; }
 
+body.page-terms section.text .section-header h2, body.page-terms section.text .section-header h3, body.page-terms section.text .section-header legend, body.page-terms section.text .section-header .cart-collaterals .wc-proceed-to-checkout h3 .amount, .cart-collaterals .wc-proceed-to-checkout h3 body.page-terms section.text .section-header .amount,
+body.page-terms section.text .section-header p,
+body.page-terms section.text .section-header input,
+body.page-terms section.text .section-header label,
+body.page-terms section.text .section-header table.variations div.option-placeholder,
+table.variations body.page-terms section.text .section-header div.option-placeholder,
+body.page-terms section.text .section-header .woocommerce-message,
+body.page-terms section.text .section-header .woocommerce-info,
+body.page-terms section.text .section-header .woocommerce-error,
+body.page-terms section.text .section-header .wpcf7-response-output,
+body.page-terms section.text .section-header body.single-product .product .summary .price small,
+body.single-product .product .summary .price body.page-terms section.text .section-header small,
+body.page-terms section.text .section-body h2,
+body.page-terms section.text .section-body h3,
+body.page-terms section.text .section-body legend,
+body.page-terms section.text .section-body .cart-collaterals .wc-proceed-to-checkout h3 .amount,
+.cart-collaterals .wc-proceed-to-checkout h3 body.page-terms section.text .section-body .amount,
+body.page-terms section.text .section-body p,
+body.page-terms section.text .section-body input,
+body.page-terms section.text .section-body label,
+body.page-terms section.text .section-body table.variations div.option-placeholder,
+table.variations body.page-terms section.text .section-body div.option-placeholder,
+body.page-terms section.text .section-body .woocommerce-message,
+body.page-terms section.text .section-body .woocommerce-info,
+body.page-terms section.text .section-body .woocommerce-error,
+body.page-terms section.text .section-body .wpcf7-response-output,
+body.page-terms section.text .section-body body.single-product .product .summary .price small,
+body.single-product .product .summary .price body.page-terms section.text .section-body small,
+body.page-shipping section.text .section-header h2,
+body.page-shipping section.text .section-header h3,
+body.page-shipping section.text .section-header legend,
+body.page-shipping section.text .section-header .cart-collaterals .wc-proceed-to-checkout h3 .amount,
+.cart-collaterals .wc-proceed-to-checkout h3 body.page-shipping section.text .section-header .amount,
+body.page-shipping section.text .section-header p,
+body.page-shipping section.text .section-header input,
+body.page-shipping section.text .section-header label,
+body.page-shipping section.text .section-header table.variations div.option-placeholder,
+table.variations body.page-shipping section.text .section-header div.option-placeholder,
+body.page-shipping section.text .section-header .woocommerce-message,
+body.page-shipping section.text .section-header .woocommerce-info,
+body.page-shipping section.text .section-header .woocommerce-error,
+body.page-shipping section.text .section-header .wpcf7-response-output,
+body.page-shipping section.text .section-header body.single-product .product .summary .price small,
+body.single-product .product .summary .price body.page-shipping section.text .section-header small,
+body.page-shipping section.text .section-body h2,
+body.page-shipping section.text .section-body h3,
+body.page-shipping section.text .section-body legend,
+body.page-shipping section.text .section-body .cart-collaterals .wc-proceed-to-checkout h3 .amount,
+.cart-collaterals .wc-proceed-to-checkout h3 body.page-shipping section.text .section-body .amount,
+body.page-shipping section.text .section-body p,
+body.page-shipping section.text .section-body input,
+body.page-shipping section.text .section-body label,
+body.page-shipping section.text .section-body table.variations div.option-placeholder,
+table.variations body.page-shipping section.text .section-body div.option-placeholder,
+body.page-shipping section.text .section-body .woocommerce-message,
+body.page-shipping section.text .section-body .woocommerce-info,
+body.page-shipping section.text .section-body .woocommerce-error,
+body.page-shipping section.text .section-body .wpcf7-response-output,
+body.page-shipping section.text .section-body body.single-product .product .summary .price small,
+body.single-product .product .summary .price body.page-shipping section.text .section-body small {
+  max-width: 700px;
+  margin: 0 auto 1em; }
+body.page-terms section.text .section-header,
+body.page-shipping section.text .section-header {
+  max-width: 1000px;
+  padding-bottom: 0px;
+  text-align: center;
+  border-bottom: thin solid black; }
+  body.page-terms section.text .section-header a, body.page-terms section.text .section-header button,
+  body.page-shipping section.text .section-header a,
+  body.page-shipping section.text .section-header button {
+    display: block;
+    margin-bottom: 2em; }
+  body.page-terms section.text .section-header h2, body.page-terms section.text .section-header h3, body.page-terms section.text .section-header legend, body.page-terms section.text .section-header .cart-collaterals .wc-proceed-to-checkout h3 .amount, .cart-collaterals .wc-proceed-to-checkout h3 body.page-terms section.text .section-header .amount,
+  body.page-shipping section.text .section-header h2,
+  body.page-shipping section.text .section-header h3,
+  body.page-shipping section.text .section-header legend,
+  body.page-shipping section.text .section-header .cart-collaterals .wc-proceed-to-checkout h3 .amount,
+  .cart-collaterals .wc-proceed-to-checkout h3 body.page-shipping section.text .section-header .amount {
+    margin-bottom: 10px; }
+
 body.woocommerce.archive .products {
   padding-top: 0; }
 
-body.woocommerce.archive .product div {
+body.woocommerce.archive li div {
   bottom: 180px;
   left: 0;
   right: 0;
@@ -2628,14 +2855,25 @@ body.woocommerce.archive .product div {
   margin: auto;
   color: white;
   text-align: center; }
-  body.woocommerce.archive .product div h2, body.woocommerce.archive .product div h3, body.woocommerce.archive .product div legend {
+  body.woocommerce.archive li div h2, body.woocommerce.archive li div h3, body.woocommerce.archive li div legend, body.woocommerce.archive li div .cart-collaterals .wc-proceed-to-checkout h3 .amount, .cart-collaterals .wc-proceed-to-checkout h3 body.woocommerce.archive li div .amount {
     margin-bottom: 20px; }
-  body.woocommerce.archive .product div > p, body.woocommerce.archive .product div > input,
-  body.woocommerce.archive .product div > label, body.woocommerce.archive .product table.variations div > div.option-placeholder, table.variations body.woocommerce.archive .product div > div.option-placeholder, body.woocommerce.archive .product div > .woocommerce-message,
-  body.woocommerce.archive .product div > .woocommerce-info,
-  body.woocommerce.archive .product div > .woocommerce-error, body.woocommerce.archive body.single-product .product .summary .price div > small, body.single-product body.woocommerce.archive .product .summary .price div > small {
+  body.woocommerce.archive li div > p, body.woocommerce.archive li div > input,
+  body.woocommerce.archive li div > label, body.woocommerce.archive li table.variations div > div.option-placeholder, table.variations body.woocommerce.archive li div > div.option-placeholder, body.woocommerce.archive li div > .woocommerce-message,
+  body.woocommerce.archive li div > .woocommerce-info,
+  body.woocommerce.archive li div > .woocommerce-error, body.woocommerce.archive li div > .wpcf7-response-output, body.woocommerce.archive li body.single-product .product .summary .price div > small, body.single-product .product .summary .price body.woocommerce.archive li div > small {
     margin-bottom: 30px; }
-body.woocommerce.archive .product img {
+body.woocommerce.archive li figure {
+  height: 90vh;
+  overflow: hidden; }
+  body.woocommerce.archive li figure:after {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); }
+body.woocommerce.archive li img {
   display: block; }
 
 @media only screen and (max-width: 1000px) {
@@ -2651,28 +2889,16 @@ body.woocommerce.archive .product img {
     body.woocommerce.archive .product div p, body.woocommerce.archive .product div input,
     body.woocommerce.archive .product div label, body.woocommerce.archive .product div table.variations div.option-placeholder, table.variations body.woocommerce.archive .product div div.option-placeholder, body.woocommerce.archive .product div .woocommerce-message,
     body.woocommerce.archive .product div .woocommerce-info,
-    body.woocommerce.archive .product div .woocommerce-error, body.woocommerce.archive body.single-product .product div .summary .price small, body.single-product body.woocommerce.archive .product div .summary .price small, body.woocommerce.archive body.single-product .product .summary .price div small, body.single-product body.woocommerce.archive .product .summary .price div small {
+    body.woocommerce.archive .product div .woocommerce-error, body.woocommerce.archive .product div .wpcf7-response-output, body.woocommerce.archive body.single-product .product div .summary .price small, body.single-product body.woocommerce.archive .product div .summary .price small, body.woocommerce.archive body.single-product .product .summary .price div small, body.single-product body.woocommerce.archive .product .summary .price div small {
       display: none; } }
 body.single-product .product {
   height: 100vh;
+  max-height: 1000px;
   margin-top: -90px;
   padding: 0;
   padding-top: 90px;
   background-color: #f0f0f0; }
   body.single-product .product .images {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
     width: 60%;
     height: 100%;
     float: right;
@@ -2700,6 +2926,24 @@ body.single-product .product {
     float: left; }
 body.single-product #product-editorial {
   padding: 0; }
+body.single-product #product-inquiry {
+  display: none;
+  padding-top: 100px; }
+  body.single-product #product-inquiry h2, body.single-product #product-inquiry h3, body.single-product #product-inquiry legend, body.single-product #product-inquiry .cart-collaterals .wc-proceed-to-checkout h3 .amount, .cart-collaterals .wc-proceed-to-checkout h3 body.single-product #product-inquiry .amount {
+    margin-bottom: 25px;
+    text-align: center; }
+  body.single-product #product-inquiry form {
+    max-width: 700px;
+    margin: auto;
+    padding: 25px;
+    background-color: #f0f0f0; }
+    body.single-product #product-inquiry form div {
+      margin-bottom: 25px; }
+      body.single-product #product-inquiry form div h3, body.single-product #product-inquiry form div legend, body.single-product #product-inquiry form div .cart-collaterals .wc-proceed-to-checkout h3 .amount, .cart-collaterals .wc-proceed-to-checkout h3 body.single-product #product-inquiry form div .amount {
+        margin-bottom: 0 !important;
+        text-align: left; }
+        body.single-product #product-inquiry form div h3 span, body.single-product #product-inquiry form div legend span, .cart-collaterals .wc-proceed-to-checkout h3 body.single-product #product-inquiry form div .amount span {
+          font-size: inherit; }
 
 body.single-product .product .images .woocommerce-main-image {
   display: none; }
@@ -2737,20 +2981,10 @@ body.single-product .product .images .slider-controls {
       body.single-product .product .images .thumbnails img {
         width: auto;
         height: 100%; } }
-body.single-product .product .summary .link-arrow img {
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -ms-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-  width: 15px;
-  margin-left: 10px; }
-body.single-product .product .summary .link-arrow:hover img, body.single-product .product .summary .link-arrow:active img {
-  margin-left: 5px; }
 body.single-product .product .summary p[itemprop="name"], body.single-product .product .summary input[itemprop="name"],
 body.single-product .product .summary label[itemprop="name"], body.single-product .product .summary table.variations div[itemprop="name"].option-placeholder, table.variations body.single-product .product .summary div[itemprop="name"].option-placeholder, body.single-product .product .summary [itemprop="name"].woocommerce-message,
 body.single-product .product .summary [itemprop="name"].woocommerce-info,
-body.single-product .product .summary [itemprop="name"].woocommerce-error, body.single-product .product .summary .price small[itemprop="name"],
+body.single-product .product .summary [itemprop="name"].woocommerce-error, body.single-product .product .summary [itemprop="name"].wpcf7-response-output, body.single-product .product .summary .price small[itemprop="name"],
 body.single-product .product .summary div[itemprop="description"],
 body.single-product .product .summary .product-download,
 body.single-product .product .summary .product-shipping {
@@ -2778,7 +3012,7 @@ body.single-product .product .summary .single_add_to_cart_button {
     body.single-product .product .summary p[itemprop="name"], body.single-product .product .summary input[itemprop="name"],
     body.single-product .product .summary label[itemprop="name"], body.single-product .product .summary table.variations div[itemprop="name"].option-placeholder, table.variations body.single-product .product .summary div[itemprop="name"].option-placeholder, body.single-product .product .summary [itemprop="name"].woocommerce-message,
     body.single-product .product .summary [itemprop="name"].woocommerce-info,
-    body.single-product .product .summary [itemprop="name"].woocommerce-error, body.single-product .product .summary .price small[itemprop="name"],
+    body.single-product .product .summary [itemprop="name"].woocommerce-error, body.single-product .product .summary [itemprop="name"].wpcf7-response-output, body.single-product .product .summary .price small[itemprop="name"],
     body.single-product .product .summary div[itemprop="description"] {
       width: calc(50% - 40px);
       padding-right: 40px;
@@ -2793,7 +3027,7 @@ body.single-product .product .summary .single_add_to_cart_button {
   body.single-product .product .summary p[itemprop="name"], body.single-product .product .summary input[itemprop="name"],
   body.single-product .product .summary label[itemprop="name"], body.single-product .product .summary table.variations div[itemprop="name"].option-placeholder, table.variations body.single-product .product .summary div[itemprop="name"].option-placeholder, body.single-product .product .summary [itemprop="name"].woocommerce-message,
   body.single-product .product .summary [itemprop="name"].woocommerce-info,
-  body.single-product .product .summary [itemprop="name"].woocommerce-error, body.single-product .product .summary .price small[itemprop="name"],
+  body.single-product .product .summary [itemprop="name"].woocommerce-error, body.single-product .product .summary [itemprop="name"].wpcf7-response-output, body.single-product .product .summary .price small[itemprop="name"],
   body.single-product .product .summary div[itemprop="description"],
   body.single-product .product .summary form {
     width: 100%;
@@ -2818,11 +3052,12 @@ body.single-product .product .summary .single_add_to_cart_button {
       -ms-flex-align: center;
       align-items: center; }
       #product-materials ul li img {
-        max-width: 150px; }
+        max-width: 150px;
+        object-fit: contain; }
       #product-materials ul li p, #product-materials ul li input,
       #product-materials ul li label, #product-materials ul li table.variations div.option-placeholder, table.variations #product-materials ul li div.option-placeholder, #product-materials ul li .woocommerce-message,
       #product-materials ul li .woocommerce-info,
-      #product-materials ul li .woocommerce-error, #product-materials ul li body.single-product .product .summary .price small, body.single-product .product .summary .price #product-materials ul li small {
+      #product-materials ul li .woocommerce-error, #product-materials ul li .wpcf7-response-output, #product-materials ul li body.single-product .product .summary .price small, body.single-product .product .summary .price #product-materials ul li small {
         float: left;
         padding-left: 30px;
         text-align: left; }
@@ -2847,7 +3082,7 @@ body.single-product .product .summary .single_add_to_cart_button {
   #product-materials > p, #product-materials > input,
   #product-materials > label, table.variations #product-materials > div.option-placeholder, #product-materials > .woocommerce-message,
   #product-materials > .woocommerce-info,
-  #product-materials > .woocommerce-error, body.single-product .product .summary .price #product-materials > small {
+  #product-materials > .woocommerce-error, #product-materials > .wpcf7-response-output, body.single-product .product .summary .price #product-materials > small {
     margin-bottom: 60px; }
 
 @media only screen and (max-width: 1000px) {
@@ -2863,7 +3098,7 @@ body.single-product .product .summary .single_add_to_cart_button {
     #product-materials ul li p, #product-materials ul li input,
     #product-materials ul li label, #product-materials ul li table.variations div.option-placeholder, table.variations #product-materials ul li div.option-placeholder, #product-materials ul li .woocommerce-message,
     #product-materials ul li .woocommerce-info,
-    #product-materials ul li .woocommerce-error, #product-materials ul li body.single-product .product .summary .price small, body.single-product .product .summary .price #product-materials ul li small {
+    #product-materials ul li .woocommerce-error, #product-materials ul li .wpcf7-response-output, #product-materials ul li body.single-product .product .summary .price small, body.single-product .product .summary .price #product-materials ul li small {
       padding-left: 0;
       text-align: center; } }
 @media all and (max-width: 750px) {
@@ -2886,7 +3121,7 @@ body.single-product .product .summary .single_add_to_cart_button {
     #product-materials ul li p, #product-materials ul li input,
     #product-materials ul li label, #product-materials ul li table.variations div.option-placeholder, table.variations #product-materials ul li div.option-placeholder, #product-materials ul li .woocommerce-message,
     #product-materials ul li .woocommerce-info,
-    #product-materials ul li .woocommerce-error, #product-materials ul li body.single-product .product .summary .price small, body.single-product .product .summary .price #product-materials ul li small {
+    #product-materials ul li .woocommerce-error, #product-materials ul li .wpcf7-response-output, #product-materials ul li body.single-product .product .summary .price small, body.single-product .product .summary .price #product-materials ul li small {
       padding-left: 15px;
       text-align: left; } }
 @media only screen and (max-width: 500px) {
@@ -2902,5 +3137,5 @@ body.single-product .product .summary .single_add_to_cart_button {
     #product-materials ul li p, #product-materials ul li input,
     #product-materials ul li label, #product-materials ul li table.variations div.option-placeholder, table.variations #product-materials ul li div.option-placeholder, #product-materials ul li .woocommerce-message,
     #product-materials ul li .woocommerce-info,
-    #product-materials ul li .woocommerce-error, #product-materials ul li body.single-product .product .summary .price small, body.single-product .product .summary .price #product-materials ul li small {
+    #product-materials ul li .woocommerce-error, #product-materials ul li .wpcf7-response-output, #product-materials ul li body.single-product .product .summary .price small, body.single-product .product .summary .price #product-materials ul li small {
       text-align: center; } }

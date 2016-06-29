@@ -5,6 +5,8 @@ main{
   height: 100%;
   min-height: 100%;
   overflow: hidden;
+  max-width: 1500px;
+  margin: auto;
 
   background-color: $white;
 }

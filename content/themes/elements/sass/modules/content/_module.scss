@@ -28,11 +28,22 @@ section.module{
 
     // Side caption
     .module-caption{
-      @include transform( rotate(-90deg) );
-
-      top: 90px;
-      left: -150px;
+      top: 0;
+      left: -100px;
       position: absolute;
+
+      width: 100px;
+
+      p{
+        @include transform( rotate(-90deg) translateX(-100%) );
+
+        top: 0px;
+        left: 50px;
+        position: absolute;
+
+        transform-origin: left;
+        white-space: nowrap;
+      }
     }
   }
 
@@ -51,10 +62,11 @@ section.module{
       }
 
       .module-caption{
-        @include transform( rotate(90deg) );
-
         left: auto;
-        right: -150px;
+
+        p{
+          @include transform( rotate(90deg) translateX(0) );
+        }
       }
     }
   }

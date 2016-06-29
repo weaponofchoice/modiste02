@@ -85,6 +85,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </div><!-- #product-<?php the_ID(); ?> -->
 
+<div id="product-inquiry">
+  <h2>Inquiry</h2>
+
+  <?php echo do_shortcode('[contact-form-7 id="260" title="Product Inquiry"]'); ?>
+</div>
+
 <div id="product-editorial">
   <?php get_elements(); ?>
 </div>

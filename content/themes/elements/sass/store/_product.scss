@@ -1,6 +1,7 @@
 body.single-product{
   .product{
     height: 100vh;
+    max-height: 1000px;
     margin-top: -90px;
     padding: 0;
     padding-top: 90px;
@@ -8,10 +9,6 @@ body.single-product{
     background-color: $grey-light;
 
     .images{
-      @include flexbox;
-      @include justify-content( center );
-      @include align-items( center );
-
       width: 60%;
       height: 100%;
       float: right;
@@ -32,6 +29,39 @@ body.single-product{
 
   #product-editorial{
     padding: 0;
+  }
+
+  #product-inquiry{
+    display: none;
+    padding-top: 100px;
+
+    h2{
+      margin-bottom: 25px;
+
+      text-align: center;
+    }
+
+    form{
+      max-width: 700px;
+      margin: auto;
+      padding: 25px;
+
+      background-color: $grey-light;
+
+      div{
+        margin-bottom: 25px;
+
+        h3{
+          margin-bottom: 0 !important;
+
+          text-align: left;
+
+          span{
+            font-size: inherit;
+          }
+        }
+      }
+    }
   }
 }
 

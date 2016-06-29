@@ -12,7 +12,7 @@ if( $materials ):
       ?>
 
       <li>
-        <img src="<?php echo $image['sizes']['medium']; ?>" width="<?php echo $image['width']; ?>" height="<?php echo $image['height']; ?>">
+        <div><img src="<?php echo $image['sizes']['medium']; ?>" width="<?php echo $image['width']; ?>" height="<?php echo $image['height']; ?>"></div>
         <?php echo $text; ?>
       </li>
 

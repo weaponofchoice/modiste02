@@ -20,8 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="management-heading">
-  <h3>Modiste Cart</h3>
+<div class="link-shop">
+  <a class="link-arrow" href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>">Return to furniture shop<img src="<?php echo get_template_directory_uri() . '/img/arrow.svg'; ?>"></a>
 </div>
 
 <?php wc_print_notices(); ?>
@@ -37,9 +37,8 @@ if ( ! defined( 'ABSPATH' ) ) {
   <table class="shop_table shop_table_responsive cart" cellspacing="0">
   	<thead>
   		<tr>
-  			<th class="product-remove">&nbsp;</th>
-  			<th class="product-thumbnail">&nbsp;</th>
-  			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
+  			<th class="product-thumbnail"><?php _e( 'Product', 'woocommerce' ); ?></th>
+  			<th class="product-name"></th>
   			<th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>
   			<th class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
   			<th class="product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></th>
@@ -56,18 +55,6 @@ if ( ! defined( 'ABSPATH' ) ) {
   			if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
   				?>
   				<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
-
-  					<td class="product-remove">
-  						<?php
-  							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
-  								'<a href="%s" class="remove" title="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
-  								esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
-  								__( 'Remove this item', 'woocommerce' ),
-  								esc_attr( $product_id ),
-  								esc_attr( $_product->get_sku() )
-  							), $cart_item_key );
-  						?>
-  					</td>
 
   					<td class="product-thumbnail">
   						<?php
@@ -119,6 +106,19 @@ if ( ! defined( 'ABSPATH' ) ) {
   							}
 
   							echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item );
+
+  							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
+    								'<a href="%s" class="remove" title="%s" data-product_id="%s" data-product_sku="%s">remove item</a>',
+  								esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
+  								__( 'Remove this item', 'woocommerce' ),
+  								esc_attr( $product_id ),
+  								esc_attr( $_product->get_sku() )
+  							), $cart_item_key );
+
+                echo
+                '<input type="submit" name="update_cart" value="' . esc_attr( 'update cart', 'woocommerce' ) . '" />';
+
+                wp_nonce_field( 'woocommerce-cart' );
   						?>
   					</td>
 
@@ -133,26 +133,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   		}
 
   		do_action( 'woocommerce_cart_contents' );
-  		?>
-  		<tr>
-  			<td colspan="6" class="actions">
-
-  				<?php if ( wc_coupons_enabled() ) { ?>
-  					<div class="coupon">
-
-  						<label for="coupon_code"><?php _e( 'Coupon', 'woocommerce' ); ?>:</label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <input type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply Coupon', 'woocommerce' ); ?>" />
-
-  						<?php do_action( 'woocommerce_cart_coupon' ); ?>
-  					</div>
-  				<?php } ?>
-
-  				<input type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'woocommerce' ); ?>" />
-
-  				<?php do_action( 'woocommerce_cart_actions' ); ?>
-
-  				<?php wp_nonce_field( 'woocommerce-cart' ); ?>
-  			</td>
-  		</tr>
+      ?>
 
   		<?php do_action( 'woocommerce_after_cart_contents' ); ?>
   	</tbody>

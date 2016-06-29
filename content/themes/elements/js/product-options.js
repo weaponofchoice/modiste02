@@ -6,7 +6,7 @@ $(document).ready( function() {
 
   for(a = 0; a < options.length; a++){
     if( $(options[a]).find('input[checked="checked"]').length > 0 ){
-      var defaultValue = $(options[a]).find('input[checked="checked"]')[0].value;
+      var defaultValue = $(options[a]).find('input[checked="checked"]')[0].value.replace(/-/g, ' ');
       $(options[a]).prepend('<div class="option-placeholder">' + defaultValue + '</div>');
     } else {
       $(options[a]).prepend('<div class="option-placeholder">Choose option</div>');
@@ -16,8 +16,8 @@ $(document).ready( function() {
 
   var label = $('label');
 
-  label.click( function() {
-    var parent = $(this).parents('td.value');
+  label.on( 'click', function() {
+    var parent = $(this).parents('tr');
     var placeholder = parent.find('.option-placeholder');
     var value = $(this).text();
 
@@ -33,6 +33,22 @@ $(document).ready( function() {
     var parent = $(this).parents('td.value');
     parent.find('.option-placeholder').hide();
     parent.find('div:not(.option-placeholder)').show();
+  });
+
+  var inquiryBtn = $('.button#inquiry');
+
+  inquiryBtn.on( 'click', function() {
+    $('#product-inquiry').show();
+
+    for(a = 0; a < options.length; a++){
+      var value = $(options[a]).find('.option-placeholder').text();
+      value = value.replace(/-/g, ' ');
+      var label = $(options[a]).parent().find('.label label').attr('for').substring(3);
+      label = label.replace(/-/g, '');
+
+      $('.option-' + label + ' span').html(value);
+      $('input[name="option_' + label + '"]').attr('value', value);
+    }
   });
 
 });

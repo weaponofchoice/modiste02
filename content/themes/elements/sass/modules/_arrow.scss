@@ -23,3 +23,19 @@
     margin: auto;
   }
 }
+
+.link-arrow{
+  img{
+    @include transition( .2s );
+
+    width: 15px;
+    margin-left: 10px;
+  }
+
+  &:hover,
+  &:active{
+    img{
+      margin-left: 5px;
+    }
+  }
+}

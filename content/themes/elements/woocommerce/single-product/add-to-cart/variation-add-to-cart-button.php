@@ -22,5 +22,5 @@ global $product;
 	<input type="hidden" name="product_id" value="<?php echo absint( $product->id ); ?>" />
 	<input type="hidden" name="variation_id" class="variation_id" value="0" />
 
-  <a class="button button-sec" href="mailto:lucawater@gmail.com">inquire</a>
+  <a id="inquiry" href="#product-inquiry" class="button button-sec">inquire</a>
 </div>

@@ -1,3 +1,9 @@
+/*
+ * To use the button animation(where the text flies up on hover), put content of button in twice in a span
+ *
+ * Example: '<button><span>click here</span><span>click here</span></button>'
+ */
+
 button{
   @extend a;
   @include appearance( none );
