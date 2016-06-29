@@ -1,1 +1,1 @@
-!function(i){if(i("section.slider").length>0){var e=i("section.slider");e.slider({lightbox:!1})}}(jQuery);
+!function(e){if(e("section.slider").length>0){var i=e("section.slider");i.slider({lightbox:!1,keys:!1})}}(jQuery);
