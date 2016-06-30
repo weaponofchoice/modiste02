@@ -1,6 +1,7 @@
 <?php
 // Content (variables)
 $title = get_the_title();
+$intro = wpautop( get_field('post_intro') );
 $category = get_the_category( $post->ID );
 $category_link = get_category_link( $category[0]->term_id );
 $content = wpautop( get_the_content() );
@@ -17,6 +18,8 @@ $image = get_the_post_thumbnail( $post->ID, 'large' );
 
   <div>
     <h2><?php echo $title; ?></h2>
+
+    <?php echo $intro; ?>
 
     <a class="button button-white" href="<?php echo $permalink; ?>">view project</a>
   </div>
