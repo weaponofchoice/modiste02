@@ -10,3 +10,11 @@ main{
 
   background-color: $white;
 }
+
+body.blog,
+body.post-type-archive-product,
+body.single-product{
+  main{
+    max-width: none;
+  }
+}
