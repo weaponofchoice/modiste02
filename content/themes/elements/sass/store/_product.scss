@@ -8,6 +8,13 @@ body.single-product{
 
     background-color: $grey-light;
 
+    .product-inner{
+      width: 100%;
+      max-width: 1500px;
+      height: 100%;
+      margin: auto;
+    }
+
     .images{
       width: 60%;
       height: 100%;
